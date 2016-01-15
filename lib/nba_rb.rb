@@ -1,8 +1,8 @@
-require './nba_rb/version'
-require './nba_rb/constants'
-require './nba_rb/game'
-require './nba_rb/player'
-require './nba_rb/team'
+require './lib/nba_rb/version'
+require './lib/nba_rb/constants'
+require './lib/nba_rb/game'
+require './lib/nba_rb/player'
+require './lib/nba_rb/team'
 require 'net/http'
 require 'json'
 

@@ -1,16 +1,50 @@
-def get_player(first_name,
-               last_name,
-               only_current = 0,
-               _just_id = true)
+class Player
+  attr_accessor :first_name,
+                :last_name,
+                :only_current,
+                :data
 
-  last_formatted = last_name.downcase.capitalize
-  first_formatted = first_name.downcase.capitalize
+  def initialize(first_name,
+                 last_name,
+                 only_current = 0)
 
-  name = "#{last_formatted}, #{first_formatted}"
-  list = PlayerList.new(League.NBA, NbaRb::CURRENT_SEASON, only_current).info
+    last_formatted = last_name.downcase.capitalize
+    first_formatted = first_name.downcase.capitalize
 
-  list['rowSet'].each do |player|
-    return player if player[1] == name
+    name = "#{last_formatted}, #{first_formatted}"
+    list = PlayerList.new(League.NBA, NbaRb::CURRENT_SEASON, only_current).info
+
+    list['rowSet'].each do |player|
+      @data = player if player[1] == name
+    end
+  end
+
+  def id
+    @data[0]
+  end
+
+  def player_code
+    @data[5]
+  end
+
+  def rostered?
+    !@data[2].zero?
+  end
+
+  def team_id
+    @data[6]
+  end
+
+  def team_name
+    @data[7] + ' ' + @data[8]
+  end
+
+  def team_abbreviation
+    @data[9]
+  end
+
+  def team_code
+    @data[10]
   end
 end
 

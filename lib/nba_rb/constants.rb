@@ -1,3 +1,358 @@
+class League
+  class << self
+    attr_accessor :default, :NBA
+  end
+
+  @NBA = '00'
+  @default = @NBA
+end
+
+class PerMode
+  class << self
+    attr_accessor :totals,
+                  :per_game,
+                  :minutes_per,
+                  :per_48,
+                  :per_40,
+                  :per_36,
+                  :per_minute,
+                  :per_possession,
+                  :per_play,
+                  :per_100_possessions,
+                  :per_100_plays,
+                  :default
+  end
+
+  @totals = 'Totals'
+  @per_game = 'PerGame'
+  @minutes_per = 'MinutesPer'
+  @per_48 = 'Per48'
+  @per_40 = 'Per40'
+  @per_36 = 'Per36'
+  @per_minute = 'PerMinute'
+  @per_possession = 'PerPossession'
+  @per_play = 'PerPlay'
+  @per_100_possessions = 'Per100Possessions'
+  @per_100_plays = 'Per100Plays'
+  @default = @per_game
+end
+
+class SeasonType
+  class << self
+    attr_accessor :default,
+                  :playoffs,
+                  :regular
+  end
+
+  @regular = 'Regular Season'
+  @playoffs = 'Playoffs'
+  @default = @regular
+end
+
+class MeasureType
+  class << self
+    attr_accessor :default,
+                  :advanced,
+                  :base,
+                  :misc,
+                  :four_factors,
+                  :scoring,
+                  :opponent,
+                  :usage
+  end
+
+  @base = 'Base'
+  @advanced = 'Advanced'
+  @misc = 'Misc'
+  @four_factors = 'Four Factors'
+  @scoring = 'Scoring'
+  @opponent = 'Opponent'
+  @usage = 'Usage'
+  @default = @base
+end
+
+class GroupQuantity
+  class << self
+    attr_accessor :default
+  end
+
+  @default = 5
+end
+
+class Outcome
+  class << self
+    attr_accessor :default, :win, :loss
+  end
+
+  @default = ''
+  @win = 'W'
+  @loss = 'L'
+end
+
+class Location
+  class << self
+    attr_accessor :default, :home, :away
+  end
+
+  @default = ''
+  @home = 'Home'
+  @away = 'Away'
+end
+
+class SeasonSegment
+  class << self
+    attr_accessor :default,
+                  :entire_season,
+                  :pre_all_star,
+                  :post_all_star
+  end
+  @default = ''
+
+  @entire_season = ''
+  @pre_all_star = 'Pre All-Star'
+  @post_all_star = 'Post All-Star'
+end
+
+class DateFrom
+  class << self
+    attr_accessor :default
+  end
+
+  @default = ''
+end
+
+class DateTo
+  class << self
+    attr_accessor :default
+  end
+
+  @default = ''
+end
+
+class VsConference
+  class << self
+    attr_accessor :default, :all, :east, :west
+  end
+
+  @default = ''
+  @all = ''
+  @east = 'East'
+  @west = 'West'
+end
+
+class VsDivision
+  class << self
+    attr_accessor :default,
+                  :all,
+                  :atlantic,
+                  :central,
+                  :northwest,
+                  :pacific,
+                  :southeast,
+                  :southwest
+  end
+
+  @default = ''
+  @all = ''
+  @atlantic = 'Atlantic'
+  @central = 'Central'
+  @northwest = 'Northwest'
+  @pacific = 'Pacific'
+  @southeast = 'Southeast'
+  @southwest = 'Southwest'
+end
+
+class GameSegment
+  class << self
+    attr_accessor :default,
+                  :entire_game,
+                  :first_half,
+                  :second_half,
+                  :overtime
+  end
+
+  @default = ''
+  @entire_game = ''
+  @first_half = 'First Half'
+  @second_half = 'Second Half'
+  @overtime = 'Overtime'
+end
+
+class ShotClockRange
+  class << self
+    attr_accessor :default,
+                  :all_ranges,
+                  :shot_clock_off
+  end
+
+  @default = ''
+  @all_ranges = ''
+  @shot_clock_off = 'ShotClock Off'
+
+  def get(n)
+    if n > 24 or n < 0
+      return ''
+    elsif 22 <= n <= 24
+      return '24-22'
+    elsif 18 <= n < 22
+      return '22-18 Very Early'
+    elsif 15 <= n < 18
+      return '18-15 Early'
+    elsif 7 <= n < 15
+      return '15-7 Average'
+    elsif 4 <= n < 7
+      return '7-4 Late'
+    elsif 0 <= n < 4
+      return '4-0 Very Late'
+    end
+  end
+end
+
+class PlusMinus
+  class << self
+    attr_accessor :default
+  end
+
+  @default = 'N'
+end
+
+class PaceAdjust
+  class << self
+    attr_accessor :default
+  end
+
+  @default = 'N'
+end
+
+class Rank
+  class << self
+    attr_accessor :default
+  end
+
+  @default = 'N'
+end
+
+class OpponentTeamID
+  class << self
+    attr_accessor :default
+  end
+
+  @default = '0'
+end
+
+class Period
+  class << self
+    attr_accessor :default,
+                  :all_quarters,
+                  :first_quarter,
+                  :second_quarter,
+                  :third_quarter,
+                  :fourth_quarter
+  end
+
+  @default = '0'
+  @all_quarters = '0'
+  @first_quarter = '1'
+  @second_quarter = '2'
+  @third_quarter = '3'
+  @fourth_quarter = '4'
+
+  def overtime(n)
+    str(4 + n)
+  end
+end
+
+class LastNGames
+  class << self
+    attr_accessor :default
+  end
+
+  @default = '0'
+end
+
+
+class PlayoffRound
+  class << self
+    attr_accessor :default,
+                  :all,
+                  :quarter_finals,
+                  :semi_finals,
+                  :conference_finals,
+                  :finals
+  end
+
+  @default = '0'
+  @all = '0'
+  @quarter_finals = '1'
+  @semi_finals = '2'
+  @conference_finals = '3'
+  @finals = '4'
+end
+
+class Month
+  class << self
+    attr_accessor :default,
+                  :all,
+                  :october,
+                  :november,
+                  :december,
+                  :january,
+                  :february,
+                  :march,
+                  :april,
+                  :may,
+                  :june,
+                  :july,
+                  :august,
+                  :september
+  end
+
+  @default = '0'
+  @all = '0'
+  @october = '1'
+  @november = '2'
+  @december = '3'
+  @january = '4'
+  @february = '5'
+  @march = '6'
+  @april = '7'
+  @may = '8'
+  @june = '9'
+  @july = '10'
+  @august = '11'
+  @september = '12'
+end
+
+class RangeType
+  class << self
+    attr_accessor :default
+  end
+
+  @default = '0'
+end
+
+class StartRange
+  class << self
+    attr_accessor :default
+  end
+
+  @default = '0'
+end
+
+class EndRange
+  class << self
+    attr_accessor :default
+  end
+
+  @default = '0'
+end
+
+class StartPeriod < Period
+end
+
+class EndPeriod < Period
+end
+
 TEAMS = {
     'ATL': {
         'abbr': 'ATL',
@@ -361,358 +716,3 @@ TEAMS = {
         'colors': ['002A5B', 'E21836', 'BAC4CA']
     }
 }
-
-class League
-  class << self
-    attr_accessor :default, :NBA
-  end
-
-  @NBA = '00'
-  @default = @NBA
-end
-
-class PerMode
-  class << self
-    attr_accessor :totals,
-                  :per_game,
-                  :minutes_per,
-                  :per_48,
-                  :per_40,
-                  :per_36,
-                  :per_minute,
-                  :per_possession,
-                  :per_play,
-                  :per_100_possessions,
-                  :per_100_plays,
-                  :default
-  end
-
-  @totals = 'totals'
-  @per_game = 'per_game'
-  @minutes_per = 'minutes_per'
-  @per_48 = 'per_48'
-  @per_40 = 'per_40'
-  @per_36 = 'per_36'
-  @per_minute = 'per_minute'
-  @per_possession = 'per_possession'
-  @per_play = 'per_play'
-  @per_100_possessions = 'per_100_possessions'
-  @per_100_plays = 'per_100_plays'
-  @default = @per_game
-end
-
-class SeasonType
-  class << self
-    attr_accessor :default,
-                  :playoffs,
-                  :regular
-  end
-
-  @regular = 'Regular Season'
-  @playoffs = 'Playoffs'
-  @default = @regular
-end
-
-class MeasureType
-  class << self
-    attr_accessor :default,
-                  :advanced,
-                  :base,
-                  :misc,
-                  :four_factors,
-                  :scoring,
-                  :opponent,
-                  :usage
-  end
-
-  @base = 'Base'
-  @advanced = 'Advanced'
-  @misc = 'Misc'
-  @four_factors = 'Four Factors'
-  @scoring = 'Scoring'
-  @opponent = 'Opponent'
-  @usage = 'Usage'
-  @default = @base
-end
-
-class GroupQuantity
-  class << self
-    attr_accessor :default
-  end
-
-  @default = 5
-end
-
-class Outcome
-  class << self
-    attr_accessor :default, :win, :loss
-  end
-
-  @default = ''
-  @win = 'W'
-  @loss = 'L'
-end
-
-class Location
-  class << self
-    attr_accessor :default, :home, :away
-  end
-
-  @default = ''
-  @home = 'Home'
-  @away = 'Away'
-end
-
-class SeasonSegment
-  class << self
-    attr_accessor :default,
-                  :entire_season,
-                  :pre_all_star,
-                  :post_all_star
-  end
-  @default = ''
-
-  @entire_season = ''
-  @pre_all_star = 'Pre All-Star'
-  @post_all_star = 'Post All-Star'
-end
-
-class DateFrom
-  class << self
-    attr_accessor :default
-  end
-
-  @default = ''
-end
-
-class DateTo
-  class << self
-    attr_accessor :default
-  end
-
-  @default = ''
-end
-
-class VsConference
-  class << self
-    attr_accessor :default, :all, :east, :west
-  end
-
-  @default = ''
-  @all = ''
-  @east = 'East'
-  @west = 'West'
-end
-
-class VsDivision
-  class << self
-    attr_accessor :default,
-                  :all,
-                  :atlantic,
-                  :central,
-                  :northwest,
-                  :pacific,
-                  :southeast,
-                  :southwest
-  end
-
-  @default = ''
-  @all = ''
-  @atlantic = 'Atlantic'
-  @central = 'Central'
-  @northwest = 'Northwest'
-  @pacific = 'Pacific'
-  @southeast = 'Southeast'
-  @southwest = 'Southwest'
-end
-
-class GameSegment
-  class << self
-    attr_accessor :default,
-                  :entire_game,
-                  :first_half,
-                  :second_half,
-                  :overtime
-  end
-
-  @default = ''
-  @entire_game = ''
-  @first_half = 'First Half'
-  @second_half = 'Second Half'
-  @overtime = 'Overtime'
-end
-
-class ShotClockRange
-  class << self
-    attr_accessor :default,
-                  :all_ranges,
-                  :shot_clock_off
-  end
-
-  @default = ''
-  @all_ranges = ''
-  @shot_clock_off = 'ShotClock Off'
-
-  def get(n)
-    if n > 24 or n < 0
-      return ''
-    elsif 22 <= n <= 24
-      return '24-22'
-    elsif 18 <= n < 22
-      return '22-18 Very Early'
-    elsif 15 <= n < 18
-      return '18-15 Early'
-    elsif 7 <= n < 15
-      return '15-7 Average'
-    elsif 4 <= n < 7
-      return '7-4 Late'
-    elsif 0 <= n < 4
-      return '4-0 Very Late'
-    end
-  end
-end
-
-class PlusMinus
-  class << self
-    attr_accessor :default
-  end
-
-  @default = 'N'
-end
-
-class PaceAdjust
-  class << self
-    attr_accessor :default
-  end
-
-  @default = 'N'
-end
-
-class Rank
-  class << self
-    attr_accessor :default
-  end
-
-  @default = 'N'
-end
-
-class OpponentTeamID
-  class << self
-    attr_accessor :default
-  end
-
-  @default = '0'
-end
-
-class Period
-  class << self
-    attr_accessor :default,
-                  :all_quarters,
-                  :first_quarter,
-                  :second_quarter,
-                  :third_quarter,
-                  :fourth_quarter
-  end
-
-  @default = '0'
-  @all_quarters = '0'
-  @first_quarter = '1'
-  @second_quarter = '2'
-  @third_quarter = '3'
-  @fourth_quarter = '4'
-
-  def overtime(n)
-    str(4 + n)
-  end
-end
-
-class LastNGames
-  class << self
-    attr_accessor :default
-  end
-
-  @default = '0'
-end
-
-
-class PlayoffRound
-  class << self
-    attr_accessor :default,
-                  :all,
-                  :quarter_finals,
-                  :semi_finals,
-                  :conference_finals,
-                  :finals
-  end
-
-  @default = '0'
-  @all = '0'
-  @quarter_finals = '1'
-  @semi_finals = '2'
-  @conference_finals = '3'
-  @finals = '4'
-end
-
-class Month
-  class << self
-    attr_accessor :default,
-                  :all,
-                  :october,
-                  :november,
-                  :december,
-                  :january,
-                  :february,
-                  :march,
-                  :april,
-                  :may,
-                  :june,
-                  :july,
-                  :august,
-                  :september
-  end
-
-  @default = '0'
-  @all = '0'
-  @october = '1'
-  @november = '2'
-  @december = '3'
-  @january = '4'
-  @february = '5'
-  @march = '6'
-  @april = '7'
-  @may = '8'
-  @june = '9'
-  @july = '10'
-  @august = '11'
-  @september = '12'
-end
-
-class RangeType
-  class << self
-    attr_accessor :default
-  end
-
-  @default = '0'
-end
-
-class StartRange
-  class << self
-    attr_accessor :default
-  end
-
-  @default = '0'
-end
-
-class EndRange
-  class << self
-    attr_accessor :default
-  end
-
-  @default = '0'
-end
-
-class StartPeriod < Period
-end
-
-class EndPeriod < Period
-end

@@ -575,8 +575,8 @@ end
 
 class TeamVsPlayer
   attr_accessor :team_id,
-                :measure_type,
                 :vs_player_id,
+                :measure_type,
                 :per_mode,
                 :plus_minus,
                 :pace_adjust,
