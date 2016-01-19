@@ -1,3 +1,5 @@
+require './lib/helpers/initialize'
+
 class Boxscore
   @endpoint = 'boxscore'
 

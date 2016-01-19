@@ -1,8 +1,15 @@
+require './lib/helpers/initialize'
+
 class TeamList
+  include Initializable
   attr_accessor :league_id,
                 :data
 
-  def initialize(league_id = League.NBA)
+  def initialize(*args)
+    super(*args)
+
+    league_id ||= League.NBA
+
     uri = URI.parse(NbaRb::BASE_URL + 'commonteamyears')
     response = Net::HTTP.post_form(uri, 'LeagueID': league_id)
 
@@ -22,10 +29,12 @@ class TeamSummary
                 :season_type,
                 :data
 
-  def initialize(team_id,
-                 season = NbaRb::NbaRb::CURRENT_SEASON,
-                 league_id = League.NBA,
-                 season_type = SeasonType.default)
+  def initialize(*args)
+    super(*args)
+
+    season ||= NbaRb::NbaRb::CURRENT_SEASON
+    league_id ||= League.NBA
+    season_type ||= SeasonType.default
 
     uri = URI.parse(NbaRb::BASE_URL + 'teaminfocommon')
     response = Net::HTTP.post_form(uri, 'TeamID': team_id,
@@ -46,12 +55,16 @@ class TeamSummary
 end
 
 class TeamCommonRoster
+  include Initializable
+
   attr_accessor :team_id,
                 :season,
                 :data
 
-  def initialize(team_id,
-                 season = NbaRb::CURRENT_SEASON)
+  def initialize(*args)
+    super(*args)
+
+    season ||= NbaRb::CURRENT_SEASON
 
     uri = URI.parse(NbaRb::BASE_URL + 'commonteamroster')
     response = Net::HTTP.post_form(uri, 'TeamID': team_id,
@@ -71,6 +84,7 @@ class TeamCommonRoster
 end
 
 class TeamDashboard
+  include Initializable
   @endpoint = ''
 
   class << self
@@ -106,29 +120,31 @@ class TeamDashboard
                 :last_n_games,
                 :data
 
-  def initialize(team_id,
-                 measure_type = MeasureType.default,
-                 per_mode = PerMode.default,
-                 plus_minus = PlusMinus.default,
-                 pace_adjust = PaceAdjust.default,
-                 rank = Rank.default,
-                 league_id = League.default,
-                 season = NbaRb::CURRENT_SEASON,
-                 season_type = SeasonType.default,
-                 po_round = PlayoffRound.default,
-                 outcome = Outcome.default,
-                 location = Location.default,
-                 month = Month.default,
-                 season_segment = SeasonSegment.default,
-                 date_from = DateFrom.default,
-                 date_to = DateTo.default,
-                 opponent_team_id = OpponentTeamID.default,
-                 vs_conference = VsConference.default,
-                 vs_division = VsDivision.default,
-                 game_segment = GameSegment.default,
-                 period = Period.default,
-                 shot_clock_range = ShotClockRange.default,
-                 last_n_games = LastNGames.default)
+  def initialize(*args)
+    super(*args)
+
+    measure_type ||= MeasureType.default
+    per_mode ||= PerMode.default
+    plus_minus ||= PlusMinus.default
+    pace_adjust ||= PaceAdjust.default
+    rank ||= Rank.default
+    league_id ||= League.default
+    season ||= NbaRb::CURRENT_SEASON
+    season_type ||= SeasonType.default
+    po_round ||= PlayoffRound.default
+    outcome ||= Outcome.default
+    location ||= Location.default
+    month ||= Month.default
+    season_segment ||= SeasonSegment.default
+    date_from ||= DateFrom.default
+    date_to ||= DateTo.default
+    opponent_team_id ||= OpponentTeamID.default
+    vs_conference ||= VsConference.default
+    vs_division ||= VsDivision.default
+    game_segment ||= GameSegment.default
+    period ||= Period.default
+    shot_clock_range ||= ShotClockRange.default
+    last_n_games ||= LastNGames.default
 
     uri = URI.parse(NbaRb::BASE_URL + @endpoint)
     response = Net::HTTP.post_form(uri, 'TeamID': team_id,
@@ -354,6 +370,7 @@ class TeamYearOverYearSplits < TeamDashboard
 end
 
 class TeamLineups
+  include Initializable
   attr_accessor :team_id,
                 :game_id,
                 :group_quantity,
@@ -378,55 +395,57 @@ class TeamLineups
                 :last_n_games,
                 :data
 
-  def initialize(team_id,
-                 game_id = '',
-                 group_quantity = GroupQuantity.default,
-                 season = NbaRb::CURRENT_SEASON,
-                 season_type = SeasonType.default,
-                 measure_type = MeasureType.default,
-                 per_mode = PerMode.default,
-                 plus_minus = PlusMinus.default,
-                 pace_adjust = PaceAdjust.default,
-                 rank = Rank.default,
-                 outcome = Outcome.default,
-                 location = Location.default,
-                 month = Month.default,
-                 season_segment = SeasonSegment.default,
-                 date_from = DateFrom.default,
-                 date_to = DateTo.default,
-                 opponent_team_id = OpponentTeamID.default,
-                 vs_conference = VsConference.default,
-                 vs_division = VsDivision.default,
-                 game_segment = GameSegment.default,
-                 period = Period.default,
-                 last_n_games = LastNGames.default)
+  def initialize(*args)
+    super(*args)
 
-  uri = URI.parse(NbaRb::BASE_URL + 'teamdashlineups')
-  response = Net::HTTP.post_form(uri, 'GroupQuantity': group_quantity,
-                                      'GameID': game_id,
-                                      'TeamID': team_id,
-                                      'Season': season,
-                                      'SeasonType': season_type,
-                                      'MeasureType': measure_type,
-                                      'PerMode': per_mode,
-                                      'PlusMinus': plus_minus,
-                                      'PaceAdjust': pace_adjust,
-                                      'Rank': rank,
-                                      'Outcome': outcome,
-                                      'Location': location,
-                                      'Month': month,
-                                      'SeasonSegment': season_segment,
-                                      'DateFrom': date_from,
-                                      'DateTo': date_to,
-                                      'OpponentTeamID': opponent_team_id,
-                                      'VsConference': vs_conference,
-                                      'VsDivision': vs_division,
-                                      'GameSegment': game_segment,
-                                      'Period': period,
-                                      'LastNGames': last_n_games)
+    game_id ||= ''
+    group_quantity ||= GroupQuantity.default
+    season ||= NbaRb::CURRENT_SEASON
+    season_type ||= SeasonType.default
+    measure_type ||= MeasureType.default
+    per_mode ||= PerMode.default
+    plus_minus ||= PlusMinus.default
+    pace_adjust ||= PaceAdjust.default
+    rank ||= Rank.default
+    outcome ||= Outcome.default
+    location ||= Location.default
+    month ||= Month.default
+    season_segment ||= SeasonSegment.default
+    date_from ||= DateFrom.default
+    date_to ||= DateTo.default
+    opponent_team_id ||= OpponentTeamID.default
+    vs_conference ||= VsConference.default
+    vs_division ||= VsDivision.default
+    game_segment ||= GameSegment.default
+    period ||= Period.default
+    last_n_games ||= LastNGames.default
 
-  parsed_response = JSON.parse(response.body)
-  @data = parsed_response['resultSets']
+    uri = URI.parse(NbaRb::BASE_URL + 'teamdashlineups')
+    response = Net::HTTP.post_form(uri, 'GroupQuantity': group_quantity,
+                                        'GameID': game_id,
+                                        'TeamID': team_id,
+                                        'Season': season,
+                                        'SeasonType': season_type,
+                                        'MeasureType': measure_type,
+                                        'PerMode': per_mode,
+                                        'PlusMinus': plus_minus,
+                                        'PaceAdjust': pace_adjust,
+                                        'Rank': rank,
+                                        'Outcome': outcome,
+                                        'Location': location,
+                                        'Month': month,
+                                        'SeasonSegment': season_segment,
+                                        'DateFrom': date_from,
+                                        'DateTo': date_to,
+                                        'OpponentTeamID': opponent_team_id,
+                                        'VsConference': vs_conference,
+                                        'VsDivision': vs_division,
+                                        'GameSegment': game_segment,
+                                        'Period': period,
+                                        'LastNGames': last_n_games)
+
+    parsed_response = JSON.parse(response.body)
+    @data = parsed_response['resultSets']
   end
 
   def overall
@@ -471,14 +490,17 @@ class TeamPlayerOnOffSummary < TeamDashboard
 end
 
 class TeamGameLogs
+  include Initializable
   attr_accessor :team_id,
                 :season,
                 :season_type,
                 :data
 
-  def initialize(team_id,
-                 season = NbaRb::CURRENT_SEASON,
-                 season_type = SeasonType.default)
+  def initialize(*args)
+    super(*args)
+
+    season ||= NbaRb::CURRENT_SEASON
+    season_type ||= SeasonType.default
 
     uri = URI.parse(NbaRb::BASE_URL + 'teamgamelog')
     response = Net::HTTP.post_form(uri, 'TeamID': team_id,
@@ -495,13 +517,16 @@ class TeamGameLogs
 end
 
 class TeamSeasons
+  include Initializable
   attr_accessor :team_id,
                 :season_type,
                 :per_mode
 
-  def initialize(team_id,
-                 season_type = SeasonType.Default,
-                 per_mode = PerMode.Default)
+  def initialize(*args)
+    super(*args)
+
+    season_type ||= SeasonType.Default
+    per_mode ||= PerMode.Default
 
     uri = URI.parse(NbaRb::BASE_URL + 'teamyearbyyearstats')
     response = Net::HTTP.post_form(uri, 'TeamID': team_id,
@@ -574,6 +599,7 @@ class TeamPassTracking < TeamDashboard
 end
 
 class TeamVsPlayer
+  include Initializable
   attr_accessor :team_id,
                 :vs_player_id,
                 :measure_type,
@@ -600,30 +626,31 @@ class TeamVsPlayer
                 :last_n_games,
                 :data
 
-  def initialize(team_id,
-                 vs_player_id,
-                 measure_type = MeasureType.default,
-                 per_mode = PerMode.default,
-                 plus_minus = PlusMinus.default,
-                 pace_adjust = PaceAdjust.default,
-                 rank = Rank.default,
-                 league_id = League.default,
-                 season = NbaRb::CURRENT_SEASON,
-                 season_type = SeasonType.default,
-                 po_round = PlayoffRound.default,
-                 outcome = Outcome.default,
-                 location = Location.default,
-                 month = Month.default,
-                 season_segment = SeasonSegment.default,
-                 date_from = DateFrom.default,
-                 date_to = DateTo.default,
-                 opponent_team_id = OpponentTeamID.default,
-                 vs_conference = VsConference.default,
-                 vs_division = VsDivision.default,
-                 game_segment = GameSegment.default,
-                 period = Period.default,
-                 shot_clock_range = ShotClockRange.default,
-                 last_n_games = LastNGames.default)
+  def initialize(*args)
+    super(*args)
+
+    measure_type ||= MeasureType.default
+    per_mode ||= PerMode.default
+    plus_minus ||= PlusMinus.default
+    pace_adjust ||= PaceAdjust.default
+    rank ||= Rank.default
+    league_id ||= League.default
+    season ||= NbaRb::CURRENT_SEASON
+    season_type ||= SeasonType.default
+    po_round ||= PlayoffRound.default
+    outcome ||= Outcome.default
+    location ||= Location.default
+    month ||= Month.default
+    season_segment ||= SeasonSegment.default
+    date_from ||= DateFrom.default
+    date_to ||= DateTo.default
+    opponent_team_id ||= OpponentTeamID.default
+    vs_conference ||= VsConference.default
+    vs_division ||= VsDivision.default
+    game_segment ||= GameSegment.default
+    period ||= Period.default
+    shot_clock_range ||= ShotClockRange.default
+    last_n_games ||= LastNGames.default
 
     uri = URI.parse(NbaRb::BASE_URL + 'teamvsplayer')
     response = Net::HTTP.post_form(uri, 'TeamID': team_id,
