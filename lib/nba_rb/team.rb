@@ -146,7 +146,7 @@ class TeamDashboard
     shot_clock_range ||= ShotClockRange.default
     last_n_games ||= LastNGames.default
 
-    uri = URI.parse(NbaRb::BASE_URL + @endpoint)
+    uri = URI.parse(NbaRb::BASE_URL + endpoint)
     response = Net::HTTP.post_form(uri, 'TeamID': team_id,
                                         'MeasureType': measure_type,
                                         'PerMode': per_mode,

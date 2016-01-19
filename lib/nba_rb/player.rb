@@ -140,7 +140,7 @@ class PlayerDashboard
                 :shot_clock_range,
                 :last_n_games,
                 :data
-                
+
   @endpoint = ''
 
   def initialize(*args)
@@ -170,7 +170,7 @@ class PlayerDashboard
     shot_clock_range ||= ShotClockRange.default
     last_n_games ||= LastNGames.default
 
-    uri = URI.parse(NbaRb::BASE_URL + @endpoint)
+    uri = URI.parse(NbaRb::BASE_URL + endpoint)
     response = Net::HTTP.post_form(uri, 'PlayerID': player_id,
                                         'TeamID': team_id,
                                         'MeasureType': measure_type,
@@ -421,6 +421,11 @@ class PlayerCareer
   def endpoint
     self.class.endpoint
   end
+
+  attr_accessor :player_id,
+                :league_id,
+                :per_mode,
+                :data
 
   def initialize(*args)
     super(*args)
