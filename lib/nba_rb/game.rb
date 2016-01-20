@@ -1,4 +1,4 @@
-require 'initialize'
+
 
 class Boxscore
   @endpoint = 'boxscore'

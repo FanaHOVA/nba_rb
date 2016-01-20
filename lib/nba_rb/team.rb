@@ -1,4 +1,4 @@
-require 'initialize'
+
 
 class TeamList
   include Initializable
