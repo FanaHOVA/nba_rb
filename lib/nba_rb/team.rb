@@ -23,6 +23,7 @@ class TeamList
 end
 
 class TeamSummary
+  include Initializable
   attr_accessor :team_id,
                 :season,
                 :league_id,
@@ -32,7 +33,7 @@ class TeamSummary
   def initialize(*args)
     super(*args)
 
-    season ||= NbaRb::NbaRb::CURRENT_SEASON
+    season ||= NbaRb::CURRENT_SEASON
     league_id ||= League.NBA
     season_type ||= SeasonType.default
 
