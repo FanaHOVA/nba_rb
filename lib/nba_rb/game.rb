@@ -35,12 +35,12 @@ class Boxscore
     @end_range = end_range
 
     uri = URI.parse(NbaRb::BASE_URL + endpoint)
-    response = Net::HTTP.post_form(uri, 'GameID': @game_id,
-                                        'RangeType': range_type,
-                                        'StartPeriod': start_period,
-                                        'EndPeriod': end_period,
-                                        'StartRange': start_range,
-                                        'EndRange': end_range)
+    response = Net::HTTP.post_form(uri, 'GameID' => @game_id,
+                                        'RangeType' => range_type,
+                                        'StartPeriod' => start_period,
+                                        'EndPeriod' => end_period,
+                                        'StartRange' => start_range,
+                                        'EndRange' => end_range)
 
     parsed_response = JSON.parse(response.body)
     @data = parsed_response['resultSets']
@@ -185,9 +185,9 @@ class PlayByPlay
     @end_period = end_period
 
     uri = URI.parse(NbaRb::BASE_URL + 'playbyplay')
-    response = Net::HTTP.post_form(uri, 'GameID': @game_id,
-                                        'StartPeriod': start_period,
-                                        'EndPeriod': end_period)
+    response = Net::HTTP.post_form(uri, 'GameID' => @game_id,
+                                        'StartPeriod' => start_period,
+                                        'EndPeriod' => end_period)
 
     parsed_response = JSON.parse(response.body)
     @data = parsed_response['resultSets']
