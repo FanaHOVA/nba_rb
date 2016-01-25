@@ -1,4 +1,5 @@
 require 'helpers/initialize'
+require 'helpers/stats_hash'
 require 'nba_rb/version'
 require 'nba_rb/constants'
 require 'nba_rb/game'

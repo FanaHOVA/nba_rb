@@ -1,7 +1,7 @@
-
-
 class TeamList
+  include StatsHash
   include Initializable
+
   attr_accessor :league_id,
                 :data
 
@@ -18,12 +18,14 @@ class TeamList
   end
 
   def info
-    @data[0]
+    create_stats_hash(@data[0])
   end
 end
 
 class TeamSummary
   include Initializable
+  include StatsHash
+
   attr_accessor :team_id,
                 :season,
                 :league_id,
@@ -47,16 +49,17 @@ class TeamSummary
   end
 
   def info
-    @data[0]
+    create_stats_hash(@data[0])
   end
 
   def season_ranks
-    @data[1]
+    create_stats_hash(@data[1])
   end
 end
 
 class TeamCommonRoster
   include Initializable
+  include StatsHash
 
   attr_accessor :team_id,
                 :season,
@@ -76,16 +79,18 @@ class TeamCommonRoster
   end
 
   def roster
-    @data[0]
+    create_stats_hash(@data[0])
   end
 
   def coaches
-    @data[1]
+    create_stats_hash(@data[1])
   end
 end
 
 class TeamDashboard
   include Initializable
+  include StatsHash
+
   @endpoint = ''
 
   class << self
@@ -177,7 +182,7 @@ class TeamDashboard
   end
 
   def overall
-    @data[0]
+    create_stats_hash(@data[0])
   end
 end
 
@@ -185,23 +190,23 @@ class TeamGeneralSplits < TeamDashboard
   @endpoint = 'teamdashboardbygeneralsplits'
 
   def location
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def wins_losses
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def monthly
-    @data[3]
+    create_stats_hash(@data[3])
   end
 
   def pre_post_all_star
-    @data[4]
+    create_stats_hash(@data[4])
   end
 
   def days_rest
-    @data[5]
+    create_stats_hash(@data[5])
   end
 end
 
@@ -209,15 +214,15 @@ class TeamOpponentSplits < TeamDashboard
   @endpoint = 'teamdashboardbyopponent'
 
   def by_conference
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def by_division
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def by_opponent
-    @data[2]
+    create_stats_hash(@data[2])
   end
 end
 
@@ -225,23 +230,23 @@ class TeamLastNGamesSplits < TeamDashboard
   @endpoint = 'teamdashboardbylastngames'
 
   def last5
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def last10
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def last15
-    @data[3]
+    create_stats_hash(@data[3])
   end
 
   def last20
-    @data[4]
+    create_stats_hash(@data[4])
   end
 
   def gamenumber
-    @data[5]
+    create_stats_hash(@data[5])
   end
 end
 
@@ -249,19 +254,19 @@ class TeamInGameSplits < TeamDashboard
   @endpoint = 'teamdashboardbygamesplits'
 
   def by_half
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def by_period
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def by_score_margin
-    @data[3]
+    create_stats_hash(@data[3])
   end
 
   def by_actual_margin
-    @data[4]
+    create_stats_hash(@data[4])
   end
 end
 
@@ -270,47 +275,47 @@ class TeamClutchSplits < TeamDashboard
 
   def last5min_deficit_5point
     # Results in last 5 minutes <= 5 points
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def last3min_deficit_5point
     # Results in last 5 minutes <= 5 points
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def last1min_deficit_5point
     # Results in last 5 minutes <= 5 points
-    @data[3]
+    create_stats_hash(@data[3])
   end
 
   def last30sec_deficit_3point
     # Results in last 5 minutes <= 5 points
-    @data[4]
+    create_stats_hash(@data[4])
   end
 
   def last10sec_deficit_3point
     # Results in last 5 minutes <= 5 points
-    @data[5]
+    create_stats_hash(@data[5])
   end
 
   def last5min_plusminus_5point
     # Last 5 minutes +/= 5 points
-    @data[6]
+    create_stats_hash(@data[6])
   end
 
   def last3min_plusminus_5point
     # Last 3 minutes +/= 5 points
-    @data[7]
+    create_stats_hash(@data[7])
   end
 
   def last1min_plusminus_5point
     # Last 1 minutes +/= 5 points
-    @data[8]
+    create_stats_hash(@data[8])
   end
 
   def last30sec_plusminus_5point
     # Last 30 seconds +/= 3 points
-    @data[9]
+    create_stats_hash(@data[9])
   end
 end
 
@@ -318,31 +323,31 @@ class TeamShootingSplits < TeamDashboard
   @endpoint = 'teamdashboardbyshootingsplits'
 
   def shot_5ft
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def shot_8ft
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def shot_areas
-    @data[3]
+    create_stats_hash(@data[3])
   end
 
   def assisted_shots
-    @data[4]
+    create_stats_hash(@data[4])
   end
 
   def shot_type_summary
-    @data[5]
+    create_stats_hash(@data[5])
   end
 
   def shot_type_detail
-    @data[6]
+    create_stats_hash(@data[6])
   end
 
   def assissted_by
-    @data[7]
+    create_stats_hash(@data[7])
   end
 end
 
@@ -350,15 +355,15 @@ class TeamPerformanceSplits < TeamDashboard
   @endpoint = 'teamdashboardbyteamperformance'
 
   def score_differential
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def points_scored
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def points_against
-    @data[3]
+    create_stats_hash(@data[3])
   end
 end
 
@@ -366,12 +371,14 @@ class TeamYearOverYearSplits < TeamDashboard
   @endpoint = 'teamdashboardbyyearoveryear'
 
   def by_year
-    @data[1]
+    create_stats_hash(@data[1])
   end
 end
 
 class TeamLineups
   include Initializable
+  include StatsHash
+
   attr_accessor :team_id,
                 :game_id,
                 :group_quantity,
@@ -450,11 +457,11 @@ class TeamLineups
   end
 
   def overall
-  @data[0]
+  create_stats_hash(@data[0])
   end
 
   def lineups
-  @data[1]
+  create_stats_hash(@data[1])
   end
 end
 
@@ -462,7 +469,7 @@ class TeamPlayers < TeamDashboard
   @endpoint = 'teamplayerdashboard'
 
   def season_totals
-    @data[1]
+    create_stats_hash(@data[1])
   end
 end
 
@@ -470,11 +477,11 @@ class TeamPlayerOnOffDetail < TeamDashboard
   @endpoint = 'teamplayeronoffdetails'
 
   def on_court
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def off_court
-    @data[2]
+    create_stats_hash(@data[2])
   end
 end
 
@@ -482,16 +489,18 @@ class TeamPlayerOnOffSummary < TeamDashboard
   @endpoint = 'teamplayeronoffsummary'
 
   def on_court
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def off_court
-    @data[2]
+    create_stats_hash(@data[2])
   end
 end
 
 class TeamGameLogs
   include Initializable
+  include StatsHash
+
   attr_accessor :team_id,
                 :season,
                 :season_type,
@@ -513,12 +522,14 @@ class TeamGameLogs
   end
 
   def info
-    @data[1]
+    create_stats_hash(@data[1])
   end
 end
 
 class TeamSeasons
   include Initializable
+  include StatsHash
+
   attr_accessor :team_id,
                 :season_type,
                 :per_mode
@@ -539,7 +550,7 @@ class TeamSeasons
   end
 
   def info
-    @data[1]
+    create_stats_hash(@data[1])
   end
 end
 
@@ -547,23 +558,23 @@ class TeamShotTracking < TeamDashboard
   @endpoint = 'teamdashptshots'
 
   def shot_clock_shooting
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def dribble_shooting
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def closest_defender_shooting
-    @data[3]
+    create_stats_hash(@data[3])
   end
 
   def closest_defender_shooting_long
-    @data[4]
+    create_stats_hash(@data[4])
   end
 
   def touch_time_shooting
-    @data[5]
+    create_stats_hash(@data[5])
   end
 end
 
@@ -571,19 +582,19 @@ class TeamReboundTracking < TeamDashboard
   @endpoint = 'teamdashptreb'
 
   def shot_type_rebounding
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def contested_rebounding
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def shot_distance_rebounding
-    @data[3]
+    create_stats_hash(@data[3])
   end
 
   def rebound_distance_rebounding
-    @data[4]
+    create_stats_hash(@data[4])
   end
 end
 
@@ -591,16 +602,18 @@ class TeamPassTracking < TeamDashboard
   @endpoint = 'teamdashptpass'
 
   def passes_made
-    @data[0]
+    create_stats_hash(@data[0])
   end
 
   def passes_recieved
-    @data[1]
+    create_stats_hash(@data[1])
   end
 end
 
 class TeamVsPlayer
   include Initializable
+  include StatsHash
+
   attr_accessor :team_id,
                 :vs_player_id,
                 :measure_type,
@@ -684,38 +697,38 @@ class TeamVsPlayer
   end
 
   def overall
-    @data[0]
+    create_stats_hash(@data[0])
   end
 
   def vs_player_overall
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def on_off_court
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def shot_distance_overall
-    @data[3]
+    create_stats_hash(@data[3])
   end
 
   def shot_distance_on_court
-    @data[4]
+    create_stats_hash(@data[4])
   end
 
   def shot_distance_off_court
-    @data[5]
+    create_stats_hash(@data[5])
   end
 
   def shot_area_overall
-    @data[6]
+    create_stats_hash(@data[6])
   end
 
   def shot_area_on_court
-    @data[7]
+    create_stats_hash(@data[7])
   end
 
   def shot_area_off_court
-    @data[8]
+    create_stats_hash(@data[8])
   end
 end

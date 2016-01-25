@@ -1,6 +1,7 @@
-
-
 class Boxscore
+  include Initializable
+  include StatsHash
+
   @endpoint = 'boxscore'
 
   class << self
@@ -19,13 +20,14 @@ class Boxscore
                 :end_range,
                 :data
 
-  def initialize(game_id,
-                 range_type = RangeType.default,
-                 start_period = Period.default,
-                 end_period = Period.default,
-                 start_range = StartRange.default,
-                 end_range = EndRange.default
-                )
+  def initialize(*args)
+    super(*args)
+
+    range_type ||= RangeType.default
+    start_period ||= Period.default
+    end_period ||= Period.default
+    start_range ||= StartRange.default
+    end_range ||= EndRange.default
 
     @game_id = game_id
     @range_type = range_type
@@ -47,55 +49,55 @@ class Boxscore
   end
 
   def game_summary
-    @data[0]
+    create_stats_hash(@data[0])
   end
 
   def line_score
-    @data[1]
+    create_stats_hash(@data[1])
   end
 
   def season_series
-    @data[2]
+    create_stats_hash(@data[2])
   end
 
   def last_meeting
-    @data[3]
+    create_stats_hash(@data[3])
   end
 
   def player_stats
-    @data[4]
+    create_stats_hash(@data[4])
   end
 
   def team_stats
-    @data[5]
+    create_stats_hash(@data[5])
   end
 
   def other_stats
-    @data[6]
+    create_stats_hash(@data[6])
   end
 
   def officials
-    @data[7]
+    create_stats_hash(@data[7])
   end
 
   def game_info
-    @data[8]
+    create_stats_hash(@data[8])
   end
 
   def inactive_players
-    @data[9]
+    create_stats_hash(@data[9])
   end
 
   def available_video
-    @data[10]
+    create_stats_hash(@data[10])
   end
 
   def player_track
-    @data[11]
+    create_stats_hash(@data[11])
   end
 
   def player_track_team
-    @data[12]
+    create_stats_hash(@data[12])
   end
 end
 
@@ -107,11 +109,11 @@ class BoxscoreScoring < Boxscore
   end
 
   def sql_players_scoring
-    @data[13]
+    create_stats_hash(@data[13])
   end
 
   def sql_team_scoring
-    @data[14]
+    create_stats_hash(@data[14])
   end
 end
 
@@ -123,11 +125,11 @@ class BoxscoreUsage < Boxscore
   end
 
   def sql_players_usage
-    @data[13]
+    create_stats_hash(@data[13])
   end
 
   def sql_team_usage
-    @data[14]
+    create_stats_hash(@data[14])
   end
 end
 
@@ -139,11 +141,11 @@ class BoxscoreMisc < Boxscore
   end
 
   def sql_players_misc
-    @data[13]
+    create_stats_hash(@data[13])
   end
 
   def sql_team_misc
-    @data[14]
+    create_stats_hash(@data[14])
   end
 end
 
@@ -151,11 +153,11 @@ class BoxscoreAdvanced < Boxscore
   @endpoint = 'boxscoreadvanced'
 
   def sql_players_advanced
-    @data[13]
+    create_stats_hash(@data[13])
   end
 
   def sql_team_advanced
-    @data[14]
+    create_stats_hash(@data[14])
   end
 end
 
@@ -167,22 +169,23 @@ class BoxscoreFourFactors < Boxscore
   end
 
   def sql_players_four_factors
-    @data[13]
+    create_stats_hash(@data[13])
   end
 
   def sql_team_four_factors
-    @data[14]
+    create_stats_hash(@data[14])
   end
 end
 
 class PlayByPlay
-  def initialize(game_id,
-                 start_period = Period.default,
-                 end_period = Period.default)
+  include Initializable
+  include StatsHash
 
-    @game_id = game_id
-    @start_period = start_period
-    @end_period = end_period
+  def initialize(*args)
+    super(*args)
+
+    start_period ||= Period.default
+    end_period ||= Period.default
 
     uri = URI.parse(NbaRb::BASE_URL + 'playbyplay')
     response = Net::HTTP.post_form(uri, 'GameID' => @game_id,
@@ -194,10 +197,10 @@ class PlayByPlay
   end
 
   def info
-    @data[0]
+    create_stats_hash(@data[0])
   end
 
   def available_video
-    @data[1]
+    create_stats_hash(@data[1])
   end
 end
