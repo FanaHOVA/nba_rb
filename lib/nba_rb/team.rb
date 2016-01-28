@@ -128,8 +128,6 @@ class TeamDashboard
   def initialize(*args)
     super(*args)
 
-    puts season
-
     @measure_type ||= MeasureType.default
     @per_mode ||= PerMode.default
     @plus_minus ||= PlusMinus.default
@@ -177,8 +175,6 @@ class TeamDashboard
                                   'ShotClockRange' => shot_clock_range,
                                   'LastNGames' => last_n_games)
 
-    puts res
-
     @data = res['resultSets']
   end
 
@@ -190,7 +186,7 @@ end
 class TeamGeneralSplits < TeamDashboard
   @endpoint = 'teamdashboardbygeneralsplits'
 
-  def location
+  def by_location
     create_stats_hash(@data[1])
   end
 
