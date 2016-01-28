@@ -1,5 +1,6 @@
 class Boxscore
   include Initializable
+  include StatsRequest
   include StatsHash
 
   @endpoint = 'boxscore'
@@ -23,29 +24,20 @@ class Boxscore
   def initialize(*args)
     super(*args)
 
-    range_type ||= RangeType.default
-    start_period ||= Period.default
-    end_period ||= Period.default
-    start_range ||= StartRange.default
-    end_range ||= EndRange.default
+    @range_type ||= RangeType.default
+    @start_period ||= Period.default
+    @end_period ||= Period.default
+    @start_range ||= StartRange.default
+    @end_range ||= EndRange.default
 
-    @game_id = game_id
-    @range_type = range_type
-    @start_period = start_period
-    @end_period = end_period
-    @start_range = start_range
-    @end_range = end_range
+    res = stats_request(endpoint, 'GameID' => game_id,
+                                  'RangeType' => range_type,
+                                  'StartPeriod' => start_period,
+                                  'EndPeriod' => end_period,
+                                  'StartRange' => start_range,
+                                  'EndRange' => end_range)
 
-    uri = URI.parse(NbaRb::BASE_URL + endpoint)
-    response = Net::HTTP.post_form(uri, 'GameID' => @game_id,
-                                        'RangeType' => range_type,
-                                        'StartPeriod' => start_period,
-                                        'EndPeriod' => end_period,
-                                        'StartRange' => start_range,
-                                        'EndRange' => end_range)
-
-    parsed_response = JSON.parse(response.body)
-    @data = parsed_response['resultSets']
+    @data = res['resultSets']
   end
 
   def game_summary
@@ -179,21 +171,20 @@ end
 
 class PlayByPlay
   include Initializable
+  include StatsRequest
   include StatsHash
 
   def initialize(*args)
     super(*args)
 
-    start_period ||= Period.default
-    end_period ||= Period.default
+    @start_period ||= Period.default
+    @end_period ||= Period.default
 
-    uri = URI.parse(NbaRb::BASE_URL + 'playbyplay')
-    response = Net::HTTP.post_form(uri, 'GameID' => @game_id,
-                                        'StartPeriod' => start_period,
-                                        'EndPeriod' => end_period)
+    res = stats_request('playbyplay', 'GameID' => @game_id,
+                                      'StartPeriod' => start_period,
+                                      'EndPeriod' => end_period)
 
-    parsed_response = JSON.parse(response.body)
-    @data = parsed_response['resultSets']
+    @data = res['resultSets']
   end
 
   def info
