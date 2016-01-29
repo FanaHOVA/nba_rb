@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "A wrapper for the NBA stats API"
   spec.description   = "A wrapper for the NBA stats API"
-  spec.homepage      = "http://alessiofanelli.com"
+  spec.homepage      = "https://github.com/FanaHOVA/nba_rb"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
