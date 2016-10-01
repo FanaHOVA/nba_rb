@@ -24,11 +24,11 @@ class Boxscore
   def initialize(*args)
     super(*args)
 
-    @range_type ||= RangeType.default
-    @start_period ||= Period.default
-    @end_period ||= Period.default
-    @start_range ||= StartRange.default
-    @end_range ||= EndRange.default
+    @range_type ||= NbaRb::RangeType.default
+    @start_period ||= NbaRb::Period.default
+    @end_period ||= NbaRb::Period.default
+    @start_range ||= NbaRb::StartRange.default
+    @end_range ||= NbaRb::EndRange.default
 
     res = stats_request(endpoint, 'GameID' => game_id,
                                   'RangeType' => range_type,
@@ -100,11 +100,18 @@ class BoxscoreScoring < Boxscore
     self.class.endpoint
   end
 
-  def sql_players_scoring
+  def matchup
+    scores = players_scoring
+    home_team = scores[0]['TEAM_ABBREVIATION']
+    away_team = scores.last['TEAM_ABBREVIATION']
+    puts "#{home_team} vs #{away_team}"
+  end
+
+  def players_scoring
     create_stats_hash(@data[13])
   end
 
-  def sql_team_scoring
+  def team_scoring
     create_stats_hash(@data[14])
   end
 end
@@ -116,11 +123,11 @@ class BoxscoreUsage < Boxscore
     self.class.endpoint
   end
 
-  def sql_players_usage
+  def players_usage
     create_stats_hash(@data[13])
   end
 
-  def sql_team_usage
+  def team_usage
     create_stats_hash(@data[14])
   end
 end
@@ -132,11 +139,11 @@ class BoxscoreMisc < Boxscore
     self.class.endpoint
   end
 
-  def sql_players_misc
+  def players_misc
     create_stats_hash(@data[13])
   end
 
-  def sql_team_misc
+  def team_misc
     create_stats_hash(@data[14])
   end
 end
@@ -144,11 +151,11 @@ end
 class BoxscoreAdvanced < Boxscore
   @endpoint = 'boxscoreadvanced'
 
-  def sql_players_advanced
+  def players_advanced
     create_stats_hash(@data[13])
   end
 
-  def sql_team_advanced
+  def team_advanced
     create_stats_hash(@data[14])
   end
 end
@@ -160,11 +167,11 @@ class BoxscoreFourFactors < Boxscore
     self.class.endpoint
   end
 
-  def sql_players_four_factors
+  def players_four_factors
     create_stats_hash(@data[13])
   end
 
-  def sql_team_four_factors
+  def team_four_factors
     create_stats_hash(@data[14])
   end
 end
@@ -177,8 +184,8 @@ class PlayByPlay
   def initialize(*args)
     super(*args)
 
-    @start_period ||= Period.default
-    @end_period ||= Period.default
+    @start_period ||= NbaRb::Period.default
+    @end_period ||= NbaRb::Period.default
 
     res = stats_request('playbyplay', 'GameID' => @game_id,
                                       'StartPeriod' => start_period,

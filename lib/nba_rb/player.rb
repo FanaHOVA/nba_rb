@@ -63,7 +63,7 @@ class PlayerList
   def initialize(*args)
     super(*args)
 
-    @league_id ||= League.NBA
+    @league_id ||= NbaRb::League.NBA
     @season ||= NbaRb::CURRENT_SEASON
     @only_current ||= 1
 
@@ -150,28 +150,28 @@ class PlayerDashboard
     super(*args)
 
     @team_id ||= 0
-    @measure_type ||= MeasureType.default
-    @per_mode ||= PerMode.default
-    @plus_minus ||= PlusMinus.default
-    @pace_adjust ||= PaceAdjust.default
-    @rank ||= PaceAdjust.default
-    @league_id ||= League.default
+    @measure_type ||= NbaRb::MeasureType.default
+    @per_mode ||= NbaRb::PerMode.default
+    @plus_minus ||= NbaRb::PlusMinus.default
+    @pace_adjust ||= NbaRb::PaceAdjust.default
+    @rank ||= NbaRb::PaceAdjust.default
+    @league_id ||= NbaRb::League.default
     @season ||= NbaRb::CURRENT_SEASON
-    @season_type ||= SeasonType.default
-    @po_round ||= PlayoffRound.default
-    @outcome ||= Outcome.default
-    @location ||= Location.default
-    @month ||= Month.default
-    @season_segment ||= SeasonSegment.default
-    @date_from ||= DateFrom.default
-    @date_to ||= DateTo.default
-    @opponent_team_id ||= OpponentTeamID.default
-    @vs_conference ||= VsConference.default
-    @vs_division ||= VsDivision.default
-    @game_segment ||= GameSegment.default
-    @period ||= Period.default
-    @shot_clock_range ||= ShotClockRange.default
-    @last_n_games ||= LastNGames.default
+    @season_type ||= NbaRb::SeasonType.default
+    @po_round ||= NbaRb::PlayoffRound.default
+    @outcome ||= NbaRb::Outcome.default
+    @location ||= NbaRb::Location.default
+    @month ||= NbaRb::Month.default
+    @season_segment ||= NbaRb::SeasonSegment.default
+    @date_from ||= NbaRb::DateFrom.default
+    @date_to ||= NbaRb::DateTo.default
+    @opponent_team_id ||= NbaRb::OpponentTeamID.default
+    @vs_conference ||= NbaRb::VsConference.default
+    @vs_division ||= NbaRb::VsDivision.default
+    @game_segment ||= NbaRb::GameSegment.default
+    @period ||= NbaRb::Period.default
+    @shot_clock_range ||= NbaRb::ShotClockRange.default
+    @last_n_games ||= NbaRb::LastNGames.default
 
     res = stats_request(endpoint, 'PlayerID' => player_id,
                                   'TeamID' => team_id,
@@ -588,8 +588,8 @@ class PlayerCareer
   def initialize(*args)
     super(*args)
 
-    @per_mode ||= PerMode.per_game
-    @league_id ||= League.NBA
+    @per_mode ||= NbaRb::PerMode.per_game
+    @league_id ||= NbaRb::League.NBA
 
     res = stats_request('playercareerstats', 'PlayerID' => player_id,
                                              'LeagueID' => league_id,
@@ -705,9 +705,9 @@ class PlayerGameLogs
   def initialize(*args)
     super(*args)
 
-    @league_id ||= League.NBA
+    @league_id ||= NbaRb::League.NBA
     @season ||= NbaRb::CURRENT_SEASON
-    @season_type ||= SeasonType.regular
+    @season_type ||= NbaRb::SeasonType.regular
 
     res = stats_request('playergamelog', 'PlayerID' => player_id,
                                          'LeagueID' => league_id,
@@ -830,28 +830,28 @@ class PlayerVsPlayer
     super(*args)
 
     @team_id ||= 0
-    @measure_type ||= MeasureType.default
-    @per_mode ||= PerMode.default
-    @plus_minus ||= PlusMinus.default
-    @pace_adjust ||= PaceAdjust.default
-    @rank ||= PaceAdjust.default
-    @league_id ||= League.default
+    @measure_type ||= NbaRb::MeasureType.default
+    @per_mode ||= NbaRb::PerMode.default
+    @plus_minus ||= NbaRb::PlusMinus.default
+    @pace_adjust ||= NbaRb::PaceAdjust.default
+    @rank ||= NbaRb::PaceAdjust.default
+    @league_id ||= NbaRb::League.default
     @season ||= NbaRb::CURRENT_SEASON
-    @season_type ||= SeasonType.default
-    @po_round ||= PlayoffRound.default
-    @outcome ||= Outcome.default
-    @location ||= Location.default
-    @month ||= Month.default
-    @season_segment ||= SeasonSegment.default
-    @date_from ||= DateFrom.default
-    @date_to ||= DateTo.default
-    @opponent_team_id ||= OpponentTeamID.default
-    @vs_conference ||= VsConference.default
-    @vs_division ||= VsDivision.default
-    @game_segment ||= GameSegment.default
-    @period ||= Period.default
-    @shot_clock_range ||= ShotClockRange.default
-    @last_n_games ||= LastNGames.default
+    @season_type ||= NbaRb::SeasonType.default
+    @po_round ||= NbaRb::PlayoffRound.default
+    @outcome ||= NbaRb::Outcome.default
+    @location ||= NbaRb::Location.default
+    @month ||= NbaRb::Month.default
+    @season_segment ||= NbaRb::SeasonSegment.default
+    @date_from ||= NbaRb::DateFrom.default
+    @date_to ||= NbaRb::DateTo.default
+    @opponent_team_id ||= NbaRb::OpponentTeamID.default
+    @vs_conference ||= NbaRb::VsConference.default
+    @vs_division ||= NbaRb::VsDivision.default
+    @game_segment ||= NbaRb::GameSegment.default
+    @period ||= NbaRb::Period.default
+    @shot_clock_range ||= NbaRb::ShotClockRange.default
+    @last_n_games ||= NbaRb::LastNGames.default
 
     res = stats_request('playervsplayer', 'PlayerID' => player_id,
                                           'VsPlayerID' => vs_player_id,
