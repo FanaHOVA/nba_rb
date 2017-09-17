@@ -3,7 +3,7 @@ class Boxscore
   include StatsRequest
   include StatsHash
 
-  @endpoint = 'boxscore'
+  @endpoint = 'boxscoretraditionalv2'
 
   class << self
     attr_reader :endpoint
@@ -94,7 +94,7 @@ class Boxscore
 end
 
 class BoxscoreScoring < Boxscore
-  @endpoint = 'boxscorescoring'
+  @endpoint = 'boxscorescoringv2'
 
   def endpoint
     self.class.endpoint
@@ -104,7 +104,6 @@ class BoxscoreScoring < Boxscore
     scores = players_scoring
     home_team = scores[0]['TEAM_ABBREVIATION']
     away_team = scores.last['TEAM_ABBREVIATION']
-    puts "#{home_team} vs #{away_team}"
   end
 
   def players_scoring
@@ -117,7 +116,7 @@ class BoxscoreScoring < Boxscore
 end
 
 class BoxscoreUsage < Boxscore
-  @endpoint = 'boxscoreusage'
+  @endpoint = 'boxscoreusagev2'
 
   def endpoint
     self.class.endpoint
@@ -133,7 +132,7 @@ class BoxscoreUsage < Boxscore
 end
 
 class BoxscoreMisc < Boxscore
-  @endpoint = 'boxscoremisc'
+  @endpoint = 'boxscoremiscv2'
 
   def endpoint
     self.class.endpoint
@@ -149,7 +148,7 @@ class BoxscoreMisc < Boxscore
 end
 
 class BoxscoreAdvanced < Boxscore
-  @endpoint = 'boxscoreadvanced'
+  @endpoint = 'boxscoreadvancedv2'
 
   def players_advanced
     create_stats_hash(@data[13])
@@ -161,7 +160,7 @@ class BoxscoreAdvanced < Boxscore
 end
 
 class BoxscoreFourFactors < Boxscore
-  @endpoint = 'boxscorefourfactors'
+  @endpoint = 'boxscorefourfactorsv2'
 
   def endpoint
     self.class.endpoint

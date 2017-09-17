@@ -6,7 +6,7 @@ describe NbaRb do
   end
 
   it 'has a current season' do
-    expect(NbaRb::CURRENT_SEASON).to eq('2015-16')
+    expect(NbaRb::CURRENT_SEASON).to eq('2016-17')
   end
 
   it 'has a base url' do
