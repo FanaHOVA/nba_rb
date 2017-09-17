@@ -12,5 +12,5 @@ require 'json'
 
 module NbaRb
   BASE_URL = 'http://stats.nba.com/stats/'
-  CURRENT_SEASON = '2015-16'
+  CURRENT_SEASON = '2016-17'
 end
