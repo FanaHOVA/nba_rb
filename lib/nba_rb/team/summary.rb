@@ -1,6 +1,6 @@
 module NbaRb
   module Team
-    class Summary < BaseClass
+    class Summary < NbaRb::Team::BaseClass
       attr_accessor :team_id,
                     :season,
                     :league_id,

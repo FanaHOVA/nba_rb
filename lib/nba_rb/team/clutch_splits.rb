@@ -4,7 +4,7 @@ module NbaRb
       @endpoint = 'teamdashboardbyclutch'
 
       # Results in last X minutes <= X points
-      
+
       def last5min_deficit_5point
         create_stats_hash(@data[1])
       end
