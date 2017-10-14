@@ -1,6 +1,6 @@
 module NbaRb
   module Team
-    class CommonRoster < BaseClass
+    class CommonRoster < NbaRb::Team::BaseClass
       attr_accessor :team_id,
                     :season,
                     :data
