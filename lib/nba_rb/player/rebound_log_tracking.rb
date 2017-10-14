@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class ReboundLogTracking < PlayerDashboard
+    class ReboundLogTracking < NbaRb::Player::Dashboard
       @endpoint = 'playerdashptreboundlogs'
     end
   end

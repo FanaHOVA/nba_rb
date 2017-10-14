@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class OpponentSplits < PlayerDashboard
+    class OpponentSplits < NbaRb::Player::Dashboard
       @endpoint = 'playerdashboardbyopponent'
 
       def by_conference

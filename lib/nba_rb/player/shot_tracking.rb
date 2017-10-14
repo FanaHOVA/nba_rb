@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class ShotTracking < PlayerDashboard
+    class ShotTracking < NbaRb::Player::Dashboard
       @endpoint = 'playerdashptshots'
 
       def general_shooting

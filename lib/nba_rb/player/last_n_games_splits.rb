@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class LastNGamesSplits < PlayerDashboard
+    class LastNGamesSplits < NbaRb::Player::Dashboard
       @endpoint = 'playerdashboardbylastngames'
 
       def last5

@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class PerformanceSplits < PlayerDashboard
+    class PerformanceSplits < NbaRb::Player::Dashboard
       @endpoint = 'playerdashboardbyteamperformance'
 
       def score_differential

@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class PassTracking < PlayerDashboard
+    class PassTracking < NbaRb::Player::Dashboard
       @endpoint = 'playerdashptpass'
 
       def passes_made

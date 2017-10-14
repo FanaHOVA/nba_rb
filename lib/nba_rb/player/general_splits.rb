@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class GeneralSplits < PlayerDashboard
+    class GeneralSplits < NbaRb::Player::Dashboard
       @endpoint = 'playerdashboardbygeneralsplits'
 
       def location

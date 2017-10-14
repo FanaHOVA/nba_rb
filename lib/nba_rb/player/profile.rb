@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class Profile < PlayerCareer
+    class Profile < NbaRb::Player::Career
       @endpoint = 'playerprofilev2'
 
       def season_highs

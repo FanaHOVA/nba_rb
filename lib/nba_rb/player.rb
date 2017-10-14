@@ -5,6 +5,29 @@ module NbaRb
       include StatsRequest
       include StatsHash
 
+      require_relative './player/dashboard'
+      require_relative './player/career'
+      require_relative './player/clutch_splits'
+      require_relative './player/defense_tracking'
+      require_relative './player/game_logs'
+      require_relative './player/general_splits'
+      require_relative './player/in_game_splits'
+      require_relative './player/last_n_games_splits'
+      require_relative './player/list'
+      require_relative './player/opponent_splits'
+      require_relative './player/pass_tracking'
+      require_relative './player/performance_splits'
+      require_relative './player/player_vs_player'
+      require_relative './player/profile'
+      require_relative './player/rebound_log_tracking'
+      require_relative './player/shooting_splits'
+      require_relative './player/rebound_tracking'
+      require_relative './player/shooting_splits'
+      require_relative './player/shot_log_tracking'
+      require_relative './player/shot_tracking'
+      require_relative './player/summary'
+      require_relative './player/year_over_year_splits'
+
       attr_accessor :first_name,
                     :last_name,
                     :only_current,

@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class ReboundTracking < PlayerDashboard
+    class ReboundTracking < NbaRb::Player::Dashboard
       @endpoint = 'playerdashptreb'
 
       def shot_type_rebounding

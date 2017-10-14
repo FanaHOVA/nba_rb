@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class ClutchSplits < PlayerDashboard
+    class ClutchSplits < NbaRb::Player::Dashboard
       @endpoint = 'playerdashboardbyclutch'
 
       def last5min_deficit_5point

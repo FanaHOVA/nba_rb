@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class DefenseTracking < PlayerDashboard
+    class DefenseTracking < NbaRb::Player::Dashboard
       @endpoint = 'playerdashptshotdefend'
     end
   end

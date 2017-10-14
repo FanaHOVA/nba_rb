@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class InGameSplits < PlayerDashboard
+    class InGameSplits < NbaRb::Player::Dashboard
       @endpoint = 'playerdashboardbygamesplits'
 
       def by_half

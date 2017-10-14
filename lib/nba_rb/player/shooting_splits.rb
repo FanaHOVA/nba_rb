@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class ShootingSplits < PlayerDashboard
+    class ShootingSplits < NbaRb::Player::Dashboard
       @endpoint = 'playerdashboardbyshootingsplits'
 
       def shot_5ft

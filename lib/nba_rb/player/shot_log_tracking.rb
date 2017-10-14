@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class ShotLogTracking < PlayerDashboard
+    class ShotLogTracking < NbaRb::Player::Dashboard
       @endpoint = 'playerdashptshotlog'
     end
   end

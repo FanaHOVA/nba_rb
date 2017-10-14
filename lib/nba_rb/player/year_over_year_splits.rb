@@ -1,6 +1,6 @@
 module NbaRb
   module Player
-    class YearOverYearSplits < PlayerDashboard
+    class YearOverYearSplits < NbaRb::Player::Dashboard
       @endpoint = 'playerdashboardbyyearoveryear'
 
       def splits_by_year
