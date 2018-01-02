@@ -3,8 +3,7 @@ module NbaRb
     class Stats < Dashboard
       @endpoint = 'leaguedashteamstats'
 
-      attr_accessor :league_id,
-                    :data
+      attr_accessor :data
 
       def initialize(*args)
         super(*args)
