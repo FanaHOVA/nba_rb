@@ -25,6 +25,7 @@ module NbaRb
     require_relative './team/seasons'
     require_relative './team/shooting_splits'
     require_relative './team/shot_tracking'
+    require_relative './team/stats'
     require_relative './team/summary'
     require_relative './team/vs_player'
     require_relative './team/year_over_year_splits'
