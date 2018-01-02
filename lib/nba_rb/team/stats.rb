@@ -8,7 +8,6 @@ module NbaRb
 
       def initialize(*args)
         super(*args)
-        puts @data
       end
 
       def overall
