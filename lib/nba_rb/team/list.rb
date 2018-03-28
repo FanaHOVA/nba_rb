@@ -1,6 +1,6 @@
 module NbaRb
   module Team
-    class List < NbaRb::Team::BaseClass
+    class List < BaseClass
       attr_accessor :league_id,
                     :data
 

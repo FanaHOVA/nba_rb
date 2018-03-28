@@ -1,6 +1,6 @@
 module NbaRb
   module Game
-    class PlayByPlay < NbaRb::Team::BaseClass
+    class PlayByPlay < BaseClass
       include Initializable
       include StatsRequest
       include StatsHash

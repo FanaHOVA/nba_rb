@@ -1,6 +1,6 @@
 module NbaRb
   module Game
-    class Hustle < NbaRb::Team::BaseClass
+    class Hustle < BaseClass
       @endpoint = 'hustlestatsboxscore'
 
       attr_accessor :game_id

@@ -1,6 +1,6 @@
 module NbaRb
   module Team
-    class Dashboard < NbaRb::Team::BaseClass
+    class Dashboard < BaseClass
       @endpoint = ''
 
       class << self

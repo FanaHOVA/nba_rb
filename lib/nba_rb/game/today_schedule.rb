@@ -1,6 +1,6 @@
 module NbaRb
   module Game
-    class TodaySchedule < NbaRb::Team::BaseClass
+    class TodaySchedule < BaseClass
       @endpoint = 'scoreboardV2'
 
       class << self
