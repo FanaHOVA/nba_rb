@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://stats.nba.com/stats/boxscorescoringv2?EndPeriod=0&EndRange=0&GameID=0041400122&RangeType=0&StartPeriod=0&StartRange=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/57.0.2987.133 Safari/537.36
+      Dnt:
+      - '1'
+      Accept-Encoding:
+      - gzip, deflate, sdch
+      Accept-Language:
+      - en
+      Origin:
+      - http://stats.nba.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Last-Modified:
+      - Fri, 30 Mar 2018 16:48:19 GMT
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '1343'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - Fri, 30 Mar 2018 16:48:48 GMT
+      Date:
+      - Fri, 30 Mar 2018 16:48:48 GMT
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - ak_bmsc=6662862F05138C93254F40EA8739570AD590ADC7D1280000706ABE5AF76AE915~plaSS20/qjYg2UUQcOwEIWDA97t7yvGFKT96dqoi6LnjcqZBLqrVHjhtBw3FyCW7pX/Fb6oN0mdUCOmaQRekbO3cmGm1dMX3nR6PHwPN9YidKaNim0yGkwqJ5omFLIhZDSd1DW6JEWhFzCkGxrRqtRK17ioHXJBvcH7BFNPvrjOmYAczAzOWk2dkS89JHV37T0X+NEpf9XxFNP9LS84FP3ujUVHixjvTsAkNUOFlbF8bc=;
+        expires=Fri, 30 Mar 2018 18:48:48 GMT; max-age=7200; path=/; domain=.nba.com;
+        HttpOnly
+    body:
+      encoding: ASCII-8BIT
+      string: '{"resource":"boxscore","parameters":{"GameID":"0041400122","StartPeriod":0,"EndPeriod":0,"StartRange":0,"EndRange":0,"RangeType":0},"resultSets":[{"name":"sqlPlayersScoring","headers":["GAME_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY","PLAYER_ID","PLAYER_NAME","START_POSITION","COMMENT","MIN","PCT_FGA_2PT","PCT_FGA_3PT","PCT_PTS_2PT","PCT_PTS_2PT_MR","PCT_PTS_3PT","PCT_PTS_FB","PCT_PTS_FT","PCT_PTS_OFF_TOV","PCT_PTS_PAINT","PCT_AST_2PM","PCT_UAST_2PM","PCT_AST_3PM","PCT_UAST_3PM","PCT_AST_FGM","PCT_UAST_FGM"],"rowSet":[["0041400122",1610612749,"MIL","Milwaukee",203507,"Giannis
+        Antetokounmpo","F","","37:52",1.0,0.0,0.667,0.333,0.0,0.0,0.333,0.0,0.333,0.5,0.5,0.0,0.0,0.5,0.5],["0041400122",1610612749,"MIL","Milwaukee",101141,"Ersan
+        Ilyasova","F","","23:44",0.7,0.3,0.75,0.0,0.0,0.25,0.25,0.25,0.75,1.0,0.0,0.0,0.0,1.0,0.0],["0041400122",1610612749,"MIL","Milwaukee",2585,"Zaza
+        Pachulia","C","","22:32",1.0,0.0,0.857,0.857,0.0,0.0,0.143,0.0,0.0,0.333,0.667,0.0,0.0,0.333,0.667],["0041400122",1610612749,"MIL","Milwaukee",203114,"Khris
+        Middleton","G","","38:19",0.65,0.35,0.455,0.182,0.409,0.091,0.136,0.227,0.273,0.2,0.8,0.667,0.333,0.375,0.625],["0041400122",1610612749,"MIL","Milwaukee",203487,"Michael
+        Carter-Williams","G","","32:51",0.917,0.083,0.833,0.167,0.0,0.0,0.167,0.0,0.667,0.2,0.8,0.0,0.0,0.2,0.8],["0041400122",1610612749,"MIL","Milwaukee",203089,"John
+        Henson","","","25:28",0.889,0.111,1.0,0.0,0.0,0.0,0.0,0.25,1.0,0.75,0.25,0.0,0.0,0.75,0.25],["0041400122",1610612749,"MIL","Milwaukee",201162,"Jared
+        Dudley","","","17:02",0.5,0.5,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0],["0041400122",1610612749,"MIL","Milwaukee",201573,"Jerryd
+        Bayless","","","15:09",1.0,0.0,0.75,0.25,0.0,0.0,0.25,0.25,0.5,0.0,1.0,0.0,0.0,0.0,1.0],["0041400122",1610612749,"MIL","Milwaukee",201564,"O.J.
+        Mayo","","","27:03",0.7,0.3,0.75,0.5,0.0,0.25,0.25,0.5,0.25,0.0,1.0,0.0,0.0,0.0,1.0],["0041400122",1610612749,"MIL","Milwaukee",203898,"Tyler
+        Ennis","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["0041400122",1610612749,"MIL","Milwaukee",203268,"Jorge
+        Gutierrez","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["0041400122",1610612749,"MIL","Milwaukee",203948,"Johnny
+        O''Bryant III","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["0041400122",1610612749,"MIL","Milwaukee",203101,"Miles
+        Plumlee","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["0041400122",1610612741,"CHI","Chicago",2399,"Mike
+        Dunleavy","F","","33:24",0.25,0.75,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0],["0041400122",1610612741,"CHI","Chicago",2200,"Pau
+        Gasol","F","","33:35",0.917,0.083,0.727,0.182,0.0,0.0,0.273,0.182,0.545,1.0,0.0,0.0,0.0,1.0,0.0],["0041400122",1610612741,"CHI","Chicago",201149,"Joakim
+        Noah","C","","32:19",1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,0.0],["0041400122",1610612741,"CHI","Chicago",202710,"Jimmy
+        Butler","G","","46:00",0.526,0.474,0.452,0.129,0.29,0.0,0.258,0.0,0.323,0.857,0.143,0.333,0.667,0.7,0.3],["0041400122",1610612741,"CHI","Chicago",201565,"Derrick
+        Rose","G","","38:05",0.571,0.429,0.267,0.133,0.4,0.0,0.333,0.2,0.133,1.0,0.0,1.0,0.0,1.0,0.0],["0041400122",1610612741,"CHI","Chicago",201959,"Taj
+        Gibson","","","11:00",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],["0041400122",1610612741,"CHI","Chicago",203503,"Tony
+        Snell","","","13:21",0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0],["0041400122",1610612741,"CHI","Chicago",202703,"Nikola
+        Mirotic","","","22:21",0.667,0.333,0.5,0.0,0.375,0.25,0.125,0.25,0.5,0.5,0.5,1.0,0.0,0.667,0.333],["0041400122",1610612741,"CHI","Chicago",201166,"Aaron
+        Brooks","","","9:55",0.333,0.667,0.4,0.0,0.6,0.0,0.0,0.0,0.4,0.0,1.0,1.0,0.0,0.5,0.5],["0041400122",1610612741,"CHI","Chicago",203946,"Cameron
+        Bairstow","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["0041400122",1610612741,"CHI","Chicago",203926,"Doug
+        McDermott","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["0041400122",1610612741,"CHI","Chicago",1737,"Nazr
+        Mohammed","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["0041400122",1610612741,"CHI","Chicago",202734,"E''Twaun
+        Moore","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]]},{"name":"sqlTeamsScoring","headers":["GAME_ID","TEAM_ID","TEAM_NAME","TEAM_ABBREVIATION","TEAM_CITY","MIN","PCT_FGA_2PT","PCT_FGA_3PT","PCT_PTS_2PT","PCT_PTS_2PT_MR","PCT_PTS_3PT","PCT_PTS_FB","PCT_PTS_FT","PCT_PTS_OFF_TOV","PCT_PTS_PAINT","PCT_AST_2PM","PCT_UAST_2PM","PCT_AST_3PM","PCT_UAST_3PM","PCT_AST_FGM","PCT_UAST_FGM"],"rowSet":[["0041400122",1610612749,"Bucks","MIL","Milwaukee","240:00",0.811,0.189,0.683,0.244,0.146,0.073,0.171,0.183,0.439,0.357,0.643,0.75,0.25,0.406,0.594],["0041400122",1610612741,"Bulls","CHI","Chicago","240:00",0.593,0.407,0.418,0.088,0.396,0.022,0.187,0.077,0.33,0.842,0.158,0.833,0.167,0.839,0.161]]}]}'
+    http_version: 
+  recorded_at: Fri, 30 Mar 2018 16:48:49 GMT
+recorded_with: VCR 3.0.3
