@@ -1,7 +1,9 @@
 module NbaRb
-  module Team
-    class Dashboard < BaseClass
-      @endpoint = ''
+  module Player
+    class Dashboard
+      include Initializable
+      include StatsRequest
+      include StatsHash
 
       class << self
         attr_reader :endpoint
@@ -11,7 +13,8 @@ module NbaRb
         self.class.endpoint
       end
 
-      attr_accessor :team_id,
+      attr_accessor :player_id,
+                    :team_id,
                     :measure_type,
                     :per_mode,
                     :plus_minus,
@@ -36,15 +39,17 @@ module NbaRb
                     :last_n_games,
                     :data
 
+      @endpoint = ''
+
       def initialize(*args)
         super(*args)
 
-        @endpoint = ''
+        @team_id ||= 0
         @measure_type ||= NbaRb::MeasureType.default
         @per_mode ||= NbaRb::PerMode.default
         @plus_minus ||= NbaRb::PlusMinus.default
         @pace_adjust ||= NbaRb::PaceAdjust.default
-        @rank ||= NbaRb::Rank.default
+        @rank ||= NbaRb::PaceAdjust.default
         @league_id ||= NbaRb::League.default
         @season ||= NbaRb::CURRENT_SEASON
         @season_type ||= NbaRb::SeasonType.default
@@ -63,29 +68,30 @@ module NbaRb
         @shot_clock_range ||= NbaRb::ShotClockRange.default
         @last_n_games ||= NbaRb::LastNGames.default
 
-        res = stats_request(endpoint, 'TeamID' => team_id,
-                                       'MeasureType' => measure_type,
-                                       'PerMode' => per_mode,
-                                       'PlusMinus' => plus_minus,
-                                       'PaceAdjust' => pace_adjust,
-                                       'Rank' => rank,
-                                       'LeagueID' => league_id,
-                                       'Season' => season,
-                                       'SeasonType' => season_type,
-                                       'PORound' => po_round,
-                                       'Outcome' => outcome,
-                                       'Location' => location,
-                                       'Month' => month,
-                                       'SeasonSegment' => season_segment,
-                                       'DateFrom' => date_from,
-                                       'DateTo' => date_to,
-                                       'OpponentTeamID' => opponent_team_id,
-                                       'VsConference' => vs_conference,
-                                       'VsDivision' => vs_division,
-                                       'GameSegment' => game_segment,
-                                       'Period' => period,
-                                       'ShotClockRange' => shot_clock_range,
-                                       'LastNGames' => last_n_games)
+        res = stats_request(endpoint, 'PlayerID' => player_id,
+                                      'TeamID' => team_id,
+                                      'MeasureType' => measure_type,
+                                      'PerMode' => per_mode,
+                                      'PlusMinus' => plus_minus,
+                                      'PaceAdjust' => pace_adjust,
+                                      'Rank' => rank,
+                                      'LeagueID' => league_id,
+                                      'Season' => season,
+                                      'SeasonType' => season_type,
+                                      'PORound' => po_round,
+                                      'Outcome' => outcome,
+                                      'Location' => location,
+                                      'Month' => month,
+                                      'SeasonSegment' => season_segment,
+                                      'DateFrom' => date_from,
+                                      'DateTo' => date_to,
+                                      'OpponentTeamID' => opponent_team_id,
+                                      'VsConference' => vs_conference,
+                                      'VsDivision' => vs_division,
+                                      'GameSegment' => game_segment,
+                                      'Period' => period,
+                                      'ShotClockRange' => shot_clock_range,
+                                      'LastNGames' => last_n_games)
 
         @data = res['resultSets']
       end

@@ -1,0 +1,107 @@
+version: 2
+
+jobs:
+  build_2_5:
+    parallelism: 1
+    docker:
+      - image: circleci/ruby:2.5.0
+        environment:
+          - RAILS_ENV: test
+          - RACK_ENV: test
+    steps:
+      - checkout
+
+      # Restore cache for gems and install missing ones, if any
+      - restore_cache:
+          key: '{{ checksum "Gemfile" }}'
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: '{{ checksum "Gemfile" }}'
+          paths:
+            - vendor/bundle
+
+      # Run tests and store recap
+      - run:
+          name: Run tests
+          command: bundle exec rspec
+
+  build_2_4:
+    parallelism: 1
+    docker:
+      - image: circleci/ruby:2.4
+        environment:
+          - RAILS_ENV: test
+          - RACK_ENV: test
+    steps:
+      - checkout
+
+      # Restore cache for gems and install missing ones, if any
+      - restore_cache:
+          key: '{{ checksum "Gemfile" }}'
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: '{{ checksum "Gemfile" }}'
+          paths:
+            - vendor/bundle
+
+      # Run tests and store recap
+      - run:
+          name: Run tests
+          command: bundle exec rspec
+
+  build_2_3:
+    parallelism: 1
+    docker:
+      - image: circleci/ruby:2.3
+        environment:
+          - RAILS_ENV: test
+          - RACK_ENV: test
+    steps:
+      - checkout
+
+      # Restore cache for gems and install missing ones, if any
+      - restore_cache:
+          key: '{{ checksum "Gemfile" }}'
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: '{{ checksum "Gemfile" }}'
+          paths:
+            - vendor/bundle
+
+      # Run tests and store recap
+      - run:
+          name: Run tests
+          command: bundle exec rspec
+
+  build_2_2:
+    parallelism: 1
+    docker:
+      - image: circleci/ruby:2.2
+        environment:
+          - RAILS_ENV: test
+          - RACK_ENV: test
+    steps:
+      - checkout
+
+      # Restore cache for gems and install missing ones, if any
+      - restore_cache:
+          key: '{{ checksum "Gemfile" }}'
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: '{{ checksum "Gemfile" }}'
+          paths:
+            - vendor/bundle
+
+      # Run tests and store recap
+      - run:
+          name: Run tests
+          command: bundle exec rspec
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - build_2_5
+      - build_2_4
+      - build_2_3
+      - build_2_2

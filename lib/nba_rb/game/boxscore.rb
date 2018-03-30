@@ -1,6 +1,6 @@
 module NbaRb
   module Game
-    class Boxscore < NbaRb::Team::BaseClass
+    class Boxscore < BaseClass
       @endpoint = 'boxscoretraditionalv2'
 
       class << self

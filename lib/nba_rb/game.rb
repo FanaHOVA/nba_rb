@@ -1,5 +1,5 @@
 module NbaRb
-  module Team
+  module Game
     class BaseClass
       include StatsHash
       include Initializable
@@ -13,5 +13,6 @@ module NbaRb
     require_relative './game/boxscore_scoring'
     require_relative './game/boxscore_usage'
     require_relative './game/play_by_play'
+    require_relative './game/today_schedule'
   end
 end
