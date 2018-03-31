@@ -1,41 +1,23 @@
-# NbaRb
+# nba_rb
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nba_rb`. To experiment with that code, run `bin/console` for an interactive prompt.
+nba_rb is a Ruby wrapper for the `stats.nba.com` API. It supports most endpoints (feel free to open an issue if something is missing!) and provides helper methods to extract certain information from the responses. 
 
-TODO: Delete this and the text above, and describe your gem
+There's three main modules: `NbaRb::Game`, `NbaRb::Team`, `NbaRb::Player`. Each of them contains classes related to endpoints for that scope. You can find some examples in the `spec` folder, I plan to write some more docs in the future (Happy to see PRs for this!). 
 
-## Installation
+Here's a couple more examples:
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'nba_rb'
+```
+# Getting the Boxscore for one of today's games
+todays_schedule = NbaRb::Game::TodaySchedule.new
+todays_first_game_id = todays_schedule.matchup_teams_info[0]['GAME_ID'] # Get the Game ID of the first game
+game_boxscore = NbaRb::Game::Boxscore.new(game_id: todays_first_game_id)
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install nba_rb
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/nba_rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+```
+# Find Suns stats from a game they played 5 days ago
+5_days_ago_schedule = NbaRb::Game::TodaySchedule.new(game_date: Date.today - 5)
+game =  todays_schedule.matchup_teams_info.select { |data| data['TEAM_ABBREVIATION'] == 'PHX' }.first
+game_boxscore = NbaRb::Game::Boxscore.new(game_id: game['GAME_ID'])
+game_stats = game_boxscore.line_score.select { |data| data['TEAM_ABBREVIATION'] == 'PHX' }.first
+puts "The #{game_stats['TEAM_CITY']} #{game_stats['TEAM_NAME']} scored #{game_stats['PTS']} points on #{game_stats['FGM']}/#{game_stats['FGA']} shooting"
+```
