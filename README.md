@@ -1,5 +1,10 @@
 # nba_rb
 
+[![CircleCI](https://circleci.com/gh/FanaHOVA/nba_rb/tree/master.svg?style=svg)](https://circleci.com/gh/FanaHOVA/nba_rb/tree/master)
+[![Gem](https://img.shields.io/gem/v/nba_rb.svg?style=flat)](http://rubygems.org/gems/nba_rb "View this project in Rubygems")
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
+
 nba_rb is a Ruby wrapper for the `stats.nba.com` API. It supports most endpoints (feel free to open an issue if something is missing!) and provides helper methods to extract certain information from the responses. 
 
 There's three main modules: `NbaRb::Game`, `NbaRb::Team`, `NbaRb::Player`. Each of them contains classes related to endpoints for that scope. You can find some examples in the `spec` folder, I plan to write some more docs in the future (Happy to see PRs for this!). 
