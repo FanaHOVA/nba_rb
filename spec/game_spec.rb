@@ -1,23 +1,27 @@
 require 'spec_helper'
 
 describe 'Games endpoints' do
-  it 'has working Boxscore endpoint' do
-    boxscore = NbaRb::Game::Boxscore.new(game_id: '0041400122')
+  it 'has working BoxscoreSummary endpoint' do
+    boxscore = NbaRb::Game::BoxscoreSummary.new(game_id: '0041400122')
     expect(boxscore.data).to_not eq(nil)
-    expect(boxscore.endpoint).to eq('boxscoretraditionalv2')
+    expect(boxscore.endpoint).to eq('boxscoresummaryv2')
     expect(boxscore.game_summary).to_not eq(nil)
-    expect(boxscore.line_score).to_not eq(nil)
-    expect(boxscore.season_series).to_not eq(nil)
+    expect(boxscore.other_stats).to_not eq(nil)
     expect(boxscore.last_meeting).to_not eq(nil)
-    expect(boxscore.player_stats).to_not eq(nil)
-    expect(boxscore.team_stats).to_not eq(nil)
     expect(boxscore.other_stats).to_not eq(nil)
     expect(boxscore.officials).to_not eq(nil)
     expect(boxscore.game_info).to_not eq(nil)
     expect(boxscore.inactive_players).to_not eq(nil)
     expect(boxscore.available_video).to_not eq(nil)
-    expect(boxscore.player_track).to_not eq(nil)
-    expect(boxscore.player_track_team).to_not eq(nil)
+  end
+
+  it 'has working Boxscore endpoint' do
+    boxscore = NbaRb::Game::Boxscore.new(game_id: '0041400122')
+    expect(boxscore.data).to_not eq(nil)
+    expect(boxscore.endpoint).to eq('boxscoretraditionalv2')
+    expect(boxscore.player_stats).to_not eq(nil)
+    expect(boxscore.team_stats).to_not eq(nil)
+    expect(boxscore.team_starter_bench_stats).to_not eq(nil)
   end
 
   it 'has working BoxscoreScoring endpoint' do

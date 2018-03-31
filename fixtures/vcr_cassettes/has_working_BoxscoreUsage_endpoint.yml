@@ -28,7 +28,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Last-Modified:
-      - Sat, 31 Mar 2018 14:59:21 GMT
+      - Sat, 31 Mar 2018 15:27:07 GMT
       Server:
       - Microsoft-IIS/7.5
       X-Aspnet-Version:
@@ -40,16 +40,16 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, must-revalidate
       Expires:
-      - Sat, 31 Mar 2018 14:59:21 GMT
+      - Sat, 31 Mar 2018 15:29:21 GMT
       Date:
-      - Sat, 31 Mar 2018 14:59:21 GMT
+      - Sat, 31 Mar 2018 15:29:21 GMT
       Connection:
       - keep-alive
       Vary:
       - Accept-Encoding
       Set-Cookie:
-      - ak_bmsc=9AAE389B0F8DC2F7B045E80ABA883203D590ADC7D128000049A2BF5A398CDE72~plTYcICqJkHdz8FVNeCcGYLkFm6MPxMeA6O2ekWa0CSTh9koDUPm3F5OTTNO3Q9FUddPsKIy8uvBRa1uNOHmAOVnyE5reMzTHMy4NEA8xp/hd9I7MvSdxQ+1FvJdFAc93goDtmmF71YOjywq+Z1U0qw229qF51PMwZ4YiPA0lXOi2719mHHvolmf3vu/QVhfXCIxp3vCxPoWPmRSWAetGBYsWAWbIZ8OzVrauuaEfo/sQ=;
-        expires=Sat, 31 Mar 2018 16:59:21 GMT; max-age=7200; path=/; domain=.nba.com;
+      - ak_bmsc=466EC031347B904C7486E1A68866B8280210B59ECC5B000051A9BF5A08955163~plweBKjumCKCjk8ha+zK4zrYiUl2vly22z0CjyRsqQ46t9MbFAsLxsoFKR7fA7JUhDdDroVBKIxNVuMpyXxaOgra/SE5Di920NSzo1wpInPtdRE6UrJGhPuVSsbNkT0a24G+NSvJhV2vil5RSFpfrHYZ4pSb0aqCXYcewBtasDzIkYe9rkIGY/6jQuEDg7MwI+u0FknjY5O3o1rVvHYL+4JKhKAU+d4pbjOT5h6pUOlnY=;
+        expires=Sat, 31 Mar 2018 17:29:21 GMT; max-age=7200; path=/; domain=.nba.com;
         HttpOnly
     body:
       encoding: ASCII-8BIT
@@ -81,5 +81,5 @@ http_interactions:
         Mohammed","","DNP - Coach''s Decision                  ",null,0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["0041400122",1610612741,"CHI","Chicago",202734,"E''Twaun
         Moore","","DNP - Coach''s Decision                  ",null,0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]]},{"name":"sqlTeamsUsage","headers":["GAME_ID","TEAM_ID","TEAM_NAME","TEAM_ABBREVIATION","TEAM_CITY","MIN","USG_PCT","PCT_FGM","PCT_FGA","PCT_FG3M","PCT_FG3A","PCT_FTM","PCT_FTA","PCT_OREB","PCT_DREB","PCT_REB","PCT_AST","PCT_TOV","PCT_STL","PCT_BLK","PCT_BLKA","PCT_PF","PCT_PFD","PCT_PTS"],"rowSet":[["0041400122",1610612749,"Bucks","MIL","Milwaukee","240:00",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],["0041400122",1610612741,"Bulls","CHI","Chicago","240:00",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]}]}'
     http_version: 
-  recorded_at: Sat, 31 Mar 2018 14:59:22 GMT
+  recorded_at: Sat, 31 Mar 2018 15:29:21 GMT
 recorded_with: VCR 3.0.3

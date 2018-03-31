@@ -25,7 +25,7 @@ module NbaRb
         super(*args)
 
         @season ||= NbaRb::CURRENT_SEASON
-        @season_type ||= NbaRb::SeasonType.Default
+        @season_type ||= NbaRb::SeasonType.default
         @range_type ||= NbaRb::RangeType.default
         @start_period ||= NbaRb::Period.default
         @end_period ||= NbaRb::Period.default

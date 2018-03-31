@@ -28,7 +28,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Last-Modified:
-      - Sat, 31 Mar 2018 14:59:23 GMT
+      - Sat, 31 Mar 2018 15:27:09 GMT
       Server:
       - Microsoft-IIS/7.5
       X-Aspnet-Version:
@@ -40,16 +40,16 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, must-revalidate
       Expires:
-      - Sat, 31 Mar 2018 14:59:23 GMT
+      - Sat, 31 Mar 2018 15:29:22 GMT
       Date:
-      - Sat, 31 Mar 2018 14:59:23 GMT
+      - Sat, 31 Mar 2018 15:29:22 GMT
       Connection:
       - keep-alive
       Vary:
       - Accept-Encoding
       Set-Cookie:
-      - ak_bmsc=BC92378CAF2D8410F24FC05160416E75D590ADCD9C2800004BA2BF5A128BDA6D~plQj/+IrsJJpvOrcqfpyN5Xi+raw+UoJT/GoRV7RfeWuXzkT3onsPKS8x4216ns54lyDviP51Jhh7T0btHb6SPCNrdjEI2Z3pCbv5+ZLOydGhJELdjIcGuknXpwSjerEkcWreoiO1YKmCl3rTzbTPf4V+TKrG8Cdr+neV82xTq2NEwQyBfCyLew+Teyzu3iE1VhcFXMVZjWeKkW/Xj84xxZFpl/9frM+P2v3QdUxY1cq8=;
-        expires=Sat, 31 Mar 2018 16:59:23 GMT; max-age=7200; path=/; domain=.nba.com;
+      - ak_bmsc=F839FE0AA1F10132AA4F1D583BC6A9C40210B59ECC5B000052A9BF5ABE1D2B0A~plNoExtq6rg8d3Wc6c/FGqLH41AZLdcHeNQGdbHx9udVuWn4CHsLQxE8+53OCrOH5eIMv9El2N0KhRR5wRfrR6+VNoZBcSr8TaRO3Xkt9lw8D/AIB6hSdkCnESjeNWu24ORygL+l0pglIu2HQb43LrvQABal+mCdUrMl3bMTU4Kzo8YFYO0/iovvmp+zAw8ctKy4Ets+5Qpi/VY10wHP9hVsIbJGcJRzwoSmABjNXg0X8=;
+        expires=Sat, 31 Mar 2018 17:29:22 GMT; max-age=7200; path=/; domain=.nba.com;
         HttpOnly
     body:
       encoding: ASCII-8BIT
@@ -57,5 +57,5 @@ http_interactions:
         Antetokounmpo","Antetokounmpo, Giannis","G. Antetokounmpo","1994-12-06T00:00:00","Greece","Greece","Greece/Greece","6-11","222",4,"34","Forward","Active",1610612749,"Bucks","MIL","bucks","Milwaukee","giannis_antetokounmpo",2013,2017,"N","Y","2013","1","15"]]},{"name":"PlayerHeadlineStats","headers":["PLAYER_ID","PLAYER_NAME","TimeFrame","PTS","AST","REB","PIE"],"rowSet":[[203507,"Giannis
         Antetokounmpo","2017-18",27.300000,4.800000,10.000000,0.189]]},{"name":"AvailableSeasons","headers":["SEASON_ID"],"rowSet":[["12013"],["22013"],["12014"],["22014"],["42014"],["12015"],["22015"],["12016"],["22016"],["32016"],["42016"],["12017"],["22017"],["32017"]]}]}'
     http_version: 
-  recorded_at: Sat, 31 Mar 2018 14:59:24 GMT
+  recorded_at: Sat, 31 Mar 2018 15:29:22 GMT
 recorded_with: VCR 3.0.3

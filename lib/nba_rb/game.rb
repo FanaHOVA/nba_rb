@@ -7,6 +7,7 @@ module NbaRb
     end
 
     require_relative './game/boxscore'
+    require_relative './game/boxscore_summary'
     require_relative './game/boxscore_advanced'
     require_relative './game/boxscore_four_factors'
     require_relative './game/boxscore_misc'
