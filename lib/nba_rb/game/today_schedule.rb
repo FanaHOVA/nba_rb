@@ -20,7 +20,7 @@ module NbaRb
         super(*args)
 
         @league_id ||= NbaRb::League.default
-        @game_date ||= Date.current.to_s.tr('-', ' ')
+        @game_date ||= Date.now.to_s.tr('-', ' ')
         @day_offset ||= 0
 
         res = stats_request(endpoint, 'LeagueID' => league_id,
