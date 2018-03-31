@@ -4,11 +4,11 @@ module NbaRb
       @endpoint = 'boxscoreadvancedv2'
 
       def players_advanced
-        create_stats_hash(@data[13])
+        create_stats_hash(@data[0])
       end
 
       def team_advanced
-        create_stats_hash(@data[14])
+        create_stats_hash(@data[1])
       end
     end
   end

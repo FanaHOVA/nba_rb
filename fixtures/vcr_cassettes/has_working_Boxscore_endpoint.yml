@@ -28,7 +28,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Last-Modified:
-      - Fri, 30 Mar 2018 16:48:18 GMT
+      - Sat, 31 Mar 2018 15:29:21 GMT
       Server:
       - Microsoft-IIS/7.5
       X-Aspnet-Version:
@@ -40,16 +40,16 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, must-revalidate
       Expires:
-      - Fri, 30 Mar 2018 16:48:48 GMT
+      - Sat, 31 Mar 2018 15:29:21 GMT
       Date:
-      - Fri, 30 Mar 2018 16:48:48 GMT
+      - Sat, 31 Mar 2018 15:29:21 GMT
       Connection:
       - keep-alive
       Vary:
       - Accept-Encoding
       Set-Cookie:
-      - ak_bmsc=443075466138208D07E8B3F8148F6967D590ADCD9C280000706ABE5A98612D1A~plrksWJ4co0F53QpzCMZ9BmGJr+oZKcMWu5t/g9UKP5l4a/NVPpExKsEwuIrUo6/PgF6hxD2zg7ei6OwbMGN5P2nrpIa85Cagj//t0yQnbo16PU+2Un9dSh5QPCTMM8g4whzZjXFRVoagiblRcqRIRXFTFnREDMTUAZnGq6WT9NYpH57BBzHjaM4sK1FiwZRg5OKtJ6/YXaS6VT7YMNssyR4SfUyb5MTqd96m23OLzDwQ=;
-        expires=Fri, 30 Mar 2018 18:48:48 GMT; max-age=7200; path=/; domain=.nba.com;
+      - ak_bmsc=AF5228DE5A36337AF59F18F26AED6B6C0210B59ECC5B000051A9BF5A18CA7A09~plyuborFl+ys/ZtSk59gmmLcC+Lrf2ITxuiysCkwoaSxZDq9/o198+6uRHNnT+f6YR7WWBN/lD64BJGac0mzmcm1X3Of/5TBSmTzboznvnDLywmf7/B+FVjfl1WZcZjXlegdhI9obz5bB/pX18wnp9G0OCV0NGtefYh32WoJo9wPWXO558912+9qTlhgI9xja1mnr5FcJE5BboD2qDsklE4N6P6u8iu65Y6PR5jnySQ3A=;
+        expires=Sat, 31 Mar 2018 17:29:21 GMT; max-age=7200; path=/; domain=.nba.com;
         HttpOnly
     body:
       encoding: ASCII-8BIT
@@ -81,5 +81,5 @@ http_interactions:
         Mohammed","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["0041400122",1610612741,"CHI","Chicago",202734,"E''Twaun
         Moore","","DNP - Coach''s Decision                  ",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]]},{"name":"TeamStats","headers":["GAME_ID","TEAM_ID","TEAM_NAME","TEAM_ABBREVIATION","TEAM_CITY","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","STL","BLK","TO","PF","PTS","PLUS_MINUS"],"rowSet":[["0041400122",1610612749,"Bucks","MIL","Milwaukee","240:00",32,90,0.356,4,17,0.235,14,17,0.824,9,39,48,13,10,9,4,22,82,-9.000000],["0041400122",1610612741,"Bulls","CHI","Chicago","240:00",31,81,0.383,12,33,0.364,17,27,0.630,14,50,64,26,2,10,13,19,91,9.000000]]},{"name":"TeamStarterBenchStats","headers":["GAME_ID","TEAM_ID","TEAM_NAME","TEAM_ABBREVIATION","TEAM_CITY","STARTERS_BENCH","MIN","FGM","FGA","FG_PCT","FG3M","FG3A","FG3_PCT","FTM","FTA","FT_PCT","OREB","DREB","REB","AST","STL","BLK","TO","PF","PTS"],"rowSet":[["0041400122",1610612749,"Bucks","MIL","Milwaukee","Starters","155:18",21,61,0.344,3,11,0.273,10,12,0.833,5,29,34,9,5,7,4,13,55],["0041400122",1610612749,"Bucks","MIL","Milwaukee","Bench","84:42",11,29,0.379,1,6,0.167,4,5,0.800,4,10,14,4,5,2,0,9,27],["0041400122",1610612741,"Bulls","CHI","Chicago","Starters","183:23",25,66,0.379,9,25,0.360,16,25,0.640,12,45,57,22,1,7,9,10,75],["0041400122",1610612741,"Bulls","CHI","Chicago","Bench","56:37",6,15,0.400,3,8,0.375,1,2,0.500,2,5,7,4,1,3,4,9,16]]}]}'
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 16:48:48 GMT
+  recorded_at: Sat, 31 Mar 2018 15:29:21 GMT
 recorded_with: VCR 3.0.3

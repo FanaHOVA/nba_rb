@@ -11,6 +11,6 @@ require 'net/http'
 require 'json'
 
 module NbaRb
-  BASE_URL = 'http://stats.nba.com/stats/'
-  CURRENT_SEASON = '2016-17'
+  BASE_URL = 'http://stats.nba.com/stats/'.freeze
+  CURRENT_SEASON = '2017-18'.freeze
 end

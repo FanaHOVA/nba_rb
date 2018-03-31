@@ -11,14 +11,15 @@ module NbaRb
         scores = players_scoring
         home_team = scores[0]['TEAM_ABBREVIATION']
         away_team = scores.last['TEAM_ABBREVIATION']
+        "#{away_team} @ #{home_team}"
       end
 
       def players_scoring
-        create_stats_hash(@data[13])
+        create_stats_hash(@data[0])
       end
 
       def team_scoring
-        create_stats_hash(@data[14])
+        create_stats_hash(@data[1])
       end
     end
   end

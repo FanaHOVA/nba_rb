@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://stats.nba.com/stats/boxscoresummaryv2?EndPeriod=0&EndRange=0&GameID=0041400122&RangeType=0&Season=2017-18&SeasonType=Regular%20Season&StartPeriod=0&StartRange=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/57.0.2987.133 Safari/537.36
+      Dnt:
+      - '1'
+      Accept-Encoding:
+      - gzip, deflate, sdch
+      Accept-Language:
+      - en
+      Origin:
+      - http://stats.nba.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Last-Modified:
+      - Sat, 31 Mar 2018 15:27:05 GMT
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '1084'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - Sat, 31 Mar 2018 15:29:20 GMT
+      Date:
+      - Sat, 31 Mar 2018 15:29:20 GMT
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - ak_bmsc=AD71C2B8755309FE5A94A8463AF8D5290210B5C7CD15000050A9BF5AEBF5C948~plQwqHkw8nagllHs5jm1assKqbClBO3ZzlXCl+4wm0XZrZ5xtz9oVQQYHkJixlmRqFzsHQ/HAuN8n9i9OjSdeGPqE958oOWILF7fRtuYv/w9nIVik6w57ABZxRqLZS8m8OyGVFW1+RjV0tFN0HdsM9jo/FI3ndDNt07y+LJ7wLXzFmvA94mZUhE+rgAEdGszY19FhFmJJZwgM86bw1KVkyaNqPhweyj6HDifNBLe1xz8c=;
+        expires=Sat, 31 Mar 2018 17:29:20 GMT; max-age=7200; path=/; domain=.nba.com;
+        HttpOnly
+    body:
+      encoding: ASCII-8BIT
+      string: '{"resource":"boxscoresummary","parameters":{"GameID":"0041400122"},"resultSets":[{"name":"GameSummary","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","GAME_STATUS_ID","GAME_STATUS_TEXT","GAMECODE","HOME_TEAM_ID","VISITOR_TEAM_ID","SEASON","LIVE_PERIOD","LIVE_PC_TIME","NATL_TV_BROADCASTER_ABBREVIATION","LIVE_PERIOD_TIME_BCAST","WH_STATUS"],"rowSet":[["2015-04-20T00:00:00",1,"0041400122",3,"Final","20150420/MILCHI",1610612741,1610612749,"2014",4,"
+        ","TNT","Q4   - TNT",1]]},{"name":"OtherStats","headers":["LEAGUE_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY","PTS_PAINT","PTS_2ND_CHANCE","PTS_FB","LARGEST_LEAD","LEAD_CHANGES","TIMES_TIED","TEAM_TURNOVERS","TOTAL_TURNOVERS","TEAM_REBOUNDS","PTS_OFF_TO"],"rowSet":[["00",1610612741,"CHI","Chicago",30,11,2,10,12,9,2,15,7,15],["00",1610612749,"MIL","Milwaukee",36,7,6,9,12,9,0,4,2,7]]},{"name":"Officials","headers":["OFFICIAL_ID","FIRST_NAME","LAST_NAME","JERSEY_NUM"],"rowSet":[[1176,"Monty","McCutchen","13  "],[1194,"Bill","Spooner","22  "],[202058,"James","Williams","60  "]]},{"name":"InactivePlayers","headers":["PLAYER_ID","FIRST_NAME","LAST_NAME","JERSEY_NUM","TEAM_ID","TEAM_CITY","TEAM_NAME","TEAM_ABBREVIATION"],"rowSet":[[203953,"Jabari","Parker","12  ",1610612749,"Milwaukee","Bucks","MIL"],[203996,"Damien","Inglis","17  ",1610612749,"Milwaukee","Bucks","MIL"],[2550,"Kirk","Hinrich","12  ",1610612741,"Chicago","Bulls","CHI"]]},{"name":"GameInfo","headers":["GAME_DATE","ATTENDANCE","GAME_TIME"],"rowSet":[["MONDAY,
+        APRIL 20, 2015",21661,"2:18"]]},{"name":"LineScore","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY_NAME","TEAM_NICKNAME","TEAM_WINS_LOSSES","PTS_QTR1","PTS_QTR2","PTS_QTR3","PTS_QTR4","PTS_OT1","PTS_OT2","PTS_OT3","PTS_OT4","PTS_OT5","PTS_OT6","PTS_OT7","PTS_OT8","PTS_OT9","PTS_OT10","PTS"],"rowSet":[["2015-04-20T00:00:00",1,"0041400122",1610612741,"CHI","Chicago","Bulls","2-0",11,28,32,20,0,0,0,0,0,0,0,0,0,0,91],["2015-04-20T00:00:00",1,"0041400122",1610612749,"MIL","Milwaukee","Bucks","0-2",16,22,30,14,0,0,0,0,0,0,0,0,0,0,82]]},{"name":"LastMeeting","headers":["GAME_ID","LAST_GAME_ID","LAST_GAME_DATE_EST","LAST_GAME_HOME_TEAM_ID","LAST_GAME_HOME_TEAM_CITY","LAST_GAME_HOME_TEAM_NAME","LAST_GAME_HOME_TEAM_ABBREVIATION","LAST_GAME_HOME_TEAM_POINTS","LAST_GAME_VISITOR_TEAM_ID","LAST_GAME_VISITOR_TEAM_CITY","LAST_GAME_VISITOR_TEAM_NAME","LAST_GAME_VISITOR_TEAM_CITY1","LAST_GAME_VISITOR_TEAM_POINTS"],"rowSet":[["0041400122","0041400121","2015-04-18T00:00:00",1610612741,"Chicago","Bulls","CHI",103,1610612749,"Milwaukee","Bucks","MIL",91]]},{"name":"SeasonSeries","headers":["GAME_ID","HOME_TEAM_ID","VISITOR_TEAM_ID","GAME_DATE_EST","HOME_TEAM_WINS","HOME_TEAM_LOSSES","SERIES_LEADER"],"rowSet":[["0041400122",1610612741,1610612749,"2015-04-20T00:00:00",4,2,"Chicago"]]},{"name":"AvailableVideo","headers":["GAME_ID","VIDEO_AVAILABLE_FLAG","PT_AVAILABLE","PT_XYZ_AVAILABLE","WH_STATUS","HUSTLE_STATUS","HISTORICAL_STATUS"],"rowSet":[["0041400122",1,1,1,1,0,0]]}]}'
+    http_version: 
+  recorded_at: Sat, 31 Mar 2018 15:29:20 GMT
+recorded_with: VCR 3.0.3

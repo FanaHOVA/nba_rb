@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=1&LeagueID=00&Season=2016-17
+    uri: http://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=1&LeagueID=00&Season=2017-18
     body:
       encoding: US-ASCII
       string: ''
@@ -28,7 +28,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Last-Modified:
-      - Fri, 30 Mar 2018 16:48:23 GMT
+      - Sat, 31 Mar 2018 15:27:40 GMT
       Server:
       - Microsoft-IIS/7.5
       X-Aspnet-Version:
@@ -36,149 +36,575 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Content-Length:
-      - '4345'
+      - '15293'
       Cache-Control:
       - no-cache, no-store, must-revalidate
       Expires:
-      - Fri, 30 Mar 2018 16:48:53 GMT
+      - Sat, 31 Mar 2018 15:29:22 GMT
       Date:
-      - Fri, 30 Mar 2018 16:48:53 GMT
+      - Sat, 31 Mar 2018 15:29:22 GMT
       Connection:
       - keep-alive
       Vary:
       - Accept-Encoding
       Set-Cookie:
-      - ak_bmsc=CC22AB32C30B4FA6B3685C430920B207D590ADCD9C280000756ABE5A50B8B12A~pl+D4wdNE6tZCyOS5J+e/L2YmjFfH5pv6bWBJxsPnFVBtg+0j3tA9dK9y+PNsMq/zPoxjge8hGIo/QjkckOXU5f/r7vam9k7k5fGrEK8GcyUarsuHoG/Uja3mQo3tq9Gh5Pt334y55+ceBQ2bfUcI2rvVvVJFc0x2xruissGz0a5lKXzbDqHSzyv4j/e4vJd7tYf2DM+x7w9ZmrkE7tFe3BP9m3ocQbS5Li5EQS6Q+QxA=;
-        expires=Fri, 30 Mar 2018 18:48:53 GMT; max-age=7200; path=/; domain=.nba.com;
+      - ak_bmsc=E8C25B6CE5144D3729AD1C3D46225F420210B5C7CD15000052A9BF5A4FEEA241~plcYRAUd0SmWjaj6CAMKTIs2PmbSBrfTu5M4HSXUb9eMboLGdH28xqgSdzoCHgI6YzoVmh/hUDwtMHT20sQQlQ1gf7kKl2JcFuLDjbZoA4OGVmUzZhcLi9F6ytfIP48Qxg0kJCr32OIKp8hmerM10aSeEJLnC9HGoFgfWzsrkrVKX8xrSdlyoKhmPfyhsv4vUm8la9xn8r65voOJUtCqHNUP4UT+Dru2G7GGiHjIj5iII=;
+        expires=Sat, 31 Mar 2018 17:29:22 GMT; max-age=7200; path=/; domain=.nba.com;
         HttpOnly
     body:
       encoding: ASCII-8BIT
-      string: '{"resource":"commonallplayers","parameters":{"LeagueID":"00","Season":"2016-17","IsOnlyCurrentSeason":1},"resultSets":[{"name":"CommonAllPlayers","headers":["PERSON_ID","DISPLAY_LAST_COMMA_FIRST","DISPLAY_FIRST_LAST","ROSTERSTATUS","FROM_YEAR","TO_YEAR","PLAYERCODE","TEAM_ID","TEAM_CITY","TEAM_NAME","TEAM_ABBREVIATION","TEAM_CODE","GAMES_PLAYED_FLAG"],"rowSet":[[201582,"Ajinca,
-        Alexis","Alexis Ajinca",1,"2008","2017","alexis_ajinca",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[202730,"Allen,
-        Lavoy","Lavoy Allen",1,"2011","2016","lavoy_allen",1610612754,"Indiana","Pacers","IND","pacers","Y"],[2754,"Allen,
-        Tony","Tony Allen",1,"2004","2017","tony_allen",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[2365,"Andersen,
-        Chris","Chris Andersen",0,"2001","2016","chris_andersen",0,"","","","","Y"],[101187,"Anderson,
-        Alan","Alan Anderson",1,"2005","2016","alan_anderson",1610612746,"LA","Clippers","LAC","clippers","Y"],[201202,"Anthony,
-        Joel","Joel Anthony",1,"2007","2016","joel_anthony",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[2571,"Barbosa,
-        Leandro","Leandro Barbosa",1,"2003","2016","leandro_barbosa",1610612756,"Phoenix","Suns","PHX","suns","Y"],[2440,"Barnes,
-        Matt","Matt Barnes",1,"2002","2016","matt_barnes",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[101138,"Bass,
-        Brandon","Brandon Bass",1,"2005","2016","brandon_bass",1610612746,"LA","Clippers","LAC","clippers","Y"],[203461,"Bennett,
-        Anthony","Anthony Bennett",0,"2013","2016","anthony_bennett",0,"","","","","Y"],[1627791,"Bentil,
-        Ben","Ben Bentil",0,"2016","2016","ben_bentil",0,"","","","","Y"],[1627762,"Bolomboy,
-        Joel","Joel Bolomboy",1,"2016","2017","joel_bolomboy",1610612762,"Utah","Jazz","UTA","jazz","Y"],[2547,"Bosh,
-        Chris","Chris Bosh",1,"2003","2016","chris_bosh",1610612748,"Miami","Heat","MIA","heat","Y"],[1626148,"Brown,
-        Anthony","Anthony Brown",0,"2015","2017","anthony_brown",0,"","","","","Y"],[201628,"Brown,
-        Bobby","Bobby Brown",1,"2008","2017","bobby_brown",1610612745,"Houston","Rockets","HOU","rockets","Y"],[1627852,"Brussino,
-        Nicolas","Nicolas Brussino",1,"2016","2017","nicolas_brussino",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[203477,"Canaan,
-        Isaiah","Isaiah Canaan",1,"2013","2017","isaiah_canaan",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[1626176,"Christmas,
-        Rakeem","Rakeem Christmas",1,"2015","2016","rakeem_christmas",1610612754,"Indiana","Pacers","IND","pacers","Y"],[203902,"Christon,
-        Semaj","Semaj Christon",1,"2016","2016","semaj_christon",1610612760,"Oklahoma
-        City","Thunder","OKC","thunder","Y"],[202708,"Cole, Norris","Norris Cole",1,"2011","2016","norris_cole",1610612760,"Oklahoma
-        City","Thunder","OKC","thunder","Y"],[202348,"Crawford, Jordan","Jordan Crawford",1,"2010","2017","jordan_crawford",1610612740,"New
-        Orleans","Pelicans","NOP","pelicans","Y"],[203552,"Curry, Seth","Seth Curry",1,"2013","2017","seth_curry",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[2564,"Diaw,
-        Boris","Boris Diaw",1,"2003","2016","boris_diaw",1610612762,"Utah","Jazz","UTA","jazz","Y"],[201962,"Douglas,
-        Toney","Toney Douglas",0,"2009","2016","toney_douglas",0,"","","","","Y"],[2399,"Dunleavy,
-        Mike","Mike Dunleavy",1,"2002","2016","mike_dunleavy",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[101145,"Ellis,
-        Monta","Monta Ellis",1,"2005","2016","monta_ellis",1610612754,"Indiana","Pacers","IND","pacers","Y"],[203105,"Ezeli,
-        Festus","Festus Ezeli",1,"2012","2016","festus_ezeli",1610612757,"Portland","Trail
-        Blazers","POR","blazers","Y"],[200770,"Farmar, Jordan","Jordan Farmar",0,"2006","2016","jordan_farmar",0,"","","","","Y"],[200751,"Foye,
-        Randy","Randy Foye",1,"2006","2016","randy_foye",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1627868,"Garino,
-        Patricio","Patricio Garino",1,"2016","2016","patricio_garino",1610612753,"Orlando","Magic","ORL","magic","Y"],[1627771,"Gbinije,
-        Michael","Michael Gbinije",1,"2016","2016","michael_gbinije",1610612765,"Detroit","Pistons","DET","pistons","Y"],[202087,"Gee,
-        Alonzo","Alonzo Gee",0,"2009","2016","alonzo_gee",0,"","","","","Y"],[1626780,"Gibson,
-        Jonathan","Jonathan Gibson",0,"2016","2016","jonathan_gibson",0,"","","","","Y"],[203462,"Goodwin,
-        Archie","Archie Goodwin",1,"2013","2016","archie_goodwin",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[203120,"Hamilton,
-        Justin","Justin Hamilton",1,"2013","2016","justin_hamilton",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1627773,"Hammons,
-        AJ","AJ Hammons",1,"2016","2016","aj_hammons",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[202712,"Harper,
-        Justin","Justin Harper",0,"2011","2016","justin_harper",0,"","","","","Y"],[202412,"Harris,
-        Manny","Manny Harris",1,"2010","2016","manny_harris",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[201150,"Hawes,
-        Spencer","Spencer Hawes",1,"2007","2016","spencer_hawes",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[201945,"Henderson,
-        Gerald","Gerald Henderson",1,"2009","2016","gerald_henderson",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[201579,"Hibbert,
-        Roy","Roy Hibbert",1,"2008","2016","roy_hibbert",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[201941,"Hill,
-        Jordan","Jordan Hill",1,"2009","2016","jordan_hill",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[1626273,"Huertas,
-        Marcelo","Marcelo Huertas",0,"2015","2016","marcelo_huertas",0,"","","","","Y"],[2743,"Humphries,
-        Kris","Kris Humphries",1,"2004","2016","kris_humphries",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[203510,"Jackson,
-        Pierre","Pierre Jackson",0,"2016","2016","pierre_jackson",0,"","","","","Y"],[203098,"Jenkins,
-        John","John Jenkins",0,"2012","2016","john_jenkins",0,"","","","","Y"],[1627744,"Johnson,
-        Brice","Brice Johnson",1,"2016","2017","brice_johnson",1610612746,"LA","Clippers","LAC","clippers","Y"],[2563,"Jones,
-        Dahntay","Dahntay Jones",1,"2003","2016","dahntay_jones",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[2592,"Jones,
-        James","James Jones",1,"2003","2016","james_jones",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[203093,"Jones,
-        Terrence","Terrence Jones",0,"2012","2016","terrence_jones",0,"","","","","Y"],[203527,"Kelly,
-        Ryan","Ryan Kelly",1,"2013","2016","ryan_kelly",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[202688,"Knight,
-        Brandon","Brandon Knight",1,"2011","2017","brandon_knight",1610612756,"Phoenix","Suns","PHX","suns","Y"],[1627851,"Kuzminskas,
-        Mindaugas","Mindaugas Kuzminskas",1,"2016","2017","mindaugas_kuzminskas",1610612752,"New
-        York","Knicks","NYK","knicks","Y"],[1627879,"Laprovittola, Nicolas","Nicolas
-        Laprovittola",0,"2016","2016","nicolas_laprovittola",0,"","","","","Y"],[201951,"Lawson,
-        Ty","Ty Lawson",1,"2009","2016","ty_lawson",1610612758,"Sacramento","Kings","SAC","kings","Y"],[101135,"Lee,
-        David","David Lee",1,"2005","2016","david_lee",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[1627848,"Long,
-        Shawn","Shawn Long",1,"2016","2016","shawn_long",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[101249,"Lucas
-        III, John","John Lucas III",0,"2005","2016","john_lucas iii",0,"","","","","Y"],[1627815,"Mac,
-        Sheldon","Sheldon Mac",1,"2016","2016","sheldon_mac",1610612764,"Washington","Wizards","WAS","wizards","Y"],[203949,"McAdoo,
-        James Michael","James Michael McAdoo",1,"2014","2017","james michael_mcadoo",1610612744,"Golden
-        State","Warriors","GSW","warriors","Y"],[203909,"McDaniels, KJ","KJ McDaniels",1,"2014","2016","kj_mcdaniels",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[203895,"McRae,
-        Jordan","Jordan McRae",0,"2015","2016","jordan_mcrae",0,"","","","","Y"],[201177,"McRoberts,
-        Josh","Josh McRoberts",1,"2007","2017","josh_mcroberts",1610612748,"Miami","Heat","MIA","heat","Y"],[2034,"Miller,
-        Mike","Mike Miller",1,"2000","2016","mike_miller",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[202407,"Millsap,
-        Elijah","Elijah Millsap",1,"2014","2016","elijah_millsap",1610612756,"Phoenix","Suns","PHX","suns","Y"],[201627,"Morrow,
-        Anthony","Anthony Morrow",1,"2008","2016","anthony_morrow",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[202700,"Motiejunas,
-        Donatas","Donatas Motiejunas",1,"2012","2016","donatas_motiejunas",1610612740,"New
-        Orleans","Pelicans","NOP","pelicans","Y"],[1626254,"Ndour, Maurice","Maurice
-        Ndour",1,"2016","2016","maurice_ndour",1610612752,"New York","Knicks","NYK","knicks","Y"],[202390,"Neal,
-        Gary","Gary Neal",0,"2010","2016","gary_neal",0,"","","","","Y"],[203094,"Nicholson,
-        Andrew","Andrew Nicholson",1,"2012","2016","andrew_nicholson",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[200779,"Novak,
-        Steve","Steve Novak",0,"2006","2016","steve_novak",0,"","","","","Y"],[203948,"O''Bryant
-        III, Johnny","Johnny O''Bryant III",1,"2014","2017","johnny_o''bryant iii",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[1627849,"Ochefu,
-        Daniel","Daniel Ochefu",1,"2016","2016","daniel_ochefu",1610612764,"Washington","Wizards","WAS","wizards","Y"],[202620,"Onuaku,
-        Arinze","Arinze Onuaku",0,"2013","2016","arinze_onuaku",0,"","","","","Y"],[1627778,"Onuaku,
-        Chinanu","Chinanu Onuaku",1,"2016","2017","chinanu_onuaku",1610612745,"Houston","Rockets","HOU","rockets","Y"],[203934,"Patterson,
-        Lamar","Lamar Patterson",0,"2015","2016","lamar_patterson",0,"","","","","Y"],[203940,"Payne,
-        Adreian","Adreian Payne",1,"2014","2017","adreian_payne",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[201593,"Pekovic,
-        Nikola","Nikola Pekovic",1,"2010","2016","nikola_pekovic",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[1718,"Pierce,
-        Paul","Paul Pierce",1,"1998","2016","paul_pierce",1610612746,"LA","Clippers","LAC","clippers","Y"],[202347,"Pondexter,
-        Quincy","Quincy Pondexter",1,"2010","2017","quincy_pondexter",1610612740,"New
-        Orleans","Pelicans","NOP","pelicans","Y"],[101179,"Price, Ronnie","Ronnie
-        Price",1,"2005","2016","ronnie_price",1610612756,"Phoenix","Suns","PHX","suns","Y"],[1627817,"Quarterman,
-        Tim","Tim Quarterman",1,"2016","2016","tim_quarterman",1610612757,"Portland","Trail
-        Blazers","POR","blazers","Y"],[1626184,"Randle, Chasson","Chasson Randle",1,"2016","2016","chasson_randle",1610612752,"New
-        York","Knicks","NYK","knicks","Y"],[203186,"Reed, Willie","Willie Reed",1,"2012","2017","willie_reed",1610612748,"Miami","Heat","MIA","heat","Y"],[203148,"Roberts,
-        Brian","Brian Roberts",1,"2012","2016","brian_roberts",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[203080,"Robinson,
-        Thomas","Thomas Robinson",1,"2012","2016","thomas_robinson",1610612747,"Los
-        Angeles","Lakers","LAL","lakers","Y"],[200771,"Rodriguez, Sergio","Sergio
-        Rodriguez",1,"2006","2016","sergio_rodriguez",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[204014,"Rudez,
-        Damjan","Damjan Rudez",1,"2014","2016","damjan_rudez",1610612753,"Orlando","Magic","ORL","magic","Y"],[201575,"Rush,
-        Brandon","Brandon Rush",1,"2008","2016","brandon_rush",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[202336,"Sanders,
-        Larry","Larry Sanders",0,"2010","2016","larry_sanders",0,"","","","","Y"],[2449,"Scola,
-        Luis","Luis Scola",0,"2007","2016","luis_scola",0,"","","","","Y"],[202338,"Seraphin,
-        Kevin","Kevin Seraphin",1,"2010","2016","kevin_seraphin",1610612754,"Indiana","Pacers","IND","pacers","Y"],[201168,"Splitter,
-        Tiago","Tiago Splitter",1,"2010","2016","tiago_splitter",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[203950,"Stokes,
-        Jarnell","Jarnell Stokes",0,"2014","2016","jarnell_stokes",0,"","","","","Y"],[1627754,"Stone,
-        Diamond","Diamond Stone",1,"2016","2016","diamond_stone",1610612746,"LA","Clippers","LAC","clippers","Y"],[201155,"Stuckey,
-        Rodney","Rodney Stuckey",0,"2007","2016","rodney_stuckey",0,"","","","","Y"],[203096,"Sullinger,
-        Jared","Jared Sullinger",0,"2012","2016","jared_sullinger",0,"","","","","Y"],[204002,"Tavares,
-        Edy","Edy Tavares",1,"2015","2016","edy_tavares",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[203141,"Teletovic,
-        Mirza","Mirza Teletovic",1,"2012","2017","mirza_teletovic",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[203138,"Thompson,
-        Hollis","Hollis Thompson",0,"2013","2016","hollis_thompson",0,"","","","","Y"],[201977,"Thornton,
-        Marcus","Marcus Thornton",0,"2009","2016","marcus_thornton",0,"","","","","Y"],[1627861,"Tobey,
-        Mike","Mike Tobey",0,"2016","2016","mike_tobey",0,"","","","","Y"],[1626253,"Toupane,
-        Axel","Axel Toupane",1,"2015","2016","axel_toupane",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[2757,"Udrih,
-        Beno","Beno Udrih",1,"2004","2016","beno_udrih",1610612765,"Detroit","Pistons","DET","pistons","Y"],[1627784,"Uthoff,
-        Jarrod","Jarrod Uthoff",1,"2016","2016","jarrod_uthoff",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[2760,"Varejao,
-        Anderson","Anderson Varejao",0,"2004","2016","anderson_varejao",0,"","","","","Y"],[202349,"Vasquez,
-        Greivis","Greivis Vasquez",0,"2010","2016","greivis_vasquez",0,"","","","","Y"],[1626173,"Vaughn,
-        Rashad","Rashad Vaughn",1,"2015","2017","rashad_vaughn",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[2756,"Vujacic,
-        Sasha","Sasha Vujacic",1,"2004","2016","sasha_vujacic",1610612752,"New York","Knicks","NYK","knicks","Y"],[201228,"Watson,
-        C.J.","C.J. Watson",1,"2007","2016","c.j._watson",1610612753,"Orlando","Magic","ORL","magic","Y"],[203912,"Wilcox,
-        CJ","CJ Wilcox",0,"2014","2017","cj_wilcox",0,"","","","","Y"],[101114,"Williams,
-        Deron","Deron Williams",1,"2005","2016","deron_williams",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[202682,"Williams,
-        Derrick","Derrick Williams",1,"2011","2017","derrick_williams",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[202130,"Williams,
-        Reggie","Reggie Williams",0,"2009","2016","reggie_williams",0,"","","","","Y"],[1627787,"Wiltjer,
-        Kyle","Kyle Wiltjer",1,"2016","2016","kyle_wiltjer",1610612745,"Houston","Rockets","HOU","rockets","Y"],[203481,"Withey,
-        Jeff","Jeff Withey",1,"2013","2017","jeff_withey",1610612762,"Utah","Jazz","UTA","jazz","Y"],[1626174,"Wood,
-        Christian","Christian Wood",1,"2015","2016","christian_wood",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[1897,"World
-        Peace, Metta","Metta World Peace",1,"1999","2016","metta_world peace",1610612747,"Los
-        Angeles","Lakers","LAL","lakers","Y"],[201148,"Wright, Brandan","Brandan Wright",1,"2007","2017","brandan_wright",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[203923,"Young,
-        James","James Young",1,"2014","2017","james_young",1610612738,"Boston","Celtics","BOS","celtics","Y"],[1627757,"Zimmerman,
-        Stephen","Stephen Zimmerman",1,"2016","2016","stephen_zimmerman",1610612753,"Orlando","Magic","ORL","magic","Y"]]}]}'
+      string: '{"resource":"commonallplayers","parameters":{"LeagueID":"00","Season":"2017-18","IsOnlyCurrentSeason":1},"resultSets":[{"name":"CommonAllPlayers","headers":["PERSON_ID","DISPLAY_LAST_COMMA_FIRST","DISPLAY_FIRST_LAST","ROSTERSTATUS","FROM_YEAR","TO_YEAR","PLAYERCODE","TEAM_ID","TEAM_CITY","TEAM_NAME","TEAM_ABBREVIATION","TEAM_CODE","GAMES_PLAYED_FLAG"],"rowSet":[[203518,"Abrines,
+        Alex","Alex Abrines",1,"2016","2017","alex_abrines",1610612760,"Oklahoma City","Thunder","OKC","thunder","Y"],[203112,"Acy,
+        Quincy","Quincy Acy",1,"2012","2017","quincy_acy",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[203500,"Adams,
+        Steven","Steven Adams",1,"2013","2017","steven_adams",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[1628389,"Adebayo, Bam","Bam Adebayo",1,"2017","2017","bam_adebayo",1610612748,"Miami","Heat","MIA","heat","Y"],[201167,"Afflalo,
+        Arron","Arron Afflalo",1,"2007","2017","arron_afflalo",1610612753,"Orlando","Magic","ORL","magic","Y"],[201582,"Ajinca,
+        Alexis","Alexis Ajinca",1,"2008","2017","alexis_ajinca",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[202332,"Aldrich,
+        Cole","Cole Aldrich",1,"2010","2017","cole_aldrich",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[200746,"Aldridge,
+        LaMarcus","LaMarcus Aldridge",1,"2006","2017","lamarcus_aldridge",1610612759,"San
+        Antonio","Spurs","SAS","spurs","Y"],[1628386,"Allen, Jarrett","Jarrett Allen",1,"2017","2017","jarrett_allen",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1628443,"Allen,
+        Kadeem","Kadeem Allen",1,"2017","2017","kadeem_allen",1610612738,"Boston","Celtics","BOS","celtics","Y"],[2754,"Allen,
+        Tony","Tony Allen",0,"2004","2017","tony_allen",0,"","","","","Y"],[202329,"Aminu,
+        Al-Farouq","Al-Farouq Aminu",1,"2010","2017","al-farouq_aminu",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[1626147,"Anderson, Justin","Justin Anderson",1,"2015","2017","justin_anderson",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[203937,"Anderson,
+        Kyle","Kyle Anderson",1,"2014","2017","kyle_anderson",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[201583,"Anderson,
+        Ryan","Ryan Anderson",1,"2008","2017","ryan_anderson",1610612745,"Houston","Rockets","HOU","rockets","Y"],[1628387,"Anigbogu,
+        Ike","Ike Anigbogu",1,"2017","2017","ike_anigbogu",1610612754,"Indiana","Pacers","IND","pacers","Y"],[203507,"Antetokounmpo,
+        Giannis","Giannis Antetokounmpo",1,"2013","2017","giannis_antetokounmpo",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[2546,"Anthony,
+        Carmelo","Carmelo Anthony",1,"2003","2017","carmelo_anthony",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[1628384,"Anunoby, OG","OG Anunoby",1,"2017","2017","og_anunoby",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[1627853,"Arcidiacono,
+        Ryan","Ryan Arcidiacono",1,"2017","2017","ryan_arcidiacono",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[2772,"Ariza,
+        Trevor","Trevor Ariza",1,"2004","2017","trevor_ariza",1610612745,"Houston","Rockets","HOU","rockets","Y"],[201589,"Arthur,
+        Darrell","Darrell Arthur",1,"2008","2017","darrell_arthur",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[1628503,"Artis,
+        Jamel","Jamel Artis",1,"2017","2017","jamel_artis",1610612753,"Orlando","Magic","ORL","magic","Y"],[201600,"Asik,
+        Omer","Omer Asik",1,"2010","2017","omer_asik",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[201571,"Augustin,
+        D.J.","D.J. Augustin",1,"2008","2017","d.j._augustin",1610612753,"Orlando","Magic","ORL","magic","Y"],[202337,"Babbitt,
+        Luke","Luke Babbitt",1,"2010","2017","luke_babbitt",1610612748,"Miami","Heat","MIA","heat","Y"],[1628407,"Bacon,
+        Dwayne","Dwayne Bacon",1,"2017","2017","dwayne_bacon",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[1627758,"Baker,
+        Ron","Ron Baker",1,"2016","2017","ron_baker",1610612752,"New York","Knicks","NYK","knicks","Y"],[1627735,"Baldwin
+        IV, Wade","Wade Baldwin IV",1,"2016","2017","wade_baldwin iv",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[1628366,"Ball, Lonzo","Lonzo Ball",1,"2017","2017","lonzo_ball",1610612747,"Los
+        Angeles","Lakers","LAL","lakers","Y"],[200826,"Barea, J.J.","J.J. Barea",1,"2006","2017","j.j._barea",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[203084,"Barnes,
+        Harrison","Harrison Barnes",1,"2012","2017","harrison_barnes",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[203115,"Barton,
+        Will","Will Barton",1,"2012","2017","will_barton",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[201587,"Batum,
+        Nicolas","Nicolas Batum",1,"2008","2017","nicolas_batum",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[201573,"Bayless,
+        Jerryd","Jerryd Bayless",1,"2008","2017","jerryd_bayless",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[203382,"Baynes,
+        Aron","Aron Baynes",1,"2012","2017","aron_baynes",1610612738,"Boston","Celtics","BOS","celtics","Y"],[203145,"Bazemore,
+        Kent","Kent Bazemore",1,"2012","2017","kent_bazemore",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[203078,"Beal,
+        Bradley","Bradley Beal",1,"2012","2017","bradley_beal",1610612764,"Washington","Wizards","WAS","wizards","Y"],[1627736,"Beasley,
+        Malik","Malik Beasley",1,"2016","2017","malik_beasley",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[201563,"Beasley,
+        Michael","Michael Beasley",1,"2008","2017","michael_beasley",1610612752,"New
+        York","Knicks","NYK","knicks","Y"],[201158,"Belinelli, Marco","Marco Belinelli",1,"2007","2017","marco_belinelli",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[1628395,"Bell,
+        Jordan","Jordan Bell",1,"2017","2017","jordan_bell",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[1627761,"Bembry,
+        DeAndre''","DeAndre'' Bembry",1,"2016","2017","deandre''_bembry",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1627733,"Bender,
+        Dragan","Dragan Bender",1,"2016","2017","dragan_bender",1610612756,"Phoenix","Suns","PHX","suns","Y"],[202722,"Bertans,
+        Davis","Davis Bertans",1,"2016","2017","davis_bertans",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[201976,"Beverley,
+        Patrick","Patrick Beverley",1,"2012","2017","patrick_beverley",1610612746,"LA","Clippers","LAC","clippers","Y"],[203920,"Birch,
+        Khem","Khem Birch",1,"2017","2017","khem_birch",1610612753,"Orlando","Magic","ORL","magic","Y"],[1628444,"Bird,
+        Jabari","Jabari Bird",1,"2017","2017","jabari_bird",1610612738,"Boston","Celtics","BOS","celtics","Y"],[202687,"Biyombo,
+        Bismack","Bismack Biyombo",1,"2011","2017","bismack_biyombo",1610612753,"Orlando","Magic","ORL","magic","Y"],[202357,"Bjelica,
+        Nemanja","Nemanja Bjelica",1,"2015","2017","nemanja_bjelica",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[204028,"Black,
+        Tarik","Tarik Black",1,"2014","2017","tarik_black",1610612745,"Houston","Rockets","HOU","rockets","Y"],[1628469,"Blakeney,
+        Antonio","Antonio Blakeney",1,"2017","2017","antonio_blakeney",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[202339,"Bledsoe,
+        Eric","Eric Bledsoe",1,"2010","2017","eric_bledsoe",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[203505,"Blue,
+        Vander","Vander Blue",0,"2013","2017","vander_blue",0,"","","","","Y"],[203992,"Bogdanovic,
+        Bogdan","Bogdan Bogdanovic",1,"2017","2017","bogdan_bogdanovic",1610612758,"Sacramento","Kings","SAC","kings","Y"],[202711,"Bogdanovic,
+        Bojan","Bojan Bogdanovic",1,"2014","2017","bojan_bogdanovic",1610612754,"Indiana","Pacers","IND","pacers","Y"],[101106,"Bogut,
+        Andrew","Andrew Bogut",0,"2005","2017","andrew_bogut",0,"","","","","Y"],[1627762,"Bolomboy,
+        Joel","Joel Bolomboy",0,"2016","2017","joel_bolomboy",0,"","","","","Y"],[1626164,"Booker,
+        Devin","Devin Booker",1,"2015","2017","devin_booker",1610612756,"Phoenix","Suns","PHX","suns","Y"],[202344,"Booker,
+        Trevor","Trevor Booker",1,"2010","2017","trevor_booker",1610612754,"Indiana","Pacers","IND","pacers","Y"],[1628449,"Boucher,
+        Chris","Chris Boucher",1,"2017","2017","chris_boucher",1610612744,"Golden
+        State","Warriors","GSW","warriors","Y"],[202340,"Bradley, Avery","Avery Bradley",1,"2010","2017","avery_bradley",1610612746,"LA","Clippers","LAC","clippers","Y"],[1628396,"Bradley,
+        Tony","Tony Bradley",1,"2017","2017","tony_bradley",1610612762,"Utah","Jazz","UTA","jazz","Y"],[201147,"Brewer,
+        Corey","Corey Brewer",1,"2007","2017","corey_brewer",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[1627763,"Brogdon, Malcolm","Malcolm
+        Brogdon",1,"2016","2017","malcolm_brogdon",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[201166,"Brooks,
+        Aaron","Aaron Brooks",1,"2007","2017","aaron_brooks",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[1628415,"Brooks,
+        Dillon","Dillon Brooks",1,"2017","2017","dillon_brooks",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[202705,"Brooks,
+        MarShon","MarShon Brooks",1,"2011","2017","marshon_brooks",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[1626148,"Brown,
+        Anthony","Anthony Brown",1,"2015","2017","anthony_brown",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[201628,"Brown,
+        Bobby","Bobby Brown",0,"2008","2017","bobby_brown",0,"","","","","Y"],[1627759,"Brown,
+        Jaylen","Jaylen Brown",1,"2016","2017","jaylen_brown",1610612738,"Boston","Celtics","BOS","celtics","Y"],[203485,"Brown,
+        Lorenzo","Lorenzo Brown",1,"2013","2017","lorenzo_brown",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[203900,"Brown,
+        Markel","Markel Brown",1,"2014","2017","markel_brown",1610612745,"Houston","Rockets","HOU","rockets","Y"],[1628425,"Brown,
+        Sterling","Sterling Brown",1,"2017","2017","sterling_brown",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[1627852,"Brussino,
+        Nicolas","Nicolas Brussino",0,"2016","2017","nicolas_brussino",0,"","","","","Y"],[1628418,"Bryant,
+        Thomas","Thomas Bryant",1,"2017","2017","thomas_bryant",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"],[203493,"Bullock,
+        Reggie","Reggie Bullock",1,"2013","2017","reggie_bullock",1610612765,"Detroit","Pistons","DET","pistons","Y"],[203504,"Burke,
+        Trey","Trey Burke",1,"2013","2017","trey_burke",1610612752,"New York","Knicks","NYK","knicks","Y"],[202692,"Burks,
+        Alec","Alec Burks",1,"2011","2017","alec_burks",1610612762,"Utah","Jazz","UTA","jazz","Y"],[202710,"Butler,
+        Jimmy","Jimmy Butler",1,"2011","2017","jimmy_butler",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[202779,"Buycks,
+        Dwight","Dwight Buycks",1,"2013","2017","dwight_buycks",1610612765,"Detroit","Pistons","DET","pistons","Y"],[203998,"Caboclo,
+        Bruno","Bruno Caboclo",1,"2014","2017","bruno_caboclo",1610612758,"Sacramento","Kings","SAC","kings","Y"],[101181,"Calderon,
+        Jose","Jose Calderon",1,"2005","2017","jose_calderon",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[203484,"Caldwell-Pope,
+        Kentavious","Kentavious Caldwell-Pope",1,"2013","2017","kentavious_caldwell-pope",1610612747,"Los
+        Angeles","Lakers","LAL","lakers","Y"],[203477,"Canaan, Isaiah","Isaiah Canaan",0,"2013","2017","isaiah_canaan",0,"","","","","Y"],[203991,"Capela,
+        Clint","Clint Capela",1,"2014","2017","clint_capela",1610612745,"Houston","Rockets","HOU","rockets","Y"],[201960,"Carroll,
+        DeMarre","DeMarre Carroll",1,"2009","2017","demarre_carroll",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1713,"Carter,
+        Vince","Vince Carter",1,"1998","2017","vince_carter",1610612758,"Sacramento","Kings","SAC","kings","Y"],[203487,"Carter-Williams,
+        Michael","Michael Carter-Williams",1,"2013","2017","michael_carter-williams",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[1627936,"Caruso,
+        Alex","Alex Caruso",1,"2017","2017","alex_caruso",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"],[201956,"Casspi,
+        Omri","Omri Casspi",1,"2009","2017","omri_casspi",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[1626161,"Cauley-Stein,
+        Willie","Willie Cauley-Stein",1,"2015","2017","willie_cauley-stein",1610612758,"Sacramento","Kings","SAC","kings","Y"],[1628463,"Cavanaugh,
+        Tyler","Tyler Cavanaugh",1,"2017","2017","tyler_cavanaugh",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[201596,"Chalmers,
+        Mario","Mario Chalmers",1,"2008","2017","mario_chalmers",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[2199,"Chandler,
+        Tyson","Tyson Chandler",1,"2001","2017","tyson_chandler",1610612756,"Phoenix","Suns","PHX","suns","Y"],[201163,"Chandler,
+        Wilson","Wilson Chandler",1,"2007","2017","wilson_chandler",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[1627737,"Chriss,
+        Marquese","Marquese Chriss",1,"2016","2017","marquese_chriss",1610612756,"Phoenix","Suns","PHX","suns","Y"],[203546,"Clark,
+        Ian","Ian Clark",1,"2013","2017","ian_clark",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[203903,"Clarkson,
+        Jordan","Jordan Clarkson",1,"2014","2017","jordan_clarkson",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[1628492,"Clavell,
+        Gian","Gian Clavell",0,"2017","2017","gian_clavell",0,"","","","","Y"],[1628499,"Cleveland,
+        Antonius","Antonius Cleveland",1,"2017","2017","antonius_cleveland",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1628381,"Collins,
+        John","John Collins",1,"2017","2017","john_collins",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1628380,"Collins,
+        Zach","Zach Collins",1,"2017","2017","zach_collins",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[1627858,"Collinsworth, Kyle","Kyle Collinsworth",1,"2017","2017","kyle_collinsworth",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[201954,"Collison,
+        Darren","Darren Collison",1,"2009","2017","darren_collison",1610612754,"Indiana","Pacers","IND","pacers","Y"],[2555,"Collison,
+        Nick","Nick Collison",1,"2003","2017","nick_collison",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[201144,"Conley, Mike","Mike Conley",1,"2007","2017","mike_conley",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[1626192,"Connaughton,
+        Pat","Pat Connaughton",1,"2015","2017","pat_connaughton",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[1626188,"Cook, Quinn","Quinn Cook",1,"2016","2017","quinn_cook",1610612744,"Golden
+        State","Warriors","GSW","warriors","Y"],[1628429,"Cooke, Charles","Charles
+        Cooke",1,"2017","2017","charles_cooke",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[204022,"Cooley,
+        Jack","Jack Cooley",1,"2014","2017","jack_cooley",1610612758,"Sacramento","Kings","SAC","kings","Y"],[1627856,"Costello,
+        Matt","Matt Costello",1,"2017","2017","matt_costello",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[202326,"Cousins,
+        DeMarcus","DeMarcus Cousins",1,"2010","2017","demarcus_cousins",1610612740,"New
+        Orleans","Pelicans","NOP","pelicans","Y"],[203496,"Covington, Robert","Robert
+        Covington",1,"2013","2017","robert_covington",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[203459,"Crabbe,
+        Allen","Allen Crabbe",1,"2013","2017","allen_crabbe",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1628470,"Craig,
+        Torrey","Torrey Craig",1,"2017","2017","torrey_craig",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[2037,"Crawford,
+        Jamal","Jamal Crawford",1,"2000","2017","jamal_crawford",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[202348,"Crawford,
+        Jordan","Jordan Crawford",0,"2010","2017","jordan_crawford",0,"","","","","Y"],[203109,"Crowder,
+        Jae","Jae Crowder",1,"2012","2017","jae_crowder",1610612762,"Utah","Jazz","UTA","jazz","Y"],[201967,"Cunningham,
+        Dante","Dante Cunningham",1,"2009","2017","dante_cunningham",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[203552,"Curry,
+        Seth","Seth Curry",1,"2013","2017","seth_curry",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[201939,"Curry,
+        Stephen","Stephen Curry",1,"2009","2017","stephen_curry",1610612744,"Golden
+        State","Warriors","GSW","warriors","Y"],[203584,"Daniels, Troy","Troy Daniels",1,"2013","2017","troy_daniels",1610612756,"Phoenix","Suns","PHX","suns","Y"],[203076,"Davis,
+        Anthony","Anthony Davis",1,"2012","2017","anthony_davis",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[1627738,"Davis,
+        Deyonta","Deyonta Davis",1,"2016","2017","deyonta_davis",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[202334,"Davis,
+        Ed","Ed Davis",1,"2010","2017","ed_davis",1610612757,"Portland","Trail Blazers","POR","blazers","Y"],[201942,"DeRozan,
+        DeMar","DeMar DeRozan",1,"2009","2017","demar_derozan",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[203473,"Dedmon,
+        Dewayne","Dewayne Dedmon",1,"2013","2017","dewayne_dedmon",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1626155,"Dekker,
+        Sam","Sam Dekker",1,"2015","2017","sam_dekker",1610612746,"LA","Clippers","LAC","clippers","Y"],[1627098,"Delaney,
+        Malcolm","Malcolm Delaney",1,"2016","2017","malcolm_delaney",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[203521,"Dellavedova,
+        Matthew","Matthew Dellavedova",1,"2013","2017","matthew_dellavedova",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[2736,"Deng,
+        Luol","Luol Deng",1,"2004","2017","luol_deng",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"],[1627767,"Diallo,
+        Cheick","Cheick Diallo",1,"2016","2017","cheick_diallo",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[203476,"Dieng,
+        Gorgui","Gorgui Dieng",1,"2013","2017","gorgui_dieng",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[203915,"Dinwiddie,
+        Spencer","Spencer Dinwiddie",1,"2014","2017","spencer_dinwiddie",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1628416,"Dorsey,
+        Tyler","Tyler Dorsey",1,"2017","2017","tyler_dorsey",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1628422,"Dotson,
+        Damyean","Damyean Dotson",1,"2017","2017","damyean_dotson",1610612752,"New
+        York","Knicks","NYK","knicks","Y"],[1628495,"Doyle, Milton","Milton Doyle",1,"2017","2017","milton_doyle",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1628408,"Dozier,
+        PJ","PJ Dozier",1,"2017","2017","pj_dozier",1610612760,"Oklahoma City","Thunder","OKC","thunder","Y"],[201609,"Dragic,
+        Goran","Goran Dragic",1,"2008","2017","goran_dragic",1610612748,"Miami","Heat","MIA","heat","Y"],[203580,"Drew
+        II, Larry","Larry Drew II",1,"2014","2017","larry_drew ii",1610612740,"New
+        Orleans","Pelicans","NOP","pelicans","Y"],[203083,"Drummond, Andre","Andre
+        Drummond",1,"2012","2017","andre_drummond",1610612765,"Detroit","Pistons","DET","pistons","Y"],[201162,"Dudley,
+        Jared","Jared Dudley",1,"2007","2017","jared_dudley",1610612756,"Phoenix","Suns","PHX","suns","Y"],[1627739,"Dunn,
+        Kris","Kris Dunn",1,"2016","2017","kris_dunn",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[201142,"Durant,
+        Kevin","Kevin Durant",1,"2007","2017","kevin_durant",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[204067,"Eddie,
+        Jarell","Jarell Eddie",1,"2015","2017","jarell_eddie",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[1627740,"Ellenson,
+        Henry","Henry Ellenson",1,"2016","2017","henry_ellenson",1610612765,"Detroit","Pistons","DET","pistons","Y"],[201961,"Ellington,
+        Wayne","Wayne Ellington",1,"2009","2017","wayne_ellington",1610612748,"Miami","Heat","MIA","heat","Y"],[203954,"Embiid,
+        Joel","Joel Embiid",1,"2014","2017","joel_embiid",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[203898,"Ennis,
+        Tyler","Tyler Ennis",1,"2014","2017","tyler_ennis",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"],[203516,"Ennis
+        III, James","James Ennis III",1,"2014","2017","james_ennis iii",1610612765,"Detroit","Pistons","DET","pistons","Y"],[1628393,"Evans,
+        Jawun","Jawun Evans",1,"2017","2017","jawun_evans",1610612746,"LA","Clippers","LAC","clippers","Y"],[201936,"Evans,
+        Tyreke","Tyreke Evans",1,"2009","2017","tyreke_evans",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[203957,"Exum,
+        Dante","Dante Exum",1,"2014","2017","dante_exum",1610612762,"Utah","Jazz","UTA","jazz","Y"],[202702,"Faried,
+        Kenneth","Kenneth Faried",1,"2011","2017","kenneth_faried",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[202324,"Favors,
+        Derrick","Derrick Favors",1,"2010","2017","derrick_favors",1610612762,"Utah","Jazz","UTA","jazz","Y"],[1627770,"Felder,
+        Kay","Kay Felder",1,"2016","2017","kay_felder",1610612765,"Detroit","Pistons","DET","pistons","Y"],[1626245,"Felicio,
+        Cristiano","Cristiano Felicio",1,"2015","2017","cristiano_felicio",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[101109,"Felton,
+        Raymond","Raymond Felton",1,"2005","2017","raymond_felton",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[1628390,"Ferguson, Terrance","Terrance
+        Ferguson",1,"2017","2017","terrance_ferguson",1610612760,"Oklahoma City","Thunder","OKC","thunder","Y"],[1627812,"Ferrell,
+        Yogi","Yogi Ferrell",1,"2016","2017","yogi_ferrell",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[1627827,"Finney-Smith,
+        Dorian","Dorian Finney-Smith",1,"2016","2017","dorian_finney-smith",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[1627854,"Forbes,
+        Bryn","Bryn Forbes",1,"2016","2017","bryn_forbes",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[203095,"Fournier,
+        Evan","Evan Fournier",1,"2012","2017","evan_fournier",1610612753,"Orlando","Magic","ORL","magic","Y"],[1628368,"Fox,
+        De''Aaron","De''Aaron Fox",1,"2017","2017","de''aaron_fox",1610612758,"Sacramento","Kings","SAC","kings","Y"],[204025,"Frazier,
+        Tim","Tim Frazier",1,"2014","2017","tim_frazier",1610612764,"Washington","Wizards","WAS","wizards","Y"],[101112,"Frye,
+        Channing","Channing Frye",1,"2005","2017","channing_frye",1610612747,"Los
+        Angeles","Lakers","LAL","lakers","Y"],[1628365,"Fultz, Markelle","Markelle
+        Fultz",1,"2017","2017","markelle_fultz",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[201568,"Gallinari,
+        Danilo","Danilo Gallinari",1,"2008","2017","danilo_gallinari",1610612746,"LA","Clippers","LAC","clippers","Y"],[204038,"Galloway,
+        Langston","Langston Galloway",1,"2014","2017","langston_galloway",1610612765,"Detroit","Pistons","DET","pistons","Y"],[201188,"Gasol,
+        Marc","Marc Gasol",1,"2008","2017","marc_gasol",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[2200,"Gasol,
+        Pau","Pau Gasol",1,"2001","2017","pau_gasol",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[200752,"Gay,
+        Rudy","Rudy Gay",1,"2006","2017","rudy_gay",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[202331,"George,
+        Paul","Paul George",1,"2010","2017","paul_george",1610612760,"Oklahoma City","Thunder","OKC","thunder","Y"],[1627875,"Georges-Hunt,
+        Marcus","Marcus Georges-Hunt",1,"2016","2017","marcus_georges-hunt",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[201959,"Gibson,
+        Taj","Taj Gibson",1,"2009","2017","taj_gibson",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[1628385,"Giles,
+        Harry","Harry Giles",1,"2017","2017","harry_giles",1610612758,"Sacramento","Kings","SAC","kings","N"],[1938,"Ginobili,
+        Manu","Manu Ginobili",1,"2002","2017","manu_ginobili",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[203497,"Gobert,
+        Rudy","Rudy Gobert",1,"2013","2017","rudy_gobert",1610612762,"Utah","Jazz","UTA","jazz","Y"],[203932,"Gordon,
+        Aaron","Aaron Gordon",1,"2014","2017","aaron_gordon",1610612753,"Orlando","Magic","ORL","magic","Y"],[201569,"Gordon,
+        Eric","Eric Gordon",1,"2008","2017","eric_gordon",1610612745,"Houston","Rockets","HOU","rockets","Y"],[101162,"Gortat,
+        Marcin","Marcin Gortat",1,"2007","2017","marcin_gortat",1610612764,"Washington","Wizards","WAS","wizards","Y"],[1626203,"Graham,
+        Treveon","Treveon Graham",1,"2016","2017","treveon_graham",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[203924,"Grant,
+        Jerami","Jerami Grant",1,"2014","2017","jerami_grant",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[1626170,"Grant, Jerian","Jerian Grant",1,"2015","2017","jerian_grant",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[1627982,"Gray,
+        Josh","Josh Gray",0,"2017","2017","josh_gray",0,"","","","","Y"],[201980,"Green,
+        Danny","Danny Green",1,"2009","2017","danny_green",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[203110,"Green,
+        Draymond","Draymond Green",1,"2012","2017","draymond_green",1610612744,"Golden
+        State","Warriors","GSW","warriors","Y"],[101123,"Green, Gerald","Gerald Green",1,"2005","2017","gerald_green",1610612745,"Houston","Rockets","HOU","rockets","Y"],[203210,"Green,
+        JaMychal","JaMychal Green",1,"2014","2017","jamychal_green",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[201145,"Green,
+        Jeff","Jeff Green",1,"2007","2017","jeff_green",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[201933,"Griffin,
+        Blake","Blake Griffin",1,"2009","2017","blake_griffin",1610612765,"Detroit","Pistons","DET","pistons","Y"],[1627772,"Hamilton,
+        Daniel","Daniel Hamilton",1,"2017","2017","daniel_hamilton",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[203501,"Hardaway Jr., Tim","Tim Hardaway
+        Jr.",1,"2013","2017","tim_hardaway jr.",1610612752,"New York","Knicks","NYK","knicks","Y"],[201935,"Harden,
+        James","James Harden",1,"2009","2017","james_harden",1610612745,"Houston","Rockets","HOU","rockets","Y"],[203090,"Harkless,
+        Maurice","Maurice Harkless",1,"2012","2017","maurice_harkless",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[1626149,"Harrell, Montrezl","Montrezl Harrell",1,"2015","2017","montrezl_harrell",1610612746,"LA","Clippers","LAC","clippers","Y"],[2734,"Harris,
+        Devin","Devin Harris",1,"2004","2017","devin_harris",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[203914,"Harris,
+        Gary","Gary Harris",1,"2014","2017","gary_harris",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[203925,"Harris,
+        Joe","Joe Harris",1,"2014","2017","joe_harris",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[202699,"Harris,
+        Tobias","Tobias Harris",1,"2011","2017","tobias_harris",1610612746,"LA","Clippers","LAC","clippers","Y"],[1626151,"Harrison,
+        Aaron","Aaron Harrison",1,"2015","2017","aaron_harrison",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[1626150,"Harrison,
+        Andrew","Andrew Harrison",1,"2016","2017","andrew_harrison",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[1627885,"Harrison,
+        Shaquille","Shaquille Harrison",1,"2017","2017","shaquille_harrison",1610612756,"Phoenix","Suns","PHX","suns","Y"],[1628404,"Hart,
+        Josh","Josh Hart",1,"2017","2017","josh_hart",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"],[2617,"Haslem,
+        Udonis","Udonis Haslem",1,"2003","2017","udonis_haslem",1610612748,"Miami","Heat","MIA","heat","Y"],[1628502,"Hayes,
+        Nigel","Nigel Hayes",1,"2017","2017","nigel_hayes",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[202330,"Hayward,
+        Gordon","Gordon Hayward",1,"2010","2017","gordon_hayward",1610612738,"Boston","Celtics","BOS","celtics","Y"],[203687,"Hearn,
+        Reggie","Reggie Hearn",1,"2017","2017","reggie_hearn",1610612765,"Detroit","Pistons","DET","pistons","Y"],[1627988,"Henry,
+        Myke","Myke Henry",1,"2017","2017","myke_henry",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[203089,"Henson,
+        John","John Henson",1,"2012","2017","john_henson",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[1627823,"Hernangomez,
+        Juancho","Juancho Hernangomez",1,"2016","2017","juan_hernangomez",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[1626195,"Hernangomez,
+        Willy","Willy Hernangomez",1,"2016","2017","willy_hernangomez",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[1626209,"Hezonja,
+        Mario","Mario Hezonja",1,"2015","2017","mario_hezonja",1610612753,"Orlando","Magic","ORL","magic","Y"],[1628439,"Hicks,
+        Isaiah","Isaiah Hicks",1,"2017","2017","isaiah_hicks",1610612752,"New York","Knicks","NYK","knicks","Y"],[1627741,"Hield,
+        Buddy","Buddy Hield",1,"2016","2017","buddy_hield",1610612758,"Sacramento","Kings","SAC","kings","Y"],[2403,"Nene","Nene",1,"2002","2017","nene_hilario",1610612745,"Houston","Rockets","HOU","rockets","Y"],[201588,"Hill,
+        George","George Hill",1,"2008","2017","george_hill",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[203524,"Hill,
+        Solomon","Solomon Hill",1,"2013","2017","solomon_hill",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[1626199,"Hilliard,
+        Darrun","Darrun Hilliard",1,"2015","2017","darrun_hilliard",1610612759,"San
+        Antonio","Spurs","SAS","spurs","Y"],[201950,"Holiday, Jrue","Jrue Holiday",1,"2009","2017","jrue_holiday",1610612740,"New
+        Orleans","Pelicans","NOP","pelicans","Y"],[203200,"Holiday, Justin","Justin
+        Holiday",1,"2012","2017","justin_holiday",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[204066,"Holland,
+        John","John Holland",1,"2015","2017","john_holland",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[1626178,"Hollis-Jefferson,
+        Rondae","Rondae Hollis-Jefferson",1,"2015","2017","rondae_hollis-jefferson",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1626158,"Holmes,
+        Richaun","Richaun Holmes",1,"2015","2017","richaun_holmes",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[203918,"Hood,
+        Rodney","Rodney Hood",1,"2014","2017","rodney_hood",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[203816,"Hopson,
+        Scotty","Scotty Hopson",0,"2013","2017","scotty_hopson",0,"","","","","Y"],[201143,"Horford,
+        Al","Al Horford",1,"2007","2017","al_horford",1610612738,"Boston","Celtics","BOS","celtics","Y"],[1627863,"House,
+        Danuel","Danuel House",1,"2016","2017","danuel_house",1610612756,"Phoenix","Suns","PHX","suns","Y"],[2730,"Howard,
+        Dwight","Dwight Howard",1,"2004","2017","dwight_howard",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[203962,"Huestis,
+        Josh","Josh Huestis",1,"2015","2017","josh_huestis",1610612760,"Oklahoma City","Thunder","OKC","thunder","Y"],[1626154,"Hunter,
+        RJ","RJ Hunter",1,"2015","2017","rj_hunter",1610612745,"Houston","Rockets","HOU","rockets","Y"],[1626205,"Hunter,
+        Vincent","Vincent Hunter",0,"2017","2017","vincent_hunter",0,"","","","","Y"],[201586,"Ibaka,
+        Serge","Serge Ibaka",1,"2009","2017","serge_ibaka",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[2738,"Iguodala,
+        Andre","Andre Iguodala",1,"2004","2017","andre_iguodala",1610612744,"Golden
+        State","Warriors","GSW","warriors","Y"],[101141,"Ilyasova, Ersan","Ersan Ilyasova",1,"2006","2017","ersan_ilyasova",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[204060,"Ingles,
+        Joe","Joe Ingles",1,"2014","2017","joe_ingles",1610612762,"Utah","Jazz","UTA","jazz","Y"],[1627742,"Ingram,
+        Brandon","Brandon Ingram",1,"2016","2017","brandon_ingram",1610612747,"Los
+        Angeles","Lakers","LAL","lakers","Y"],[202681,"Irving, Kyrie","Kyrie Irving",1,"2011","2017","kyrie_irving",1610612738,"Boston","Celtics","BOS","celtics","Y"],[1628371,"Isaac,
+        Jonathan","Jonathan Isaac",1,"2017","2017","jonathan_isaac",1610612753,"Orlando","Magic","ORL","magic","Y"],[1628411,"Iwundu,
+        Wes","Wes Iwundu",1,"2017","2017","wes_iwundu",1610612753,"Orlando","Magic","ORL","magic","Y"],[101127,"Jack,
+        Jarrett","Jarrett Jack",1,"2005","2017","jarrett_jack",1610612752,"New York","Knicks","NYK","knicks","Y"],[1627743,"Jackson,
+        Demetrius","Demetrius Jackson",1,"2016","2017","demetrius_jackson",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[1628402,"Jackson,
+        Frank","Frank Jackson",1,"2017","2017","frank_jackson",1610612740,"New Orleans","Pelicans","NOP","pelicans","N"],[1628367,"Jackson,
+        Josh","Josh Jackson",1,"2017","2017","josh_jackson",1610612756,"Phoenix","Suns","PHX","suns","Y"],[1628382,"Jackson,
+        Justin","Justin Jackson",1,"2017","2017","justin_jackson",1610612758,"Sacramento","Kings","SAC","kings","Y"],[202704,"Jackson,
+        Reggie","Reggie Jackson",1,"2011","2017","reggie_jackson",1610612765,"Detroit","Pistons","DET","pistons","Y"],[2544,"James,
+        LeBron","LeBron James",1,"2003","2017","lebron_james",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[1628455,"James,
+        Mike","Mike James",0,"2017","2017","mike_james",0,"","","","","Y"],[2744,"Jefferson,
+        Al","Al Jefferson",1,"2004","2017","al_jefferson",1610612754,"Indiana","Pacers","IND","pacers","Y"],[1628518,"Jefferson,
+        Amile","Amile Jefferson",1,"2017","2017","amile_jefferson",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[2210,"Jefferson,
+        Richard","Richard Jefferson",1,"2001","2017","richard_jefferson",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[201943,"Jennings,
+        Brandon","Brandon Jennings",1,"2009","2017","brandon_jennings",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[201973,"Jerebko,
+        Jonas","Jonas Jerebko",1,"2009","2017","jonas_jerebko",1610612762,"Utah","Jazz","UTA","jazz","Y"],[101161,"Johnson,
+        Amir","Amir Johnson",1,"2005","2017","amir_johnson",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[1627744,"Johnson,
+        Brice","Brice Johnson",0,"2016","2017","brice_johnson",0,"","","","","Y"],[1626177,"Johnson,
+        Dakari","Dakari Johnson",1,"2017","2017","dakari_johnson",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[201949,"Johnson, James","James Johnson",1,"2009","2017","james_johnson",1610612748,"Miami","Heat","MIA","heat","Y"],[2207,"Johnson,
+        Joe","Joe Johnson",1,"2001","2017","joe_johnson",1610612745,"Houston","Rockets","HOU","rockets","Y"],[1626169,"Johnson,
+        Stanley","Stanley Johnson",1,"2015","2017","stanley_johnson",1610612765,"Detroit","Pistons","DET","pistons","Y"],[204020,"Johnson,
+        Tyler","Tyler Johnson",1,"2014","2017","tyler_johnson",1610612748,"Miami","Heat","MIA","heat","Y"],[202325,"Johnson,
+        Wesley","Wesley Johnson",1,"2010","2017","wesley_johnson",1610612746,"LA","Clippers","LAC","clippers","Y"],[203999,"Jokic,
+        Nikola","Nikola Jokic",1,"2015","2017","nikola_jokic",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[1627745,"Jones,
+        Damian","Damian Jones",1,"2016","2017","damian_jones",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[1627883,"Jones,
+        Jalen","Jalen Jones",1,"2017","2017","jalen_jones",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[1626145,"Jones,
+        Tyus","Tyus Jones",1,"2015","2017","tyus_jones",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[1627884,"Jones
+        Jr., Derrick","Derrick Jones Jr.",1,"2016","2017","derrick_jones jr.",1610612748,"Miami","Heat","MIA","heat","Y"],[201599,"Jordan,
+        DeAndre","DeAndre Jordan",1,"2008","2017","deandre_jordan",1610612746,"LA","Clippers","LAC","clippers","Y"],[202709,"Joseph,
+        Cory","Cory Joseph",1,"2011","2017","cory_joseph",1610612754,"Indiana","Pacers","IND","pacers","Y"],[1626163,"Kaminsky,
+        Frank","Frank Kaminsky",1,"2015","2017","frank_kaminsky",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[202683,"Kanter,
+        Enes","Enes Kanter",1,"2011","2017","enes_kanter",1610612752,"New York","Knicks","NYK","knicks","Y"],[1628379,"Kennard,
+        Luke","Luke Kennard",1,"2017","2017","luke_kennard",1610612765,"Detroit","Pistons","DET","pistons","Y"],[203077,"Kidd-Gilchrist,
+        Michael","Michael Kidd-Gilchrist",1,"2012","2017","michael_kidd-gilchrist",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[203930,"Kilpatrick,
+        Sean","Sean Kilpatrick",1,"2014","2017","sean_kilpatrick",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[1628467,"Kleber,
+        Maxi","Maxi Kleber",1,"2017","2017","maxi_kleber",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[202688,"Knight,
+        Brandon","Brandon Knight",1,"2011","2017","brandon_knight",1610612756,"Phoenix","Suns","PHX","suns","Y"],[1627788,"Korkmaz,
+        Furkan","Furkan Korkmaz",1,"2017","2017","furkan_korkmaz",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[1628436,"Kornet,
+        Luke","Luke Kornet",1,"2017","2017","luke_kornet",1610612752,"New York","Knicks","NYK","knicks","Y"],[2594,"Korver,
+        Kyle","Kyle Korver",1,"2003","2017","kyle_korver",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[201585,"Koufos,
+        Kosta","Kosta Koufos",1,"2008","2017","kosta_koufos",1610612758,"Sacramento","Kings","SAC","kings","Y"],[1628398,"Kuzma,
+        Kyle","Kyle Kuzma",1,"2017","2017","kyle_kuzma",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"],[1627851,"Kuzminskas,
+        Mindaugas","Mindaugas Kuzminskas",0,"2016","2017","mindaugas_kuzminskas",0,"","","","","Y"],[203897,"LaVine,
+        Zach","Zach LaVine",1,"2014","2017","zach_lavine",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[1627746,"Labissiere,
+        Skal","Skal Labissiere",1,"2016","2017","skal_labissiere",1610612758,"Sacramento","Kings","SAC","kings","Y"],[203087,"Lamb,
+        Jeremy","Jeremy Lamb",1,"2012","2017","jeremy_lamb",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[203499,"Larkin,
+        Shane","Shane Larkin",1,"2013","2017","shane_larkin",1610612738,"Boston","Celtics","BOS","celtics","Y"],[203530,"Lauvergne,
+        Joffrey","Joffrey Lauvergne",1,"2014","2017","joffrey_lauvergne",1610612759,"San
+        Antonio","Spurs","SAS","spurs","Y"],[1627774,"Layman, Jake","Jake Layman",1,"2016","2017","jake_layman",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[1627747,"LeVert, Caris","Caris LeVert",1,"2016","2017","caris_levert",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1628388,"Leaf,
+        TJ","TJ Leaf",1,"2017","2017","tj_leaf",1610612754,"Indiana","Pacers","IND","pacers","Y"],[201584,"Lee,
+        Courtney","Courtney Lee",1,"2008","2017","courtney_lee",1610612752,"New York","Knicks","NYK","knicks","Y"],[1627814,"Lee,
+        Damion","Damion Lee",1,"2017","2017","damion_lee",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1627215,"Lemon
+        Jr., Walter","Walter Lemon Jr.",0,"2017","2017","walter_lemon jr.",0,"","","","","Y"],[203458,"Len,
+        Alex","Alex Len",1,"2013","2017","alex_len",1610612756,"Phoenix","Suns","PHX","suns","Y"],[202695,"Leonard,
+        Kawhi","Kawhi Leonard",1,"2011","2017","kawhi_leonard",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[203086,"Leonard,
+        Meyers","Meyers Leonard",1,"2012","2017","meyers_leonard",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[202720,"Leuer, Jon","Jon Leuer",1,"2011","2017","jon_leuer",1610612765,"Detroit","Pistons","DET","pistons","Y"],[202732,"Liggins,
+        DeAndre","DeAndre Liggins",1,"2011","2017","deandre_liggins",1610612740,"New
+        Orleans","Pelicans","NOP","pelicans","Y"],[203081,"Lillard, Damian","Damian
+        Lillard",1,"2012","2017","damian_lillard",1610612757,"Portland","Trail Blazers","POR","blazers","Y"],[202391,"Lin,
+        Jeremy","Jeremy Lin",1,"2010","2017","jeremy_lin",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[2733,"Livingston,
+        Shaun","Shaun Livingston",1,"2004","2017","shaun_livingston",1610612744,"Golden
+        State","Warriors","GSW","warriors","Y"],[1626172,"Looney, Kevon","Kevon Looney",1,"2015","2017","kevon_looney",1610612744,"Golden
+        State","Warriors","GSW","warriors","Y"],[201572,"Lopez, Brook","Brook Lopez",1,"2008","2017","brook_lopez",1610612747,"Los
+        Angeles","Lakers","LAL","lakers","Y"],[201577,"Lopez, Robin","Robin Lopez",1,"2008","2017","robin_lopez",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[201567,"Love,
+        Kevin","Kevin Love",1,"2008","2017","kevin_love",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[200768,"Lowry,
+        Kyle","Kyle Lowry",1,"2006","2017","kyle_lowry",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[1627789,"Luwawu-Cabarrot,
+        Timothe","Timothe Luwawu-Cabarrot",1,"2016","2017","timothe_luwawu-cabarrot",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[1628399,"Lydon,
+        Tyler","Tyler Lydon",1,"2017","2017","tyler_lydon",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[1626168,"Lyles,
+        Trey","Trey Lyles",1,"2015","2017","trey_lyles",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[202714,"Mack,
+        Shelvin","Shelvin Mack",1,"2011","2017","shelvin_mack",1610612753,"Orlando","Magic","ORL","magic","Y"],[203705,"Magette,
+        Josh","Josh Magette",1,"2017","2017","josh_magette",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[101133,"Mahinmi,
+        Ian","Ian Mahinmi",1,"2007","2017","ian_mahinmi",1610612764,"Washington","Wizards","WAS","wizards","Y"],[1627748,"Maker,
+        Thon","Thon Maker",1,"2016","2017","thon_maker",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[1626246,"Marjanovic,
+        Boban","Boban Marjanovic",1,"2015","2017","boban_marjanovic",1610612746,"LA","Clippers","LAC","clippers","Y"],[1628374,"Markkanen,
+        Lauri","Lauri Markkanen",1,"2017","2017","lauri_markkanen",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[1626185,"Martin,
+        Jarell","Jarell Martin",1,"2015","2017","jarell_martin",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[1628412,"Mason,
+        Frank","Frank Mason",1,"2017","2017","frank_mason",1610612758,"Sacramento","Kings","SAC","kings","Y"],[1628493,"Mathiang,
+        Mangok","Mangok Mathiang",1,"2017","2017","mangok_mathiang",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[202083,"Matthews,
+        Wesley","Wesley Matthews",1,"2009","2017","wesley_matthews",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[201601,"Mbah
+        a Moute, Luc","Luc Mbah a Moute",1,"2008","2017","luc_mbah a moute",1610612745,"Houston","Rockets","HOU","rockets","Y"],[203949,"McAdoo,
+        James Michael","James Michael McAdoo",0,"2014","2017","james michael_mcadoo",0,"","","","","Y"],[1627775,"McCaw,
+        Patrick","Patrick McCaw",1,"2016","2017","patrick_mccaw",1610612744,"Golden
+        State","Warriors","GSW","warriors","Y"],[203468,"McCollum, CJ","CJ McCollum",1,"2013","2017","cj_mccollum",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[204456,"McConnell, T.J.","T.J. McConnell",1,"2015","2017","t.j._mcconnell",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[1628571,"McCree,
+        Erik","Erik McCree",1,"2017","2017","erik_mccree",1610612762,"Utah","Jazz","UTA","jazz","Y"],[1626191,"McCullough,
+        Chris","Chris McCullough",1,"2015","2017","chris_mccullough",1610612764,"Washington","Wizards","WAS","wizards","Y"],[203926,"McDermott,
+        Doug","Doug McDermott",1,"2014","2017","doug_mcdermott",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[201580,"McGee,
+        JaVale","JaVale McGee",1,"2008","2017","javale_mcgee",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[203585,"McGruder,
+        Rodney","Rodney McGruder",1,"2016","2017","rodney_mcgruder",1610612748,"Miami","Heat","MIA","heat","Y"],[203590,"McKinney-Jones,
+        Trey","Trey McKinney-Jones",0,"2017","2017","trey_mckinney-jones",0,"","","","","Y"],[1628035,"McKinnie,
+        Alfonzo","Alfonzo McKinnie",1,"2017","2017","alfonzo_mckinnie",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[203463,"McLemore,
+        Ben","Ben McLemore",1,"2013","2017","ben_mclemore",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[201177,"McRoberts,
+        Josh","Josh McRoberts",0,"2007","2017","josh_mcroberts",0,"","","","","Y"],[201975,"Meeks,
+        Jodie","Jodie Meeks",1,"2009","2017","jodie_meeks",1610612764,"Washington","Wizards","WAS","wizards","Y"],[1626257,"Mejri,
+        Salah","Salah Mejri",1,"2015","2017","salah_mejri",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[1626175,"Mickey,
+        Jordan","Jordan Mickey",1,"2015","2017","jordan_mickey",1610612748,"Miami","Heat","MIA","heat","Y"],[203114,"Middleton,
+        Khris","Khris Middleton",1,"2012","2017","khris_middleton",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[101139,"Miles,
+        CJ","CJ Miles",1,"2005","2017","cj_miles",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[203121,"Miller,
+        Darius","Darius Miller",1,"2012","2017","darius_miller",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[1626259,"Miller,
+        Malcolm","Malcolm Miller",1,"2017","2017","malcolm_miller",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[201988,"Mills,
+        Patty","Patty Mills",1,"2009","2017","patty_mills",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[200794,"Millsap,
+        Paul","Paul Millsap",1,"2006","2017","paul_millsap",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[202703,"Mirotic,
+        Nikola","Nikola Mirotic",1,"2014","2017","nikola_mirotic",1610612740,"New
+        Orleans","Pelicans","NOP","pelicans","Y"],[1628378,"Mitchell, Donovan","Donovan
+        Mitchell",1,"2017","2017","donovan_mitchell",1610612762,"Utah","Jazz","UTA","jazz","Y"],[1628513,"Mitrou-Long,
+        Naz","Naz Mitrou-Long",0,"2017","2017","naz_mitrou-long",0,"","","","","Y"],[1628370,"Monk,
+        Malik","Malik Monk",1,"2017","2017","malik_monk",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[202328,"Monroe,
+        Greg","Greg Monroe",1,"2010","2017","greg_monroe",1610612738,"Boston","Celtics","BOS","celtics","Y"],[1626242,"Montero,
+        Luis","Luis Montero",0,"2015","2017","luis_montero",0,"","","","","Y"],[1628500,"Moore,
+        Ben","Ben Moore",1,"2017","2017","ben_moore",1610612754,"Indiana","Pacers","IND","pacers","Y"],[202734,"Moore,
+        E''Twaun","E''Twaun Moore",1,"2011","2017","e''twaun_moore",1610612740,"New
+        Orleans","Pelicans","NOP","pelicans","Y"],[203961,"Moreland, Eric","Eric Moreland",1,"2014","2017","eric_moreland",1610612765,"Detroit","Pistons","DET","pistons","Y"],[1628537,"Morris,
+        Jaylen","Jaylen Morris",1,"2017","2017","jaylen_morris",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[202694,"Morris,
+        Marcus","Marcus Morris",1,"2011","2017","marcus_morris",1610612738,"Boston","Celtics","BOS","celtics","Y"],[202693,"Morris,
+        Markieff","Markieff Morris",1,"2011","2017","markieff_morris",1610612764,"Washington","Wizards","WAS","wizards","Y"],[1628420,"Morris,
+        Monte","Monte Morris",1,"2017","2017","monte_morris",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[1628405,"Motley,
+        Johnathan","Johnathan Motley",1,"2017","2017","johnathan_motley",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[202389,"Mozgov,
+        Timofey","Timofey Mozgov",1,"2010","2017","timofey_mozgov",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1626144,"Mudiay,
+        Emmanuel","Emmanuel Mudiay",1,"2015","2017","emmanuel_mudiay",1610612752,"New
+        York","Knicks","NYK","knicks","Y"],[203498,"Muhammad, Shabazz","Shabazz Muhammad",1,"2013","2017","shabazz_muhammad",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[204098,"Munford,
+        Xavier","Xavier Munford",1,"2015","2017","xavier_munford",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[1627749,"Murray,
+        Dejounte","Dejounte Murray",1,"2016","2017","dejounte_murray",1610612759,"San
+        Antonio","Spurs","SAS","spurs","Y"],[1627750,"Murray, Jamal","Jamal Murray",1,"2016","2017","jamal_murray",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[203488,"Muscala,
+        Mike","Mike Muscala",1,"2013","2017","mike_muscala",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1627846,"Nader,
+        Abdel","Abdel Nader",1,"2017","2017","abdel_nader",1610612738,"Boston","Celtics","BOS","celtics","Y"],[1626204,"Nance
+        Jr., Larry","Larry Nance Jr.",1,"2015","2017","larry_nance jr.",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[203894,"Napier,
+        Shabazz","Shabazz Napier",1,"2014","2017","shabazz_napier",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[2749,"Nelson, Jameer","Jameer Nelson",1,"2004","2017","jameer_nelson",1610612765,"Detroit","Pistons","DET","pistons","Y"],[203526,"Neto,
+        Raul","Raul Neto",1,"2015","2017","raul_neto",1610612762,"Utah","Jazz","UTA","jazz","Y"],[1627777,"Niang,
+        Georges","Georges Niang",1,"2016","2017","georges_niang",1610612762,"Utah","Jazz","UTA","jazz","Y"],[201149,"Noah,
+        Joakim","Joakim Noah",1,"2007","2017","joakim_noah",1610612752,"New York","Knicks","NYK","knicks","Y"],[203457,"Noel,
+        Nerlens","Nerlens Noel",1,"2013","2017","nerlens_noel",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[203512,"Nogueira,
+        Lucas","Lucas Nogueira",1,"2014","2017","lucas_nogueira",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[1717,"Nowitzki,
+        Dirk","Dirk Nowitzki",1,"1998","2017","dirk_nowitzki",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[1628373,"Ntilikina,
+        Frank","Frank Ntilikina",1,"2017","2017","frank_ntilikina",1610612752,"New
+        York","Knicks","NYK","knicks","Y"],[203994,"Nurkic, Jusuf","Jusuf Nurkic",1,"2014","2017","jusuf_nurkic",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[1628021,"Nwaba, David","David Nwaba",1,"2016","2017","david_nwaba",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[203948,"O''Bryant
+        III, Johnny","Johnny O''Bryant III",0,"2014","2017","johnny_o''bryant iii",0,"","","","","Y"],[1626220,"O''Neale,
+        Royce","Royce O''Neale",1,"2017","2017","royce_o''neale",1610612762,"Utah","Jazz","UTA","jazz","Y"],[203124,"O''Quinn,
+        Kyle","Kyle O''Quinn",1,"2012","2017","kyle_o''quinn",1610612752,"New York","Knicks","NYK","knicks","Y"],[1628400,"Ojeleye,
+        Semi","Semi Ojeleye",1,"2017","2017","semi_ojeleye",1610612738,"Boston","Celtics","BOS","celtics","Y"],[2731,"Okafor,
+        Emeka","Emeka Okafor",1,"2004","2017","emeka_okafor",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[1626143,"Okafor,
+        Jahlil","Jahlil Okafor",1,"2015","2017","jahlil_okafor",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[203506,"Oladipo,
+        Victor","Victor Oladipo",1,"2013","2017","victor_oladipo",1610612754,"Indiana","Pacers","IND","pacers","Y"],[203482,"Olynyk,
+        Kelly","Kelly Olynyk",1,"2013","2017","kelly_olynyk",1610612748,"Miami","Heat","MIA","heat","Y"],[1627778,"Onuaku,
+        Chinanu","Chinanu Onuaku",1,"2016","2017","chinanu_onuaku",1610612745,"Houston","Rockets","HOU","rockets","Y"],[1626224,"Osman,
+        Cedi","Cedi Osman",1,"2017","2017","cedi_osman",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[1626162,"Oubre
+        Jr., Kelly","Kelly Oubre Jr.",1,"2015","2017","kelly_oubre jr.",1610612764,"Washington","Wizards","WAS","wizards","Y"],[2585,"Pachulia,
+        Zaza","Zaza Pachulia",1,"2003","2017","zaza_pachulia",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[1627779,"Paige,
+        Marcus","Marcus Paige",1,"2017","2017","marcus_paige",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[1627834,"Papagiannis,
+        Georgios","Georgios Papagiannis",1,"2016","2017","georgios_papagiannis",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[203953,"Parker, Jabari","Jabari Parker",1,"2014","2017","jabari_parker",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[2225,"Parker,
+        Tony","Tony Parker",1,"2001","2017","tony_parker",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[202718,"Parsons,
+        Chandler","Chandler Parsons",1,"2011","2017","chandler_parsons",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[202335,"Patterson,
+        Patrick","Patrick Patterson",1,"2010","2017","patrick_patterson",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[1628383,"Patton, Justin","Justin Patton",1,"2017","2017","justin_patton",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","N"],[203464,"Paul,
+        Brandon","Brandon Paul",1,"2017","2017","brandon_paul",1610612759,"San Antonio","Spurs","SAS","spurs","Y"],[101108,"Paul,
+        Chris","Chris Paul",1,"2005","2017","chris_paul",1610612745,"Houston","Rockets","HOU","rockets","Y"],[203940,"Payne,
+        Adreian","Adreian Payne",0,"2014","2017","adreian_payne",0,"","","","","Y"],[1626166,"Payne,
+        Cameron","Cameron Payne",1,"2015","2017","cameron_payne",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[203901,"Payton,
+        Elfrid","Elfrid Payton",1,"2014","2017","elfrid_payton",1610612756,"Phoenix","Suns","PHX","suns","Y"],[1627780,"Payton
+        II, Gary","Gary Payton II",1,"2016","2017","gary_payton ii",1610612747,"Los
+        Angeles","Lakers","LAL","lakers","Y"],[1628506,"Perrantes, London","London
+        Perrantes",1,"2017","2017","london_perrantes",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[1628409,"Peters,
+        Alec","Alec Peters",1,"2017","2017","alec_peters",1610612756,"Phoenix","Suns","PHX","suns","Y"],[1627850,"Plumlee,
+        Marshall","Marshall Plumlee",1,"2016","2017","marshall_plumlee",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[203486,"Plumlee,
+        Mason","Mason Plumlee",1,"2013","2017","mason_plumlee",1610612743,"Denver","Nuggets","DEN","nuggets","Y"],[203101,"Plumlee,
+        Miles","Miles Plumlee",1,"2012","2017","miles_plumlee",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1627751,"Poeltl,
+        Jakob","Jakob Poeltl",1,"2016","2017","jakob_poeltl",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[202347,"Pondexter,
+        Quincy","Quincy Pondexter",0,"2010","2017","quincy_pondexter",0,"","","","","Y"],[203490,"Porter
+        Jr., Otto","Otto Porter Jr.",1,"2013","2017","otto_porter jr.",1610612764,"Washington","Wizards","WAS","wizards","Y"],[1626171,"Portis,
+        Bobby","Bobby Portis",1,"2015","2017","bobby_portis",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[204001,"Porzingis,
+        Kristaps","Kristaps Porzingis",1,"2015","2017","kristaps_porzingis",1610612752,"New
+        York","Knicks","NYK","knicks","Y"],[203939,"Powell, Dwight","Dwight Powell",1,"2014","2017","dwight_powell",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[1626181,"Powell,
+        Norman","Norman Powell",1,"2015","2017","norman_powell",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[1627816,"Poythress,
+        Alex","Alex Poythress",1,"2016","2017","alex_poythress",1610612754,"Indiana","Pacers","IND","pacers","Y"],[1627752,"Prince,
+        Taurean","Taurean Prince",1,"2016","2017","taurean_prince",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1626643,"Pullen,
+        Jacob","Jacob Pullen",0,"2017","2017","jacob_pullen",0,"","","","","Y"],[1628681,"Purvis,
+        Rodney","Rodney Purvis",1,"2017","2017","rodney_purvis",1610612753,"Orlando","Magic","ORL","magic","Y"],[1627753,"Zhou
+        Qi","Zhou Qi",1,"2017","2017","zhou_qi",1610612745,"Houston","Rockets","HOU","rockets","Y"],[1627817,"Quarterman,
+        Tim","Tim Quarterman",1,"2016","2017","tim_quarterman",1610612745,"Houston","Rockets","HOU","rockets","Y"],[1628397,"Rabb,
+        Ivan","Ivan Rabb",1,"2017","2017","ivan_rabb",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[203944,"Randle,
+        Julius","Julius Randle",1,"2014","2017","julius_randle",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"],[2216,"Randolph,
+        Zach","Zach Randolph",1,"2001","2017","zach_randolph",1610612758,"Sacramento","Kings","SAC","kings","Y"],[1628504,"Rathan-Mayes,
+        Xavier","Xavier Rathan-Mayes",0,"2017","2017","xavier_rathan-mayes",0,"","","","","Y"],[200755,"Redick,
+        JJ","JJ Redick",1,"2006","2017","jj_redick",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[1628432,"Reed,
+        Davon","Davon Reed",1,"2017","2017","davon_reed",1610612756,"Phoenix","Suns","PHX","suns","Y"],[203186,"Reed,
+        Willie","Willie Reed",0,"2012","2017","willie_reed",0,"","","","","Y"],[1626196,"Richardson,
+        Josh","Josh Richardson",1,"2015","2017","josh_richardson",1610612748,"Miami","Heat","MIA","heat","Y"],[1627781,"Richardson,
+        Malachi","Malachi Richardson",1,"2016","2017","malachi_richardson",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[203085,"Rivers,
+        Austin","Austin Rivers",1,"2012","2017","austin_rivers",1610612746,"LA","Clippers","LAC","clippers","Y"],[203460,"Roberson,
+        Andre","Andre Roberson",1,"2013","2017","andre_roberson",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[1628421,"Robinson, Devin","Devin Robinson",1,"2017","2017","devin_robinson",1610612764,"Washington","Wizards","WAS","wizards","N"],[203922,"Robinson
+        III, Glenn","Glenn Robinson III",1,"2014","2017","glenn_robinson iii",1610612754,"Indiana","Pacers","IND","pacers","Y"],[200765,"Rondo,
+        Rajon","Rajon Rondo",1,"2006","2017","rajon_rondo",1610612740,"New Orleans","Pelicans","NOP","pelicans","Y"],[201565,"Rose,
+        Derrick","Derrick Rose",1,"2008","2017","derrick_rose",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[203082,"Ross,
+        Terrence","Terrence Ross",1,"2012","2017","terrence_ross",1610612753,"Orlando","Magic","ORL","magic","Y"],[1626179,"Rozier,
+        Terry","Terry Rozier",1,"2015","2017","terry_rozier",1610612738,"Boston","Celtics","BOS","celtics","Y"],[201937,"Rubio,
+        Ricky","Ricky Rubio",1,"2011","2017","ricky_rubio",1610612762,"Utah","Jazz","UTA","jazz","Y"],[1626156,"Russell,
+        D''Angelo","D''Angelo Russell",1,"2015","2017","d''angelo_russell",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1627734,"Sabonis,
+        Domantas","Domantas Sabonis",1,"2016","2017","domantas_sabonis",1610612754,"Indiana","Pacers","IND","pacers","Y"],[203960,"Sampson,
+        JaKarr","JaKarr Sampson",1,"2014","2017","jakarr_sampson",1610612758,"Sacramento","Kings","SAC","kings","Y"],[203967,"Saric,
+        Dario","Dario Saric",1,"2016","2017","dario_saric",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[203107,"Satoransky,
+        Tomas","Tomas Satoransky",1,"2016","2017","tomas_satoransky",1610612764,"Washington","Wizards","WAS","wizards","Y"],[203471,"Schroder,
+        Dennis","Dennis Schroder",1,"2013","2017","dennis_schroder",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[203118,"Scott,
+        Mike","Mike Scott",1,"2012","2017","mike_scott",1610612764,"Washington","Wizards","WAS","wizards","Y"],[200757,"Sefolosha,
+        Thabo","Thabo Sefolosha",1,"2006","2017","thabo_sefolosha",1610612762,"Utah","Jazz","UTA","jazz","Y"],[1627782,"Selden,
+        Wayne","Wayne Selden",1,"2016","2017","wayne_selden",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[201196,"Sessions,
+        Ramon","Ramon Sessions",1,"2007","2017","ramon_sessions",1610612764,"Washington","Wizards","WAS","wizards","Y"],[202697,"Shumpert,
+        Iman","Iman Shumpert",1,"2011","2017","iman_shumpert",1610612758,"Sacramento","Kings","SAC","kings","Y"],[1627783,"Siakam,
+        Pascal","Pascal Siakam",1,"2016","2017","pascal_siakam",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[202918,"Silas,
+        Xavier","Xavier Silas",1,"2011","2017","xavier_silas",1610612738,"Boston","Celtics","BOS","celtics","Y"],[1627732,"Simmons,
+        Ben","Ben Simmons",1,"2016","2017","ben_simmons",1610612755,"Philadelphia","76ers","PHI","sixers","Y"],[203613,"Simmons,
+        Jonathon","Jonathon Simmons",1,"2015","2017","jonathon_simmons",1610612753,"Orlando","Magic","ORL","magic","Y"],[1628424,"Simmons,
+        Kobi","Kobi Simmons",1,"2017","2017","kobi_simmons",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[202713,"Singler,
+        Kyle","Kyle Singler",1,"2012","2017","kyle_singler",1610612760,"Oklahoma City","Thunder","OKC","thunder","Y"],[203935,"Smart,
+        Marcus","Marcus Smart",1,"2014","2017","marcus_smart",1610612738,"Boston","Celtics","BOS","celtics","Y"],[202397,"Smith,
+        Ish","Ish Smith",1,"2010","2017","ish_smith",1610612765,"Detroit","Pistons","DET","pistons","Y"],[2747,"Smith,
+        JR","JR Smith",1,"2004","2017","jr_smith",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[201160,"Smith,
+        Jason","Jason Smith",1,"2007","2017","jason_smith",1610612764,"Washington","Wizards","WAS","wizards","Y"],[2746,"Smith,
+        Josh","Josh Smith",0,"2004","2017","josh_smith",0,"","","","","Y"],[1628372,"Smith
+        Jr., Dennis","Dennis Smith Jr.",1,"2017","2017","dennis_smith jr.",1610612742,"Dallas","Mavericks","DAL","mavericks","Y"],[203503,"Snell,
+        Tony","Tony Snell",1,"2013","2017","tony_snell",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[201578,"Speights,
+        Marreese","Marreese Speights",1,"2008","2017","marreese_speights",1610612753,"Orlando","Magic","ORL","magic","Y"],[203917,"Stauskas,
+        Nik","Nik Stauskas",1,"2014","2017","nik_stauskas",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[202362,"Stephenson,
+        Lance","Lance Stephenson",1,"2010","2017","lance_stephenson",1610612754,"Indiana","Pacers","IND","pacers","Y"],[204065,"Stockton,
+        David","David Stockton",1,"2014","2017","david_stockton",1610612762,"Utah","Jazz","UTA","jazz","Y"],[202933,"Stone,
+        Julyan","Julyan Stone",1,"2011","2017","julyan_stone",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[1628410,"Sumner,
+        Edmond","Edmond Sumner",1,"2017","2017","edmond_sumner",1610612754,"Indiana","Pacers","IND","pacers","N"],[1628403,"Swanigan,
+        Caleb","Caleb Swanigan",1,"2017","2017","caleb_swanigan",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[1628369,"Tatum, Jayson","Jayson Tatum",1,"2017","2017","jayson_tatum",1610612738,"Boston","Celtics","BOS","celtics","Y"],[1627819,"Taylor,
+        Isaiah","Isaiah Taylor",1,"2016","2017","isaiah_taylor",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[201952,"Teague,
+        Jeff","Jeff Teague",1,"2009","2017","jeff_teague",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[203104,"Teague,
+        Marquis","Marquis Teague",1,"2012","2017","marquis_teague",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[203141,"Teletovic,
+        Mirza","Mirza Teletovic",0,"2012","2017","mirza_teletovic",0,"","","","","Y"],[202066,"Temple,
+        Garrett","Garrett Temple",1,"2009","2017","garrett_temple",1610612758,"Sacramento","Kings","SAC","kings","Y"],[1628462,"Teodosic,
+        Milos","Milos Teodosic",1,"2017","2017","milos_teodosic",1610612746,"LA","Clippers","LAC","clippers","Y"],[1891,"Terry,
+        Jason","Jason Terry",1,"1999","2017","jason_terry",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[1628464,"Theis,
+        Daniel","Daniel Theis",1,"2017","2017","daniel_theis",1610612738,"Boston","Celtics","BOS","celtics","Y"],[202738,"Thomas,
+        Isaiah","Isaiah Thomas",1,"2011","2017","isaiah_thomas",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"],[202498,"Thomas,
+        Lance","Lance Thomas",1,"2011","2017","lance_thomas",1610612752,"New York","Knicks","NYK","knicks","Y"],[202691,"Thompson,
+        Klay","Klay Thompson",1,"2011","2017","klay_thompson",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[202684,"Thompson,
+        Tristan","Tristan Thompson",1,"2011","2017","tristan_thompson",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[1628414,"Thornwell,
+        Sindarius","Sindarius Thornwell",1,"2017","2017","sindarius_thornwell",1610612746,"LA","Clippers","LAC","clippers","Y"],[201229,"Tolliver,
+        Anthony","Anthony Tolliver",1,"2008","2017","anthony_tolliver",1610612765,"Detroit","Pistons","DET","pistons","Y"],[1626157,"Towns,
+        Karl-Anthony","Karl-Anthony Towns",1,"2015","2017","karl-anthony_towns",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[200782,"Tucker,
+        PJ","PJ Tucker",1,"2006","2017","pj_tucker",1610612745,"Houston","Rockets","HOU","rockets","Y"],[202323,"Turner,
+        Evan","Evan Turner",1,"2010","2017","evan_turner",1610612757,"Portland","Trail
+        Blazers","POR","blazers","Y"],[1626167,"Turner, Myles","Myles Turner",1,"2015","2017","myles_turner",1610612754,"Indiana","Pacers","IND","pacers","Y"],[202327,"Udoh,
+        Ekpe","Ekpe Udoh",1,"2010","2017","ekpe_udoh",1610612762,"Utah","Jazz","UTA","jazz","Y"],[1627755,"Ulis,
+        Tyler","Tyler Ulis",1,"2016","2017","tyler_ulis",1610612756,"Phoenix","Suns","PHX","suns","Y"],[202685,"Valanciunas,
+        Jonas","Jonas Valanciunas",1,"2012","2017","jonas_valanciunas",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[1627756,"Valentine,
+        Denzel","Denzel Valentine",1,"2016","2017","denzel_valentine",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[1627832,"VanVleet,
+        Fred","Fred VanVleet",1,"2016","2017","fred_vanvleet",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[1626173,"Vaughn,
+        Rashad","Rashad Vaughn",0,"2015","2017","rashad_vaughn",0,"","","","","Y"],[203943,"Vonleh,
+        Noah","Noah Vonleh",1,"2014","2017","noah_vonleh",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[202696,"Vucevic,
+        Nikola","Nikola Vucevic",1,"2011","2017","nikola_vucevic",1610612753,"Orlando","Magic","ORL","magic","Y"],[2548,"Wade,
+        Dwyane","Dwyane Wade",1,"2003","2017","dwyane_wade",1610612748,"Miami","Heat","MIA","heat","Y"],[203079,"Waiters,
+        Dion","Dion Waiters",1,"2012","2017","dion_waiters",1610612748,"Miami","Heat","MIA","heat","Y"],[202689,"Walker,
+        Kemba","Kemba Walker",1,"2011","2017","kemba_walker",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[202322,"Wall,
+        John","John Wall",1,"2010","2017","john_wall",1610612764,"Washington","Wizards","WAS","wizards","Y"],[1627820,"Wallace,
+        Tyrone","Tyrone Wallace",1,"2017","2017","tyrone_wallace",1610612746,"LA","Clippers","LAC","clippers","Y"],[1628476,"Walton
+        Jr., Derrick","Derrick Walton Jr.",1,"2017","2017","derrick_walton jr.",1610612748,"Miami","Heat","MIA","heat","Y"],[1627866,"Warney,
+        Jameel","Jameel Warney",0,"2017","2017","jameel_warney",0,"","","","","Y"],[203933,"Warren,
+        TJ","TJ Warren",1,"2014","2017","tj_warren",1610612756,"Phoenix","Suns","PHX","suns","Y"],[204037,"Wear,
+        Travis","Travis Wear",1,"2014","2017","travis_wear",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"],[1627821,"Webb
+        III, James","James Webb III",1,"2017","2017","james_webb iii",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[1627362,"Weber,
+        Briante","Briante Weber",1,"2015","2017","briante_weber",1610612763,"Memphis","Grizzlies","MEM","grizzlies","Y"],[2561,"West,
+        David","David West",1,"2003","2017","david_west",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[201566,"Westbrook,
+        Russell","Russell Westbrook",1,"2008","2017","russell_westbrook",1610612760,"Oklahoma
+        City","Thunder","OKC","thunder","Y"],[1628401,"White, Derrick","Derrick White",1,"2017","2017","derrick_white",1610612759,"San
+        Antonio","Spurs","SAS","spurs","Y"],[1627855,"White, Okaro","Okaro White",1,"2016","2017","okaro_white",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[1628510,"White
+        III, Andrew","Andrew White III",1,"2017","2017","andrew_white",1610612737,"Atlanta","Hawks","ATL","hawks","Y"],[1627785,"Whitehead,
+        Isaiah","Isaiah Whitehead",1,"2016","2017","isaiah_whitehead",1610612751,"Brooklyn","Nets","BKN","nets","Y"],[202355,"Whiteside,
+        Hassan","Hassan Whiteside",1,"2010","2017","hassan_whiteside",1610612748,"Miami","Heat","MIA","heat","Y"],[203952,"Wiggins,
+        Andrew","Andrew Wiggins",1,"2014","2017","andrew_wiggins",1610612750,"Minnesota","Timberwolves","MIN","timberwolves","Y"],[203912,"Wilcox,
+        CJ","CJ Wilcox",1,"2014","2017","cj_wilcox",1610612757,"Portland","Trail Blazers","POR","blazers","Y"],[1628451,"Wiley,
+        Jacob","Jacob Wiley",0,"2017","2017","jacob_wiley",0,"","","","","Y"],[2863,"Wilkins,
+        Damien","Damien Wilkins",0,"2004","2017","damien_wilkins",0,"","","","","Y"],[1626210,"Williams,
+        Alan","Alan Williams",1,"2015","2017","alan_williams",1610612756,"Phoenix","Suns","PHX","suns","Y"],[203710,"Williams,
+        C.J.","C.J. Williams",1,"2017","2017","c.j._williams",1610612746,"LA","Clippers","LAC","clippers","Y"],[202682,"Williams,
+        Derrick","Derrick Williams",0,"2011","2017","derrick_williams",0,"","","","","Y"],[101150,"Williams,
+        Lou","Lou Williams",1,"2005","2017","lou_williams",1610612746,"LA","Clippers","LAC","clippers","Y"],[101107,"Williams,
+        Marvin","Marvin Williams",1,"2005","2017","marvin_williams",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[1627786,"Williams,
+        Troy","Troy Williams",1,"2016","2017","troy_williams",1610612752,"New York","Knicks","NYK","knicks","Y"],[1628475,"Williams
+        Jr., Matt","Matt Williams Jr.",0,"2017","2017","matt_williams jr.",0,"","","","","Y"],[1628391,"Wilson,
+        D.J.","D.J. Wilson",1,"2017","2017","d.j._wilson",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[203966,"Wilson,
+        Jamil","Jamil Wilson",0,"2017","2017","jamil_wilson",0,"","","","","Y"],[1626159,"Winslow,
+        Justise","Justise Winslow",1,"2015","2017","justise_winslow",1610612748,"Miami","Heat","MIA","heat","Y"],[203481,"Withey,
+        Jeff","Jeff Withey",0,"2013","2017","jeff_withey",0,"","","","","Y"],[203489,"Wolters,
+        Nate","Nate Wolters",0,"2013","2017","nate_wolters",0,"","","","","Y"],[201148,"Wright,
+        Brandan","Brandan Wright",0,"2007","2017","brandan_wright",0,"","","","","Y"],[1626153,"Wright,
+        Delon","Delon Wright",1,"2015","2017","delon_wright",1610612761,"Toronto","Raptors","TOR","raptors","Y"],[1627824,"Yabusele,
+        Guerschon","Guerschon Yabusele",1,"2017","2017","guerschon_yabusele",1610612738,"Boston","Celtics","BOS","celtics","Y"],[203923,"Young,
+        James","James Young",0,"2014","2017","james_young",0,"","","","","Y"],[1626202,"Young,
+        Joe","Joe Young",1,"2015","2017","joe_young",1610612754,"Indiana","Pacers","IND","pacers","Y"],[201156,"Young,
+        Nick","Nick Young",1,"2007","2017","nick_young",1610612744,"Golden State","Warriors","GSW","warriors","Y"],[201152,"Young,
+        Thaddeus","Thaddeus Young",1,"2007","2017","thaddeus_young",1610612754,"Indiana","Pacers","IND","pacers","Y"],[203469,"Zeller,
+        Cody","Cody Zeller",1,"2013","2017","cody_zeller",1610612766,"Charlotte","Hornets","CHA","hornets","Y"],[203092,"Zeller,
+        Tyler","Tyler Zeller",1,"2012","2017","tyler_zeller",1610612749,"Milwaukee","Bucks","MIL","bucks","Y"],[1627835,"Zipser,
+        Paul","Paul Zipser",1,"2016","2017","paul_zipser",1610612741,"Chicago","Bulls","CHI","bulls","Y"],[1627790,"Zizic,
+        Ante","Ante Zizic",1,"2017","2017","ante_zizic",1610612739,"Cleveland","Cavaliers","CLE","cavaliers","Y"],[1627826,"Zubac,
+        Ivica","Ivica Zubac",1,"2016","2017","ivica_zubac",1610612747,"Los Angeles","Lakers","LAL","lakers","Y"]]}]}'
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 16:48:53 GMT
+  recorded_at: Sat, 31 Mar 2018 15:29:22 GMT
 recorded_with: VCR 3.0.3

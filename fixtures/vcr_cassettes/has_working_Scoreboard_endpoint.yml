@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://stats.nba.com/stats/scoreboardV2?DayOffset=0&LeagueID=00&gameDate=2018%2003%2031
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/57.0.2987.133 Safari/537.36
+      Dnt:
+      - '1'
+      Accept-Encoding:
+      - gzip, deflate, sdch
+      Accept-Language:
+      - en
+      Origin:
+      - http://stats.nba.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Last-Modified:
+      - Sat, 31 Mar 2018 15:05:09 GMT
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '2277'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - Sat, 31 Mar 2018 15:29:22 GMT
+      Date:
+      - Sat, 31 Mar 2018 15:29:22 GMT
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - ak_bmsc=B43E9EA6C762D0317159CF3AF4650A590210B59ECC5B000052A9BF5AD9E53A44~plvJjKmNm4wp18h3BVMCVMpMPfrqmQX4yG5+oaw7DdumWV/AO9WSkFY6hSyMb604Fe5UbXxGUxJoXazHYymYEsSol2qycoOjUNg9FJMSdOBzUkKurK1nsXHxRXl4TBvqoRQPn2ONZ6Q/Jz1sfnt6OdCopFpp71REqgnXDd81yzgbfoKywMKprluyhtrslCSj3Ujs3HPBRpvqnJYQlxgTVtla+EvsC2rZiICswY4slxluw=;
+        expires=Sat, 31 Mar 2018 17:29:22 GMT; max-age=7200; path=/; domain=.nba.com;
+        HttpOnly
+    body:
+      encoding: ASCII-8BIT
+      string: '{"resource":"scoreboardV2","parameters":{"GameDate":"2018 03 31","LeagueID":"00","DayOffset":"0"},"resultSets":[{"name":"GameHeader","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","GAME_STATUS_ID","GAME_STATUS_TEXT","GAMECODE","HOME_TEAM_ID","VISITOR_TEAM_ID","SEASON","LIVE_PERIOD","LIVE_PC_TIME","NATL_TV_BROADCASTER_ABBREVIATION","HOME_TV_BROADCASTER_ABBREVIATION","AWAY_TV_BROADCASTER_ABBREVIATION","LIVE_PERIOD_TIME_BCAST","ARENA_NAME","WH_STATUS"],"rowSet":[["2018-03-31T00:00:00",1,"0021701138",1,"3:00
+        pm ET","20180331/CHAWAS",1610612764,1610612766,"2017",0,"     ","NBA TV","NBCSWA","FSSE-CHA","Q0       -
+        NBA TV","Capital One Arena",0],["2018-03-31T00:00:00",2,"0021701139",1,"5:00
+        pm ET","20180331/DETNYK",1610612752,1610612765,"2017",0,"     ",null,"MSG","FSD/FSD+","Q0       -
+        ","Madison Square Garden",0],["2018-03-31T00:00:00",3,"0021701140",1,"7:30
+        pm ET","20180331/TORBOS",1610612738,1610612761,"2017",0,"     ","NBA TV","NBCSB","SN1","Q0       -
+        NBA TV","TD Garden",0],["2018-03-31T00:00:00",4,"0021701141",1,"8:00 pm ET","20180331/BKNMIA",1610612748,1610612751,"2017",0,"     ",null,"FSSUN","YES","Q0       -
+        ","AmericanAirlines Arena",0],["2018-03-31T00:00:00",5,"0021701142",1,"10:00
+        pm ET","20180331/GSWSAC",1610612758,1610612744,"2017",0,"     ",null,"NBCSCA","NBCSBA","Q0       -
+        ","Golden 1 Center",0]]},{"name":"LineScore","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY_NAME","TEAM_NAME","TEAM_WINS_LOSSES","PTS_QTR1","PTS_QTR2","PTS_QTR3","PTS_QTR4","PTS_OT1","PTS_OT2","PTS_OT3","PTS_OT4","PTS_OT5","PTS_OT6","PTS_OT7","PTS_OT8","PTS_OT9","PTS_OT10","PTS","FG_PCT","FT_PCT","FG3_PCT","AST","REB","TOV"],"rowSet":[["2018-03-31T00:00:00",1,"0021701138",1610612764,"WAS","Washington","Wizards","41-34",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2018-03-31T00:00:00",1,"0021701138",1610612766,"CHA","Charlotte","Hornets","34-42",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2018-03-31T00:00:00",2,"0021701139",1610612752,"NYK","New
+        York","Knicks","27-49",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2018-03-31T00:00:00",2,"0021701139",1610612765,"DET","Detroit","Pistons","35-40",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2018-03-31T00:00:00",3,"0021701140",1610612738,"BOS","Boston","Celtics","52-23",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2018-03-31T00:00:00",3,"0021701140",1610612761,"TOR","Toronto","Raptors","55-20",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2018-03-31T00:00:00",4,"0021701141",1610612748,"MIA","Miami","Heat","41-35",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2018-03-31T00:00:00",4,"0021701141",1610612751,"BKN","Brooklyn","Nets","24-51",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2018-03-31T00:00:00",5,"0021701142",1610612758,"SAC","Sacramento","Kings","24-52",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["2018-03-31T00:00:00",5,"0021701142",1610612744,"GSW","Golden
+        State","Warriors","54-21",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]]},{"name":"SeriesStandings","headers":["GAME_ID","HOME_TEAM_ID","VISITOR_TEAM_ID","GAME_DATE_EST","HOME_TEAM_WINS","HOME_TEAM_LOSSES","SERIES_LEADER"],"rowSet":[["0021701140",1610612738,1610612761,"2018-03-31T00:00:00",1,1,"Tied"],["0021701141",1610612748,1610612751,"2018-03-31T00:00:00",1,2,"Brooklyn"],["0021701139",1610612752,1610612765,"2018-03-31T00:00:00",0,2,"Detroit"],["0021701142",1610612758,1610612744,"2018-03-31T00:00:00",2,1,"Sacramento"],["0021701138",1610612764,1610612766,"2018-03-31T00:00:00",0,3,"Charlotte"]]},{"name":"LastMeeting","headers":["GAME_ID","LAST_GAME_ID","LAST_GAME_DATE_EST","LAST_GAME_HOME_TEAM_ID","LAST_GAME_HOME_TEAM_CITY","LAST_GAME_HOME_TEAM_NAME","LAST_GAME_HOME_TEAM_ABBREVIATION","LAST_GAME_HOME_TEAM_POINTS","LAST_GAME_VISITOR_TEAM_ID","LAST_GAME_VISITOR_TEAM_CITY","LAST_GAME_VISITOR_TEAM_NAME","LAST_GAME_VISITOR_TEAM_CITY1","LAST_GAME_VISITOR_TEAM_POINTS"],"rowSet":[["0021701138","0021700875","2018-02-23T00:00:00",1610612764,"Washington","Wizards","WAS",105,1610612766,"Charlotte","Hornets","CHA",122],["0021701139","0021700471","2017-12-22T00:00:00",1610612752,"New
+        York","Knicks","NYK",101,1610612765,"Detroit","Pistons","DET",104],["0021701140","0021700798","2018-02-06T00:00:00",1610612738,"Boston","Celtics","BOS",91,1610612761,"Toronto","Raptors","TOR",111],["0021701141","0021700668","2018-01-19T00:00:00",1610612748,"Miami","Heat","MIA",95,1610612751,"Brooklyn","Nets","BKN",101],["0021701142","0021701033","2018-03-16T00:00:00",1610612758,"Sacramento","Kings","SAC",98,1610612744,"Golden
+        State","Warriors","GSW",93]]},{"name":"EastConfStandingsByDay","headers":["TEAM_ID","LEAGUE_ID","SEASON_ID","STANDINGSDATE","CONFERENCE","TEAM","G","W","L","W_PCT","HOME_RECORD","ROAD_RECORD"],"rowSet":[[1610612761,"00","22017","03/31/2018","East","Toronto",75,55,20,0.733000,"31-7","24-13"],[1610612738,"00","22017","03/31/2018","East","Boston",75,52,23,0.693000,"24-13","28-10"],[1610612739,"00","22017","03/31/2018","East","Cleveland",76,46,30,0.605000,"26-11","20-19"],[1610612755,"00","22017","03/31/2018","East","Philadelphia",75,45,30,0.600000,"26-11","19-19"],[1610612754,"00","22017","03/31/2018","East","Indiana",76,45,31,0.592000,"26-13","19-18"],[1610612764,"00","22017","03/31/2018","East","Washington",75,41,34,0.547000,"21-17","20-17"],[1610612748,"00","22017","03/31/2018","East","Miami",76,41,35,0.539000,"24-13","17-22"],[1610612749,"00","22017","03/31/2018","East","Milwaukee",76,41,35,0.539000,"23-15","18-20"],[1610612765,"00","22017","03/31/2018","East","Detroit",75,35,40,0.467000,"24-14","11-26"],[1610612766,"00","22017","03/31/2018","East","Charlotte",76,34,42,0.447000,"21-18","13-24"],[1610612752,"00","22017","03/31/2018","East","New
+        York",76,27,49,0.355000,"18-18","9-31"],[1610612741,"00","22017","03/31/2018","East","Chicago",76,25,51,0.329000,"15-22","10-29"],[1610612751,"00","22017","03/31/2018","East","Brooklyn",75,24,51,0.320000,"14-25","10-26"],[1610612753,"00","22017","03/31/2018","East","Orlando",75,22,53,0.293000,"15-23","7-30"],[1610612737,"00","22017","03/31/2018","East","Atlanta",76,21,55,0.276000,"15-23","6-32"]]},{"name":"WestConfStandingsByDay","headers":["TEAM_ID","LEAGUE_ID","SEASON_ID","STANDINGSDATE","CONFERENCE","TEAM","G","W","L","W_PCT","HOME_RECORD","ROAD_RECORD"],"rowSet":[[1610612745,"00","22017","03/31/2018","West","Houston",76,62,14,0.816000,"32-6","30-8"],[1610612744,"00","22017","03/31/2018","West","Golden
+        State",75,54,21,0.720000,"28-11","26-10"],[1610612757,"00","22017","03/31/2018","West","Portland",76,47,29,0.618000,"26-13","21-16"],[1610612759,"00","22017","03/31/2018","West","San
+        Antonio",76,44,32,0.579000,"30-8","14-24"],[1610612750,"00","22017","03/31/2018","West","Minnesota",77,44,33,0.571000,"28-10","16-23"],[1610612760,"00","22017","03/31/2018","West","Oklahoma
+        City",77,44,33,0.571000,"26-13","18-20"],[1610612740,"00","22017","03/31/2018","West","New
+        Orleans",76,43,33,0.566000,"22-16","21-17"],[1610612762,"00","22017","03/31/2018","West","Utah",76,43,33,0.566000,"25-13","18-20"],[1610612743,"00","22017","03/31/2018","West","Denver",76,41,35,0.539000,"27-10","14-25"],[1610612746,"00","22017","03/31/2018","West","LA
+        Clippers",76,41,35,0.539000,"21-15","20-20"],[1610612747,"00","22017","03/31/2018","West","L.A.
+        Lakers",75,33,42,0.440000,"19-17","14-25"],[1610612758,"00","22017","03/31/2018","West","Sacramento",76,24,52,0.316000,"13-26","11-26"],[1610612742,"00","22017","03/31/2018","West","Dallas",76,23,53,0.303000,"14-25","9-28"],[1610612763,"00","22017","03/31/2018","West","Memphis",76,21,55,0.276000,"15-24","6-31"],[1610612756,"00","22017","03/31/2018","West","Phoenix",77,19,58,0.247000,"9-29","10-29"]]},{"name":"Available","headers":["GAME_ID","PT_AVAILABLE"],"rowSet":[["0021701138",0],["0021701139",0],["0021701140",0],["0021701141",0],["0021701142",0]]},{"name":"TeamLeaders","headers":["GAME_ID","TEAM_ID","TEAM_CITY","TEAM_NICKNAME","TEAM_ABBREVIATION","PTS_PLAYER_ID","PTS_PLAYER_NAME","PTS","REB_PLAYER_ID","REB_PLAYER_NAME","REB","AST_PLAYER_ID","AST_PLAYER_NAME","AST"],"rowSet":[]},{"name":"TicketLinks","headers":["GAME_ID","LEAG_TIX"],"rowSet":[["0021701138","
+        "],["0021701139"," "],["0021701140"," "],["0021701141"," "],["0021701142","
+        "]]},{"name":"WinProbability","headers":[],"rowSet":[]}]}'
+    http_version: 
+  recorded_at: Sat, 31 Mar 2018 15:29:22 GMT
+recorded_with: VCR 3.0.3
