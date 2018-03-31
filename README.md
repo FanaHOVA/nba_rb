@@ -1,6 +1,7 @@
 # nba_rb
 
 [![CircleCI](https://circleci.com/gh/FanaHOVA/nba_rb/tree/master.svg?style=svg)](https://circleci.com/gh/FanaHOVA/nba_rb/tree/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6cd1ce1f16d44e279a5856d8294f1b1b)](https://www.codacy.com/app/FanaHOVA/nba_rb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=FanaHOVA/nba_rb&amp;utm_campaign=Badge_Grade)
 [![Gem](https://img.shields.io/gem/v/nba_rb.svg?style=flat)](http://rubygems.org/gems/nba_rb "View this project in Rubygems")
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
