@@ -13,6 +13,6 @@ module NbaRb
     require_relative './game/boxscore_scoring'
     require_relative './game/boxscore_usage'
     require_relative './game/play_by_play'
-    require_relative './game/today_schedule'
+    require_relative './game/scoreboard'
   end
 end
