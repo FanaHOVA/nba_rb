@@ -1,0 +1,12 @@
+version = 1
+
+test_patterns = ["spec/**"]
+
+exclude_patterns = [
+    "*/vcr_cassettes/**",
+    ".circleci/**"
+]
+
+[[analyzers]]
+name = "ruby"
+enabled = true
